@@ -1,0 +1,76 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #403e44;
+  background: #fffbf0;
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "avatar"
+    "infos";
+}
+
+main > picture {
+  grid-area: avatar;
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+picture > img {
+  width: 16rem;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+main > article {
+  grid-area: infos;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.25rem 0;
+}
+
+i {
+  color: #75cdc8;
+  font-size: 2.25rem;
+}
+
+a:hover,
+i:hover {
+  color: #fbc34a;
+}
+
+a {
+  text-decoration: dashed underline #fbc34a;
+  color: #75cdc8;
+}
+
+p {
+  margin: 0;
+}
