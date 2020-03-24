@@ -24,6 +24,7 @@ main > picture {
 
 picture > img {
   width: 16rem;
+  height: auto;
   max-width: 100%;
   border-radius: 0.5rem;
 }
