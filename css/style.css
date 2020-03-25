@@ -76,3 +76,34 @@ a {
 p {
   margin: 0;
 }
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  main {
+    height: 100vh;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "avatar infos";
+  }
+
+  main > picture {
+    align-content: center;
+    margin: auto 0;
+    border-right: 2px solid #fbc34a;
+  }
+
+  picture > img {
+    flex: 0 1 80%;
+    border-radius: 0.5rem;
+  }
+
+  main > article {
+    text-align: left;
+    margin: auto 3rem;
+  }
+
+  nav {
+    width: 200px;
+    margin: 1.25rem 0;
+    justify-content: space-between;
+  }
+}
