@@ -1,0 +1,40 @@
+// $dir = Direction of gradient
+// $from = Starting color
+// $to = Ending color
+// $width = Border width/thickness
+
+@mixin border-gradient($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image:
+    // Needed for both the top and bottom borders
+    -webkit-linear-gradient($dir, $from, $to), -webkit-linear-gradient($dir, $from, $to);
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+@mixin background-gradient($dir, $from, $to) {
+  background-image: -webkit-linear-gradient($dir, $from, $to);
+}
+
+@mixin text-gradient($dir, $from, $to) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}

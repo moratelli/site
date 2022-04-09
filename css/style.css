@@ -1,109 +1,92 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM%20Sans:wght@300..700&display=swap);
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #403e44;
-  background: #fffbf0;
-  line-height: 1.5;
+  background-color: #0d0d0d;
+  font-size: 1rem;
 }
 
-main {
-  display: grid;
-  grid-auto-columns: auto;
-  grid-auto-rows: auto;
-  grid-template-areas:
-    "avatar"
-    "infos";
-}
-
-main > picture {
-  grid-area: avatar;
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0;
-}
-
-picture > img {
-  width: 16rem;
-  height: 100%;
-  max-width: 100%;
-  border-radius: 0.5rem;
-}
-
-h1 {
-  font-size: 2.75rem;
-  margin: 0;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 1.75rem;
-  margin: 0;
-  font-weight: 400;
-  margin-top: -0.5rem;
-}
-
-h3 {
-  margin: 1rem 0 0.5rem 0;
-}
-
-main > article {
-  grid-area: infos;
-  margin: auto;
+header {
+  background: -webkit-linear-gradient(left, #82b4ff, #bff0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Fira Code", serif;
+  font-size: 1.25rem;
   text-align: center;
+  margin-top: 4em;
+  margin-right: 2em;
+  margin-bottom: 4em;
+  margin-left: 2em;
+}
+header img {
+  padding: 6px;
+  max-width: 10rem;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  outline: 2px solid black;
+  outline-offset: -6px;
+  border-left: 5 solid #ffe598;
+  border-right: 5 solid #fbae95;
+  background-image: -webkit-linear-gradient(left, #ffe598, #fbae95), -webkit-linear-gradient(left, #ffe598, #fbae95);
+  background-size: 100% 5;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+header span {
+  font-weight: bold;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1.25rem 0;
+main .skills p {
+  font-family: "Fira Code", serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+main .skills ul {
+  list-style: none;
+}
+main .skills li {
+  display: inline-block;
+  margin-right: 1.25em;
+  margin-bottom: 1.25em;
+  padding: 0px 16px;
+  line-height: 32px;
+  border-radius: 120px;
+  border: solid 2px white;
+}
+main .skills li span {
+  background: -webkit-linear-gradient(left, #ffe597, #aaff82);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
 }
 
-i {
-  color: #75cdc8;
-  font-size: 2.25rem;
+.name {
+  background: -webkit-linear-gradient(left, #ffe597, #aaff82);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-a:hover,
-i:hover {
-  color: #fbc34a;
+.job,
+.company {
+  background: -webkit-linear-gradient(left, #fbae96, #ab83fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-a {
-  text-decoration: dashed underline #fbc34a;
-  color: #75cdc8;
-}
-
-p {
-  margin: 0;
-}
-
-/* Desktop */
-@media screen and (min-width: 1024px) {
-  main {
-    height: 100vh;
-    grid-auto-columns: 1fr;
-    grid-template-areas: "avatar infos";
-  }
-
-  main > picture {
-    align-content: center;
-    margin: auto 0;
-    border-right: 2px solid #fbc34a;
-  }
-
-  picture > img {
-    flex: 0 1 80%;
-    border-radius: 0.5rem;
-  }
-
-  main > article {
-    text-align: left;
-    margin: auto 3rem;
-  }
-
-  nav {
-    width: 200px;
-    margin: 1.25rem 0;
+@media (min-width: 600px) {
+  .sales-points {
+    display: flex;
     justify-content: space-between;
   }
+
+  .sales-point {
+    width: 30%;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,120 @@
+@import "mixins.scss";
+
+// Google Fonts
+@import url(https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM%20Sans:wght@300..700&display=swap);
+
+// Constant colors
+$background-color: #0d0d0d;
+
+// Font Variables
+$fira-code: "Fira Code", serif;
+$dm-sans: "DM Sans", sans-serif;
+$font-stack: $fira-code, $dm-sans -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+  "Open Sans", "Helvetica Neue", sans-serif;
+
+// Mobile
+$hidden-on-mobile: false;
+
+// todo: clean this up to avoid code repetition
+// Border Gradient
+@mixin border-gradient-peach {
+  @include border-gradient(left, #ffe598, #fbae95, 5);
+}
+@mixin border-gradient-sky {
+  @include border-gradient(left, #82b4ff, #bff0ff, 2);
+}
+
+// Text Gradients
+@mixin text-gradient-lime {
+  @include text-gradient(left, #ffe597, #aaff82);
+}
+@mixin text-gradient-sky {
+  @include text-gradient(left, #82b4ff, #bff0ff);
+}
+@mixin text-gradient-sunset {
+  @include text-gradient(left, #fbae96, #ab83fe);
+}
+
+// IMPORTANT!
+// CSS IS MOBILE-FIRST!
+body {
+  background-color: $background-color;
+  font-size: 1rem;
+}
+
+header {
+  @include text-gradient-sky();
+  font-family: $fira-code;
+  font-size: 1.25rem;
+  text-align: center;
+  @include margin(4em, 2em, 4em, 2em);
+
+  img {
+    padding: 6px;
+    max-width: 10rem;
+    margin-bottom: 2em;
+    border-radius: 100%;
+    outline: 2px solid black;
+    outline-offset: -6px;
+    @include border-gradient-peach();
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+main {
+  .skills {
+    p {
+      font-family: $fira-code;
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: white;
+      text-align: center;
+      @include margin(null, null, 1.5em, null);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      @include margin(null, 1.25em, 1.25em, null);
+      padding: 0px 16px;
+      line-height: 32px;
+      border-radius: 120px;
+      border: solid 2px white;
+
+      span {
+        @include text-gradient-lime();
+        font-size: 0.9rem;
+        font-family: $dm-sans;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.name {
+  @include text-gradient-lime();
+}
+
+.job,
+.company {
+  @include text-gradient-sunset();
+}
+
+// Desktop
+@media (min-width: 600px) {
+  .sales-points {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sales-point {
+    width: 30%;
+  }
+}
