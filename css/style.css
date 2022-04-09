@@ -1,21 +1,63 @@
 @import url(https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=DM%20Sans:wght@300..700&display=swap);
+h1,
+h2,
+h3 {
+  font-family: "Fira Code", serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p,
+h4,
+li {
+  font-family: "DM Sans", sans-serif;
+}
+
 body {
   background-color: #0d0d0d;
+  font-family: "Fira Code", serif, "DM Sans", sans-serif -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
+  color: white;
 }
 
 header {
+  text-align: center;
   background: -webkit-linear-gradient(left, #82b4ff, #bff0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Fira Code", serif;
-  font-size: 1.25rem;
-  text-align: center;
-  margin-top: 4em;
+  margin-top: 8em;
   margin-right: 2em;
   margin-bottom: 4em;
   margin-left: 2em;
+}
+header h1 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+header h1 span {
+  font-weight: 700;
+}
+header h1 .name {
+  background: -webkit-linear-gradient(left, #ffe597, #aaff82);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header h1 .job,
+header h1 .company {
+  background: -webkit-linear-gradient(left, #fbae96, #ab83fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header img {
   padding: 6px;
@@ -32,18 +74,7 @@ header img {
   background-repeat: no-repeat;
   background-clip: border-box;
 }
-header span {
-  font-weight: bold;
-}
 
-main .skills p {
-  font-family: "Fira Code", serif;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 1.5em;
-}
 main .skills ul {
   list-style: none;
 }
@@ -61,21 +92,7 @@ main .skills li span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 0.9rem;
-  font-family: "DM Sans", sans-serif;
   font-weight: bold;
-}
-
-.name {
-  background: -webkit-linear-gradient(left, #ffe597, #aaff82);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.job,
-.company {
-  background: -webkit-linear-gradient(left, #fbae96, #ab83fe);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 600px) {
