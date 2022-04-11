@@ -46,88 +46,88 @@
 } */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
 .bg-gradient-lime {
-  background: linear-gradient(135deg, #ffe597 0%, #aaff82 100%);
+  background: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
 }
 
 .bg-gradient-sky {
-  background: linear-gradient(135deg, #82b4ff 0%, #bff0ff 100%);
+  background: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
 }
 
 .bg-gradient-peach {
-  background: linear-gradient(135deg, #ffe598 0%, #fbae95 100%);
+  background: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
 }
 
 .bg-gradient-sunset {
-  background: linear-gradient(135deg, #fbae96 0%, #ab83fe 100%);
+  background: linear-gradient(to right, #fbae95 0%, #ab83fe 100%);
 }
 
 .bg-gradient-trackli {
-  background: linear-gradient(135deg, #ff9486 0%, #dd354d 100%);
+  background: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
 }
 
 .bg-gradient-certi {
-  background: linear-gradient(135deg, #82b4ff 0%, #ff8800 100%);
+  background: linear-gradient(135deg, #ff942f 0%, #ffeaac 100%);
 }
 
 .bg-gradient-philips {
-  background: linear-gradient(135deg, #ff9486 0%, #ff4646 100%);
+  background: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
 }
 
 .bg-gradient-zallpy {
-  background: linear-gradient(135deg, #ff9486 0%, #ff4646 100%);
+  background: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
 }
 
 .text-gradient-lime {
-  background-image: linear-gradient(135deg, #ffe597 0%, #aaff82 100%);
+  background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-sky {
-  background-image: linear-gradient(135deg, #82b4ff 0%, #bff0ff 100%);
+  background-image: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-peach {
-  background-image: linear-gradient(135deg, #ffe598 0%, #fbae95 100%);
+  background-image: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-sunset {
-  background-image: linear-gradient(135deg, #fbae96 0%, #ab83fe 100%);
+  background-image: linear-gradient(to right, #fbae95 0%, #ab83fe 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-trackli {
-  background-image: linear-gradient(135deg, #ff9486 0%, #dd354d 100%);
+  background-image: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-certi {
-  background-image: linear-gradient(135deg, #82b4ff 0%, #ff8800 100%);
+  background-image: linear-gradient(135deg, #ff942f 0%, #ffeaac 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-philips {
-  background-image: linear-gradient(135deg, #ff9486 0%, #ff4646 100%);
+  background-image: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .text-gradient-zallpy {
-  background-image: linear-gradient(135deg, #ff9486 0%, #ff4646 100%);
+  background-image: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -168,6 +168,13 @@ h4 {
 ul {
   list-style: none;
   padding: 0px;
+  margin: 0px;
+}
+
+a,
+a:visited {
+  color: #f5f5f5;
+  font-weight: 600;
 }
 
 .desktop {
@@ -187,7 +194,7 @@ body {
   margin: 0 1em 5em 1em;
 }
 .introduction h1 {
-  font-weight: 500;
+  font-weight: 400;
 }
 .introduction span {
   font-weight: 700;
@@ -202,9 +209,9 @@ body {
   margin-bottom: 2rem;
   border-radius: 100%;
   outline-offset: -4px;
-  border-left: 2 solid #bff0ff;
-  border-right: 2 solid #82b4ff;
-  background-image: -webkit-linear-gradient(left, #bff0ff, #82b4ff), -webkit-linear-gradient(left, #bff0ff, #82b4ff);
+  border-left: 2 solid #82b4ff;
+  border-right: 2 solid #bff0ff;
+  background-image: -webkit-linear-gradient(135deg, #82b4ff, #bff0ff), -webkit-linear-gradient(135deg, #82b4ff, #bff0ff);
   background-size: 100% 2;
   background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
@@ -214,6 +221,7 @@ body {
 .section-title {
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .skills {
@@ -240,6 +248,7 @@ body {
 }
 .journey h1 {
   margin-bottom: 0.25rem;
+  font-weight: 700;
 }
 .journey header {
   display: flex;
