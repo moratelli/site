@@ -1,3 +1,4 @@
+/* $fira-code: "Fira Code", serif; */
 /* // $dir = Direction of gradient
 // $from = Starting color
 // $to = Ending color
@@ -46,6 +47,7 @@
 } */
 @import url(https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=DM%20Sans:wght@300..700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200...700&display=swap);
 .bg-gradient-lime {
   background: linear-gradient(135deg, #ffe597 0%, #aaff82 100%);
 }
@@ -140,10 +142,12 @@
   border: 2px solid transparent;
 }
 
+/* $fira-code: "Fira Code", serif; */
 h1,
 h2,
 h3 {
-  font-family: "Fira Code", serif;
+  /* font-family: $fira-code; */
+  font-family: "IBM Plex Mono", monospace;
 }
 
 h1 {
@@ -183,7 +187,7 @@ ul {
 
 body {
   background-color: #0d0d0d;
-  font-family: "Fira Code", serif, "DM Sans", sans-serif -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Mono", monospace, "DM Sans", sans-serif -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   color: #f5f5f5;
   margin: 3em 2em 3em 2em;
@@ -199,12 +203,15 @@ body {
 .introduction span {
   font-weight: 700;
 }
+.introduction picture {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
 .introduction img {
   padding: 2px;
-  max-width: 10rem;
+  max-width: 7rem;
   margin-bottom: 2rem;
   border-radius: 100%;
-  outline: 2px solid black;
   outline-offset: -4px;
   border-left: 2 solid #bff0ff;
   border-right: 2 solid #82b4ff;
