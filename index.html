@@ -25,7 +25,7 @@
       </picture>
       <article>
         <h1>Pedro Moratelli</h1>
-        <h2>Full Stack Developer</h2>
+        <h1>Full Stack Developer</h1>
         <nav>
           <a href="https://linkedin.com/in/pedromoratelli" target="_blank"
             ><i class="fab fa-linkedin"></i
@@ -56,45 +56,53 @@
     </main> -->
     <!-- Greetings, my name is...
     Reminder to create a different screen for desktop / mobile -->
-    <header>
+    <header class="introduction">
       <picture>
-        <source media="(min-width: 1024px)" srcset="./img/avatar-900.jpg" />
-        <img src="./img/avatar-300.jpg" alt="A headshot picture of Pedro Moratelli" />
+        <source media="(min-width: 1024px)" srcset="./img/avatar.jpg" />
+        <img src="./img/avatar.jpg" alt="A headshot picture of Pedro Moratelli" />
       </picture>
-      <h1>
-        Hello! <br />I'm <span class="name">Pedro Moratelli</span>, a
-        <span class="job">Mobile Full Stack Developer</span>.
+      <h1 class="text-gradient-sky">
+        Hello! <br />I'm <span class="text-gradient-lime">Pedro Moratelli</span>, a
+        <span class="text-gradient-sunset">Mobile Full Stack Developer</span>.
       </h1>
     </header>
     <main>
       <!-- Skills using rounded pills -->
       <section class="skills">
-        <h3>Skills</h3>
+        <h3 class="section-title">Skills</h3>
         <ul>
-          <li><span>Flutter</span></li>
-          <li><span>Node.js</span></li>
-          <li><span>React</span></li>
-          <li><span>React Native</span></li>
-          <li><span>TypeScript</span></li>
-          <li><span>JavaScript</span></li>
-          <li><span>Clean Code</span></li>
-          <li><span>Test Driven Development</span></li>
-          <li><span>i18n</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">Flutter</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">Node.js</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">React</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">React Native</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">TypeScript</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">JavaScript</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">Clean Code</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">i18n</span></li>
+          <li class="border-gradient-sky"><span class="text-gradient-lime">Test Driven Development</span></li>
         </ul>
       </section>
 
       <!-- Self contained articles where I explain what I did -->
-      <section class="experience">
-        <h3>My developer journey</h3>
+      <section class="journey">
+        <h3 class="section-title">My developer journey</h3>
         <article class="school">
-          <h2>SENAI</h2>
-          <h4>2020 - 2022</h4>
-          <p></p>
+          <div class="story">
+            <header>
+              <div>
+                <h1 class="text-gradient-sky">SENAI</h1>
+                <h4 class="text-gradient-sky">2019 - 2020</h4>
+              </div>
+              <picture class="company-logo"><img src="./img/logos/senai.png" alt="The logo of SENAI" /></picture>
+            </header>
+            <p>I started studying Software Development at SENAI, in Florianopolis, Brazil</p>
+            <p>There, I learned mostly Web Development: HTML, CSS, React, and Node.js</p>
+          </div>
+          <picture class="company-logo"></picture>
         </article>
         <article class="trackli">
           <div class="story">
-            <h2>Trackli</h2>
-            <h3>Full Stack Development Intern</h3>
+            <h1>Trackli</h1>
             <h4>Jan 2020 - Apr 2020</h4>
             <p>Trackli gave me my first opportunity in the field as an intern.</p>
             <p>
@@ -110,8 +118,7 @@
         </article>
         <article class="certi">
           <div class="story">
-            <h2>Fundação CERTI</h2>
-            <h3>Software Development Intern && Software Developer</h3>
+            <h1>Fundação CERTI</h1>
             <h4>Apr 2020 - Jul 2021</h4>
             <p>While at CERTI, I saw two important healthtech projects through.</p>
             <p>
@@ -135,8 +142,7 @@
           <picture class="company-logo"> </picture>
         </article>
         <article class="philips">
-          <h2>Philips</h2>
-          <h3>Software Developer</h3>
+          <h1>Philips</h1>
           <h4>Aug 2020 - Dec 2021</h4>
           <p>
             I worked in maintaining and developing new features for an enterprise-level complete hospital management
@@ -146,8 +152,7 @@
         </article>
         <article class="zallpy">
           <div class="story">
-            <h2>Zallpy Digital</h2>
-            <h3>Full Stack Mobile Developer</h3>
+            <h1>Zallpy Digital</h1>
             <h4>Dec 2021 - Present</h4>
             <p>
               I joined Zallpy to join a team with focused in Mobile Development. We develop features for the BMW
@@ -167,9 +172,33 @@
           </div>
           <picture class="company-logo"> </picture>
         </article>
+        <article class="today">
+          <h1>Today</h1>
+          <p>
+            I want to work as either a Mobile Developer or as a Web Developer, and emmigrate from Brazil with my
+            girlfriend Lara and our cat Panda.
+          </p>
+        </article>
       </section>
     </main>
     <!-- LinkedIn, GitHub, etc. -->
-    <footer></footer>
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <picture class="site-logo"></picture>
+            <p>You can contact me on LinkedIn</p>
+          </li>
+          <li>
+            <picture class="site-logo"></picture>
+            <p>You can find some projects in my GitHub</p>
+          </li>
+          <li>
+            <picture class="site-logo"></picture>
+            <p>You can see all my skills at ProudToBeDev</p>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

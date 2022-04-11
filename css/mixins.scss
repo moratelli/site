@@ -1,4 +1,6 @@
-// $dir = Direction of gradient
+@import "variables.scss";
+
+/* // $dir = Direction of gradient
 // $from = Starting color
 // $to = Ending color
 // $width = Border width/thickness
@@ -23,18 +25,89 @@
   background: -webkit-linear-gradient($dir, $from, $to);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+/* @mixin border-gradient-peach {
+  @include border-gradient(left, #ffe598, #fbae95, 5);
+}
+@mixin border-gradient-sky {
+  @include border-gradient(left, #82b4ff, #bff0ff, 2);
+}
+@mixin border-gradient-sunset {
+  @include border-gradient(left, #fbae96, #ab83fe, 5);
 }
 
-@mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
+// Text Gradients
+@mixin text-gradient-lime {
+  @include text-gradient(left, #ffe597, #aaff82);
+}
+@mixin text-gradient-sky {
+  @include text-gradient(left, #82b4ff, #bff0ff);
+}
+@mixin text-gradient-sunset {
+  @include text-gradient(left, #fbae96, #ab83fe);
+} */
+@mixin border-gradient-avatar($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image:
+    // Needed for both the top and bottom borders
+    -webkit-linear-gradient($dir, $from, $to), -webkit-linear-gradient($dir, $from, $to);
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
 }
 
-@mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
+@mixin border-gradient-avatar-sky {
+  @include border-gradient-avatar(left, #bff0ff, #82b4ff, 2);
 }
+
+$gradients: () !default;
+$gradients: map-merge(
+  (
+    lime: linear-gradient(135deg, #ffe597 0%, #aaff82 100%),
+    sky: linear-gradient(135deg, #82b4ff 0%, #bff0ff 100%),
+    peach: linear-gradient(135deg, #ffe598 0%, #fbae95 100%),
+    sunset: linear-gradient(135deg, #fbae96 0%, #ab83fe 100%),
+  ),
+  $gradients
+);
+
+@mixin border-gradient-sky($parent) {
+  #{$parent} {
+    background: linear-gradient($background-color, $background-color) padding-box,
+      linear-gradient(to right, #82b4ff, #bff0ff) border-box;
+    border-radius: 120px;
+    border: 2px solid transparent;
+  }
+}
+
+// Gradient backgrounds
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+
+// Gradient text
+@mixin text-gradient($parent, $gradient) {
+  #{$parent} {
+    background-image: $gradient;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+// Gradient Classes
+@each $gradient, $value in $gradients {
+  @include bg-gradient(".bg-gradient-#{$gradient}", $value);
+}
+
+// Gradient Classes
+@each $gradient, $value in $gradients {
+  @include text-gradient(".text-gradient-#{$gradient}", $value);
+}
+
+// Gradient Classes
+@include border-gradient-sky(".border-gradient-sky");
