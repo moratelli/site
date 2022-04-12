@@ -41,7 +41,10 @@ ul {
 a {
   font-weight: 600;
   cursor: pointer;
-  text-decoration: underline dotted white;
+  text-decoration: underline dotted #f5f5f5;
+  -webkit-text-decoration-line: underline !important;
+  -webkit-text-decoration-color: #f5f5f5 !important;
+  -webkit-text-decoration-style: dotted !important;
 }
 
 // hide desktop items
@@ -174,14 +177,14 @@ footer {
   }
 
   li {
-    flex: 0 1 25%;
-    font-size: 0.7rem;
+    flex: 0 1 27%;
+    font-size: 0.8rem;
     text-align: center;
 
     > a {
       color: white;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
   }
 }
