@@ -1,65 +1,15 @@
 @import "variables.scss";
 
-/* // $dir = Direction of gradient
-// $from = Starting color
-// $to = Ending color
-// $width = Border width/thickness
-
-@mixin border-gradient($dir, $from, $to, $width) {
-  border-left: $width solid $from;
-  border-right: $width solid $to;
+@mixin border-gradient-avatar {
+  border-left: 2 solid #82b4ff;
+  border-right: 2 solid #bff0ff;
   background-image:
     // Needed for both the top and bottom borders
-    -webkit-linear-gradient($dir, $from, $to), -webkit-linear-gradient($dir, $from, $to);
-  background-size: 100% $width;
+    -webkit-linear-gradient(135deg, #82b4ff, #bff0ff), -webkit-linear-gradient(135deg, #82b4ff, #bff0ff);
+  background-size: 100% 2;
   background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
   background-clip: border-box;
-}
-
-@mixin background-gradient($dir, $from, $to) {
-  background-image: -webkit-linear-gradient($dir, $from, $to);
-}
-
-@mixin text-gradient($dir, $from, $to) {
-  background: -webkit-linear-gradient($dir, $from, $to);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-/* @mixin border-gradient-peach {
-  @include border-gradient(left, #ffe598, #fbae95, 5);
-}
-@mixin border-gradient-sky {
-  @include border-gradient(left, #82b4ff, #bff0ff, 2);
-}
-@mixin border-gradient-sunset {
-  @include border-gradient(left, #fbae96, #ab83fe, 5);
-}
-
-// Text Gradients
-@mixin text-gradient-lime {
-  @include text-gradient(left, #ffe597, #aaff82);
-}
-@mixin text-gradient-sky {
-  @include text-gradient(left, #82b4ff, #bff0ff);
-}
-@mixin text-gradient-sunset {
-  @include text-gradient(left, #fbae96, #ab83fe);
-} */
-@mixin border-gradient-avatar($dir, $from, $to, $width) {
-  border-left: $width solid $from;
-  border-right: $width solid $to;
-  background-image:
-    // Needed for both the top and bottom borders
-    -webkit-linear-gradient($dir, $from, $to), -webkit-linear-gradient($dir, $from, $to);
-  background-size: 100% $width;
-  background-position: 0 100%, 0 0;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-}
-
-@mixin border-gradient-avatar-sky {
-  @include border-gradient-avatar(135deg, #82b4ff, #bff0ff, 2);
 }
 
 $gradients: () !default;
@@ -100,6 +50,17 @@ $gradients: map-merge(
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@mixin link-gradient($parent, $gradient) {
+  #{$parent} {
+    background-image: $gradient;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

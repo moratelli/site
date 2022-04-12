@@ -38,10 +38,10 @@ ul {
   margin: 0px;
 }
 
-a,
-a:visited {
-  color: #f5f5f5;
+a {
   font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline dotted white;
 }
 
 // hide desktop items
@@ -82,7 +82,7 @@ body {
     margin-bottom: 2rem;
     border-radius: 100%;
     outline-offset: -4px;
-    @include border-gradient-avatar-sky();
+    @include border-gradient-avatar();
   }
 }
 
@@ -167,8 +167,23 @@ body {
   }
 }
 
-// SENAI
-.senai {
+footer {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    flex: 0 1 25%;
+    font-size: 0.7rem;
+    text-align: center;
+
+    > a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 // Desktop
