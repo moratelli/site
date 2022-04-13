@@ -164,6 +164,7 @@ body {
   font-size: 0.9rem;
   color: #f5f5f5;
   margin: 3em 2em 3em 2em;
+  overflow-x: hidden;
 }
 
 .introduction {
@@ -327,30 +328,29 @@ footer li > a {
 }
 .today aside .photo:nth-of-type(1) {
   transform: rotate(4deg);
-  margin-left: 4rem;
-  margin-right: 0rem;
-  margin-bottom: -3rem;
+  max-width: 17rem;
+  margin: 2rem 0rem -3rem 4rem;
 }
 .today aside > img {
   z-index: 99;
   max-width: 15rem;
-  margin: -9rem 0 0rem -5rem;
+  margin: -15rem 0 0rem -4.5rem;
 }
 .today aside .photo:nth-of-type(2) {
   z-index: 97;
   transform: rotate(-3deg);
   max-width: 9rem;
-  margin: 0rem -12rem 0rem 0;
+  margin: 0rem -13rem 0rem 0;
 }
 .today aside .photo:nth-of-type(3) {
   max-width: 15rem;
-  margin-top: -6rem;
-  margin-left: -3rem;
+  margin-top: 0rem;
+  margin-left: -5rem;
 }
 .today aside .photo:nth-last-child(1) {
   z-index: 99;
-  margin: -11rem -2rem 0rem 10rem;
-  transform: rotate(5deg);
+  margin: -13rem -3rem 0rem 10rem;
+  transform: rotate(3deg);
   max-width: 8rem;
 }
 
