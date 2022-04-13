@@ -332,9 +332,10 @@ footer li > a {
   margin: 2rem 0rem -3rem 4rem;
 }
 .today aside > img {
+  align-self: center;
   z-index: 99;
   max-width: 15rem;
-  margin: -15rem 0 0rem -4.5rem;
+  margin: -15rem 16rem 0rem 0rem;
 }
 .today aside .photo:nth-of-type(2) {
   z-index: 97;
