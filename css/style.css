@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nanum+Pen+Script&display=swap&display=swap");
 .bg-gradient-lime {
   background: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
+}
+
+.bg-gradient-mint {
+  background: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
 }
 
 .bg-gradient-sky {
@@ -33,6 +37,14 @@
 
 .text-gradient-lime {
   background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mint {
+  background-image: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -210,6 +222,8 @@ body {
 
 .journey article {
   margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 .journey h1 {
   margin-bottom: 0.25rem;
@@ -263,6 +277,81 @@ footer li > a {
   color: white;
   text-decoration: none;
   font-size: 1.7rem;
+}
+
+.photo,
+.photo-with-subtitles {
+  background: #fcfafa;
+  padding: 0.3rem;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  margin: 1.5rem 1rem 0rem 1rem;
+  align-self: center;
+  box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.5);
+}
+.photo img,
+.photo-with-subtitles img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-with-subtitles p {
+  margin: 0.25rem 0 0 0;
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.zallpy .photo-with-subtitles {
+  transform: rotate(1deg);
+}
+.zallpy .photo-with-subtitles img {
+  max-width: 14rem;
+}
+
+.today {
+  margin-bottom: 8rem !important;
+}
+.today aside {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* Paris */
+  /* Passport */
+  /* Ottawa */
+  /* Lara and I */
+  /* Panda */
+}
+.today aside .photo:nth-of-type(1) {
+  transform: rotate(4deg);
+  margin-left: 4rem;
+  margin-right: 0rem;
+  margin-bottom: -3rem;
+}
+.today aside > img {
+  z-index: 99;
+  max-width: 15rem;
+  margin: -9rem 0 0rem -5rem;
+}
+.today aside .photo:nth-of-type(2) {
+  z-index: 97;
+  transform: rotate(-3deg);
+  max-width: 9rem;
+  margin: 0rem -12rem 0rem 0;
+}
+.today aside .photo:nth-of-type(3) {
+  max-width: 15rem;
+  margin-top: -6rem;
+  margin-left: -3rem;
+}
+.today aside .photo:nth-last-child(1) {
+  z-index: 99;
+  margin: -11rem -2rem 0rem 10rem;
+  transform: rotate(5deg);
+  max-width: 8rem;
 }
 
 @media (min-width: 600px) {
