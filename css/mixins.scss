@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "variables.scss";
 
 @mixin border-gradient-avatar {
@@ -30,21 +31,12 @@ $gradients: map-merge(
 
 @mixin border-gradient-sky($parent) {
   #{$parent} {
-    background: linear-gradient($background-color, $background-color) padding-box,
-      linear-gradient(to right, #82b4ff, #bff0ff) border-box;
+    background: linear-gradient($background-color, $background-color) padding-box, map.get($gradients, "sky") border-box;
     border-radius: 120px;
     border: 2px solid transparent;
   }
 }
 
-// Gradient backgrounds
-@mixin bg-gradient($parent, $gradient) {
-  #{$parent} {
-    background: $gradient;
-  }
-}
-
-// Gradient text
 @mixin text-gradient($parent, $gradient) {
   #{$parent} {
     background-image: $gradient;
@@ -55,25 +47,8 @@ $gradients: map-merge(
   }
 }
 
-@mixin link-gradient($parent, $gradient) {
-  #{$parent} {
-    background-image: $gradient;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-// Gradient Classes
-@each $gradient, $value in $gradients {
-  @include bg-gradient(".bg-gradient-#{$gradient}", $value);
-}
-
-// Gradient Classes
 @each $gradient, $value in $gradients {
   @include text-gradient(".text-gradient-#{$gradient}", $value);
 }
 
-// Gradient Classes
 @include border-gradient-sky(".border-gradient-sky");

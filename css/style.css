@@ -1,40 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Nanum+Pen+Script&display=swap&display=swap");
-.bg-gradient-lime {
-  background: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
-}
-
-.bg-gradient-mint {
-  background: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
-}
-
-.bg-gradient-sky {
-  background: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
-}
-
-.bg-gradient-peach {
-  background: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
-}
-
-.bg-gradient-sunset {
-  background: linear-gradient(to right, #fbae95 0%, #ab83fe 100%);
-}
-
-.bg-gradient-trackli {
-  background: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
-}
-
-.bg-gradient-certi {
-  background: linear-gradient(135deg, #ff942f 0%, #ffeaac 100%);
-}
-
-.bg-gradient-philips {
-  background: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
-}
-
-.bg-gradient-zallpy {
-  background: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
-}
-
 .text-gradient-lime {
   background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
   color: transparent;
@@ -108,7 +72,7 @@
 }
 
 .border-gradient-sky {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff, #bff0ff) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
