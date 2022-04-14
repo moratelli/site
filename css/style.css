@@ -227,21 +227,6 @@ body {
   margin-bottom: 0;
 }
 
-footer ul {
-  display: flex;
-  justify-content: space-between;
-}
-footer li {
-  flex: 0 1 27%;
-  font-size: 0.8rem;
-  text-align: center;
-}
-footer li > a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.7rem;
-}
-
 .photo,
 .photo-with-subtitles {
   background: #fcfafa;
@@ -317,14 +302,60 @@ footer li > a {
   max-width: 8rem;
 }
 
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer li {
+  flex: 0 1 27%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
 @media (min-width: 600px) {
-  .sales-points {
-    display: flex;
-    justify-content: space-between;
+  h1 {
+    font-size: 1.4rem;
+    margin: 0;
   }
 
-  .sales-point {
-    width: 30%;
+  h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  body {
+    font-size: 1rem;
+    margin: 5em;
+  }
+
+  .introduction,
+.skills {
+    margin: 0 2em 5em 2em;
+  }
+
+  .skills li span {
+    font-size: 1rem;
+  }
+
+  .info-bits li {
+    font-size: 0.8rem;
+  }
+
+  footer li {
+    font-size: 0.9rem;
+  }
+  footer li > a {
+    font-size: 2.5rem;
   }
 }
 
