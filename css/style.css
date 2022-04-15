@@ -1,109 +1,396 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #403e44;
-  background: #fffbf0;
-  line-height: 1.5;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap");
+.text-gradient-lime {
+  background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-main {
-  display: grid;
-  grid-auto-columns: auto;
-  grid-auto-rows: auto;
-  grid-template-areas:
-    "avatar"
-    "infos";
+.text-gradient-mint {
+  background-image: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-main > picture {
-  grid-area: avatar;
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0;
+.text-gradient-sky {
+  background-image: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-picture > img {
-  width: 16rem;
-  height: 100%;
-  max-width: 100%;
-  border-radius: 0.5rem;
+.text-gradient-peach {
+  background-image: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-sunset {
+  background-image: linear-gradient(to right, #fbae95 0%, #ab83fe 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-trackli {
+  background-image: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-certi {
+  background-image: linear-gradient(135deg, #ff942f 0%, #ffeaac 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-philips {
+  background-image: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-zallpy {
+  background-image: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-sky {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+h1,
+h2 {
+  font-family: "IBM Plex Mono", monospace;
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 1.3rem;
   margin: 0;
-  font-weight: 500;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   margin: 0;
-  font-weight: 400;
-  margin-top: -0.5rem;
 }
 
 h3 {
-  margin: 1rem 0 0.5rem 0;
-}
-
-main > article {
-  grid-area: infos;
-  margin: auto;
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1.25rem 0;
-}
-
-i {
-  color: #75cdc8;
-  font-size: 2.25rem;
-}
-
-a:hover,
-i:hover {
-  color: #fbc34a;
-}
-
-a {
-  text-decoration: dashed underline #fbc34a;
-  color: #75cdc8;
-}
-
-p {
+  font-size: 1rem;
   margin: 0;
 }
 
-/* Desktop */
-@media screen and (min-width: 1024px) {
-  main {
-    height: 100vh;
-    grid-auto-columns: 1fr;
-    grid-template-areas: "avatar infos";
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline dotted #f5f5f5;
+  -webkit-text-decoration-line: underline !important;
+  -webkit-text-decoration-color: #f5f5f5 !important;
+  -webkit-text-decoration-style: dotted !important;
+}
+
+p {
+  font-weight: 200;
+}
+
+body {
+  font-family: "DM Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #0d0d0d;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  margin: 3em 2em 3em 2em;
+  overflow-x: hidden;
+}
+
+.introduction {
+  text-align: center;
+  margin: 0 1em 5em 1em;
+}
+.introduction h1 {
+  font-weight: 400;
+}
+.introduction span {
+  font-weight: 700;
+}
+.introduction picture {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.introduction img {
+  padding: 2px;
+  max-width: 7rem;
+  margin-bottom: 2rem;
+  border-radius: 100%;
+  outline-offset: -4px;
+  border-left: 2 solid #82b4ff;
+  border-right: 2 solid #bff0ff;
+  background-image: -webkit-linear-gradient(135deg, #82b4ff, #bff0ff), -webkit-linear-gradient(135deg, #82b4ff, #bff0ff);
+  background-size: 100% 2;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.skills {
+  margin-bottom: 5rem;
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skills li {
+  display: inline-block;
+  padding: 0px 16px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+.skills li span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.journey article {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.journey h1 {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.journey header {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
+.journey header div {
+  flex: 1 0 70%;
+}
+.journey header img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.journey .photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.info-bits li {
+  background: #282828;
+  border: 1px solid #363636;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.info-bits li:nth-of-type(1) {
+  margin-top: 1.5rem;
+}
+.info-bits li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.photo,
+.photo-with-subtitles {
+  background: #fcfafa;
+  padding: 0.3rem;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  margin: 1.5rem 1rem 0rem 1rem;
+  align-self: center;
+  box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.5);
+}
+.photo img,
+.photo-with-subtitles img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-with-subtitles p {
+  margin: 0.25rem 0 0 0;
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.zallpy .photo-with-subtitles {
+  transform: rotate(1deg);
+}
+.zallpy .photo-with-subtitles img {
+  max-width: 14rem;
+}
+
+.today {
+  margin-bottom: 8rem !important;
+}
+.today aside {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* Paris */
+  /* Passport */
+  /* Ottawa */
+  /* Lara and I */
+  /* Panda */
+}
+.today aside .photo:nth-of-type(1) {
+  transform: rotate(4deg);
+  max-width: 17rem;
+  margin: 2rem 0rem -3rem 4rem;
+}
+.today aside > img {
+  align-self: center;
+  z-index: 99;
+  max-width: 15rem;
+  margin: -15rem 16rem 0rem 0rem;
+}
+.today aside .photo:nth-of-type(2) {
+  z-index: 97;
+  transform: rotate(-3deg);
+  max-width: 9rem;
+  margin: 0rem -13rem 0rem 0;
+}
+.today aside .photo:nth-of-type(3) {
+  max-width: 15rem;
+  margin-top: 0rem;
+  margin-left: -5rem;
+}
+.today aside .photo:nth-last-child(1) {
+  z-index: 99;
+  margin: -13rem -3rem 0rem 10rem;
+  transform: rotate(3deg);
+  max-width: 8rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer li {
+  flex: 0 1 27%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 481px) {
+  .introduction,
+.skills {
+    margin: 0 2em 5em 2em;
   }
 
-  main > picture {
-    align-content: center;
-    margin: auto 0;
-    border-right: 2px solid #fbc34a;
+  .skills li span {
+    font-size: 1rem;
   }
 
-  picture > img {
-    flex: 0 1 80%;
-    border-radius: 0.5rem;
+  .journey header img {
+    max-height: 3rem;
   }
 
-  main > article {
-    text-align: left;
-    margin: auto 3rem;
+  .info-bits li {
+    font-size: 0.8rem;
   }
 
-  nav {
-    width: 200px;
-    margin: 1.25rem 0;
-    justify-content: space-between;
+  footer li {
+    font-size: 0.9rem;
+  }
+  footer li > a {
+    font-size: 2.5rem;
   }
 }
+@media (min-width: 768px) {
+  body {
+    margin: 5em 10%;
+  }
+
+  .introduction,
+.skills {
+    margin: 0 13% 5em 13%;
+  }
+
+  .journey .school,
+.journey .zallpy,
+.journey .today {
+    flex-direction: row;
+  }
+  .journey .school > div,
+.journey .zallpy > div,
+.journey .today > div {
+    flex-direction: column;
+    flex: 0 1 50%;
+  }
+  .journey .school > div header,
+.journey .zallpy > div header,
+.journey .today > div header {
+    flex-direction: row;
+  }
+  .journey .school > div header img,
+.journey .zallpy > div header img,
+.journey .today > div header img {
+    align-self: center;
+  }
+  .journey .school .photo-container {
+    margin-left: 5%;
+  }
+  .journey .philips header img {
+    max-width: 8rem;
+  }
+
+  .info-bits {
+    flex-direction: row;
+  }
+
+  footer li {
+    font-size: 0.9rem;
+  }
+  footer li > a {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1281px) {
+  body {
+    margin: 5em 25%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

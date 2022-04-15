@@ -1,0 +1,374 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap");
+
+// Typography
+h1,
+h2 {
+  font-family: $ibm-plex;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+// Remove html fuckery
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline dotted #f5f5f5;
+  -webkit-text-decoration-line: underline !important;
+  -webkit-text-decoration-color: #f5f5f5 !important;
+  -webkit-text-decoration-style: dotted !important;
+}
+
+p {
+  font-weight: 200;
+}
+
+// IMPORTANT!
+// CSS IS MOBILE-FIRST!
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  margin: 3em 2em 3em 2em;
+  overflow-x: hidden;
+}
+
+.introduction {
+  text-align: center;
+  margin: 0 1em 5em 1em;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  picture {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+
+  img {
+    padding: 2px;
+    max-width: 7rem;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    outline-offset: -4px;
+    @include border-gradient-avatar();
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.skills {
+  margin-bottom: 5rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0px 16px;
+    line-height: 32px;
+    margin-bottom: 8px;
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.journey {
+  article {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+
+    div {
+      flex: 1 0 70%;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.info-bits {
+  li {
+    background: #282828;
+    border: 1px solid #363636;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+
+  li:nth-of-type(1) {
+    margin-top: 1.5rem;
+  }
+
+  li:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.photo,
+.photo-with-subtitles {
+  background: #fcfafa;
+  padding: 0.3rem;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  margin: 1.5rem 1rem 0rem 1rem;
+  align-self: center;
+  box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.5);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+.photo-with-subtitles {
+  p {
+    margin: 0.25rem 0 0 0;
+    text-align: center;
+    font-family: $nanum-pen;
+    font-size: 1.4rem;
+    color: black;
+  }
+}
+
+.zallpy {
+  .photo-with-subtitles {
+    transform: rotate(1deg);
+
+    img {
+      max-width: 14rem;
+    }
+  }
+}
+
+.today {
+  margin-bottom: 8rem !important;
+
+  aside {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    /* Paris */
+    .photo:nth-of-type(1) {
+      transform: rotate(4deg);
+      max-width: 17rem;
+      margin: 2rem 0rem -3rem 4rem;
+    }
+
+    /* Passport */
+    > img {
+      align-self: center;
+      z-index: 99;
+      max-width: 15rem;
+      margin: -15rem 16rem 0rem 0rem;
+    }
+
+    /* Ottawa */
+    .photo:nth-of-type(2) {
+      z-index: 97;
+      transform: rotate(-3deg);
+      max-width: 9rem;
+      margin: 0rem -13rem 0rem 0;
+    }
+
+    /* Lara and I */
+    .photo:nth-of-type(3) {
+      max-width: 15rem;
+      margin-top: 0rem;
+      margin-left: -5rem;
+    }
+
+    /* Panda */
+    .photo:nth-last-child(1) {
+      z-index: 99;
+      margin: -13rem -3rem 0rem 10rem;
+      transform: rotate(3deg);
+      max-width: 8rem;
+    }
+  }
+}
+
+footer {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    flex: 0 1 27%;
+    font-size: 0.8rem;
+    text-align: center;
+
+    > a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+// Tablets
+@media (min-width: 481px) {
+  .introduction,
+  .skills {
+    margin: 0 2em 5em 2em;
+  }
+
+  .skills li span {
+    font-size: 1rem;
+  }
+
+  .journey {
+    header {
+      img {
+        max-height: 3rem;
+      }
+    }
+  }
+
+  .info-bits li {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    li {
+      font-size: 0.9rem;
+
+      > a {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 768px) {
+  body {
+    margin: 5em 10%;
+  }
+
+  .introduction,
+  .skills {
+    margin: 0 13% 5em 13%;
+  }
+
+  .journey {
+    .school,
+    .zallpy,
+    .today {
+      flex-direction: row;
+
+      > div {
+        flex-direction: column;
+        flex: 0 1 50%;
+
+        header {
+          flex-direction: row;
+
+          img {
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .school {
+      .photo-container {
+        margin-left: 5%;
+      }
+    }
+
+    .philips {
+      header {
+        img {
+          max-width: 8rem;
+        }
+      }
+    }
+  }
+
+  .info-bits {
+    flex-direction: row;
+  }
+
+  footer {
+    li {
+      font-size: 0.9rem;
+
+      > a {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// Huge screens
+@media (min-width: 1281px) {
+  body {
+    margin: 5em 25%;
+  }
+}
