@@ -41,11 +41,6 @@ a {
   -webkit-text-decoration-style: dotted !important;
 }
 
-// hide desktop items
-.desktop {
-  display: none;
-}
-
 p {
   font-weight: 200;
 }
@@ -137,16 +132,16 @@ body {
       flex: 1 0 70%;
     }
 
-    picture {
-      flex: 0 1 30%;
-      align-self: center;
-    }
-
     img {
       max-width: 100%;
       max-height: 100%;
       display: block;
     }
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -276,29 +271,8 @@ footer {
   }
 }
 
-// Desktop
-@media (min-width: 600px) {
-  // Typography
-  h1 {
-    font-size: 1.4rem;
-    margin: 0;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-    margin: 0;
-  }
-
-  body {
-    font-size: 1rem;
-    margin: 5em;
-  }
-
+// Tablets
+@media (min-width: 481px) {
   .introduction,
   .skills {
     margin: 0 2em 5em 2em;
@@ -306,6 +280,14 @@ footer {
 
   .skills li span {
     font-size: 1rem;
+  }
+
+  .journey {
+    header {
+      img {
+        max-height: 3rem;
+      }
+    }
   }
 
   .info-bits li {
@@ -320,5 +302,73 @@ footer {
         font-size: 2.5rem;
       }
     }
+  }
+}
+
+// Desktop
+@media (min-width: 768px) {
+  body {
+    margin: 5em 10%;
+  }
+
+  .introduction,
+  .skills {
+    margin: 0 13% 5em 13%;
+  }
+
+  .journey {
+    .school,
+    .zallpy,
+    .today {
+      flex-direction: row;
+
+      > div {
+        flex-direction: column;
+        flex: 0 1 50%;
+
+        header {
+          flex-direction: row;
+
+          img {
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .school {
+      .photo-container {
+        margin-left: 5%;
+      }
+    }
+
+    .philips {
+      header {
+        img {
+          max-width: 8rem;
+        }
+      }
+    }
+  }
+
+  .info-bits {
+    flex-direction: row;
+  }
+
+  footer {
+    li {
+      font-size: 0.9rem;
+
+      > a {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+// Huge screens
+@media (min-width: 1281px) {
+  body {
+    margin: 5em 25%;
   }
 }
