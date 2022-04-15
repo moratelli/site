@@ -303,6 +303,46 @@ footer {
       }
     }
   }
+
+  .today {
+    > div {
+      margin-top: 8rem;
+      margin-right: 3rem;
+      flex: 0 1 50%;
+    }
+
+    aside {
+      /* Paris */
+      .photo:nth-of-type(1) {
+        max-width: 12rem;
+        margin: 2rem 0rem 0rem 4rem;
+      }
+
+      /* Passport */
+      > img {
+        max-width: 10rem;
+        margin: -15rem 10rem 0rem 0rem;
+      }
+
+      /* Ottawa */
+      .photo:nth-of-type(2) {
+        max-width: 9rem;
+        margin: -1rem -13rem 0rem 0;
+      }
+
+      /* Lara and I */
+      .photo:nth-of-type(3) {
+        max-width: 12rem;
+        margin-left: -5rem;
+      }
+
+      /* Panda */
+      .photo:nth-last-child(1) {
+        max-width: 6rem;
+        margin: -9rem -3rem 0rem 10rem;
+      }
+    }
+  }
 }
 
 // Desktop
@@ -321,7 +361,10 @@ footer {
     .zallpy,
     .today {
       flex-direction: row;
+    }
 
+    .school,
+    .zallpy {
       > div {
         flex-direction: column;
         flex: 0 1 50%;
@@ -337,6 +380,10 @@ footer {
     }
 
     .school {
+      > div header {
+        margin-top: 4rem;
+      }
+
       .photo-container {
         margin-left: 5%;
       }
