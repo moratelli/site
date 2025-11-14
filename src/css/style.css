@@ -256,29 +256,30 @@ body {
   max-width: 14rem;
 }
 
-.today {
-  margin-bottom: 8rem !important;
-}
 .today aside {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   /* Paris */
-  /* Passport */
-  /* Ottawa */
-  /* Lara and I */
-  /* Panda */
 }
 .today aside .photo:nth-of-type(1) {
   transform: rotate(4deg);
   max-width: 17rem;
   margin: 2rem 0rem -3rem 4rem;
 }
-.today aside > img {
+.today aside {
+  /* Passport */
+}
+.today aside > picture {
   align-self: center;
-  z-index: 99;
-  max-width: 15rem;
-  margin: -15rem 16rem 0rem 0rem;
+  z-index: 999;
+}
+.today aside > picture > img {
+  max-width: 20rem;
+  margin: 0rem 0rem -15rem -15rem;
+}
+.today aside {
+  /* Ottawa */
 }
 .today aside .photo:nth-of-type(2) {
   z-index: 97;
@@ -286,10 +287,16 @@ body {
   max-width: 9rem;
   margin: 0rem -13rem 0rem 0;
 }
+.today aside {
+  /* Lara and I */
+}
 .today aside .photo:nth-of-type(3) {
   max-width: 15rem;
-  margin-top: 0rem;
+  margin-top: -6rem;
   margin-left: -5rem;
+}
+.today aside {
+  /* Panda */
 }
 .today aside .photo:nth-last-child(1) {
   z-index: 99;
@@ -315,56 +322,47 @@ footer li > a {
 
 @media (min-width: 481px) {
   .introduction,
-.skills {
+  .skills {
     margin: 0 2em 5em 2em;
   }
-
   .skills li span {
     font-size: 1rem;
   }
-
   .journey header img {
     max-height: 3rem;
   }
-
   .info-bits li {
     font-size: 0.8rem;
   }
-
   footer li {
     font-size: 0.9rem;
   }
   footer li > a {
     font-size: 2.5rem;
   }
-
-  .today > div {
-    margin-top: 8rem;
-    margin-right: 3rem;
-    flex: 0 1 50%;
-  }
   .today aside {
     /* Paris */
-    /* Passport */
-    /* Ottawa */
-    /* Lara and I */
-    /* Panda */
   }
   .today aside .photo:nth-of-type(1) {
     max-width: 12rem;
     margin: 2rem 0rem 0rem 4rem;
   }
-  .today aside > img {
-    max-width: 10rem;
-    margin: -15rem 10rem 0rem 0rem;
+  .today aside {
+    /* Ottawa */
   }
   .today aside .photo:nth-of-type(2) {
     max-width: 9rem;
     margin: -1rem -13rem 0rem 0;
   }
+  .today aside {
+    /* Lara and I */
+  }
   .today aside .photo:nth-of-type(3) {
     max-width: 12rem;
     margin-left: -5rem;
+  }
+  .today aside {
+    /* Panda */
   }
   .today aside .photo:nth-last-child(1) {
     max-width: 6rem;
@@ -375,28 +373,26 @@ footer li > a {
   body {
     margin: 5em 10%;
   }
-
   .introduction,
-.skills {
+  .skills {
     margin: 0 13% 5em 13%;
   }
-
   .journey .school,
-.journey .zallpy,
-.journey .today {
+  .journey .zallpy,
+  .journey .today {
     flex-direction: row;
   }
   .journey .school > div,
-.journey .zallpy > div {
+  .journey .zallpy > div {
     flex-direction: column;
     flex: 0 1 50%;
   }
   .journey .school > div header,
-.journey .zallpy > div header {
+  .journey .zallpy > div header {
     flex-direction: row;
   }
   .journey .school > div header img,
-.journey .zallpy > div header img {
+  .journey .zallpy > div header img {
     align-self: center;
   }
   .journey .school > div header {
@@ -408,11 +404,14 @@ footer li > a {
   .journey .philips header img {
     max-width: 8rem;
   }
-
   .info-bits {
     flex-direction: row;
   }
-
+  .today > div {
+    margin-top: 8rem;
+    margin-right: 7rem;
+    flex: 0 1 50%;
+  }
   footer li {
     font-size: 0.9rem;
   }

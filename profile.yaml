@@ -1,0 +1,115 @@
+profile:
+  name: Pedro Moratelli
+  title: Tech Lead | Node.js | .NET | Flutter | React | Building Scalable Software for Global Clients
+  location: Florianópolis, Santa Catarina, Brazil
+contact:
+  email: pedromoratelli@gmail.com
+  linkedin: www.linkedin.com/in/pedromoratelli
+  personal_website: pedromoratelli.com
+  portfolio: github.com/moratelli
+summary: |
+  I'm a hands-on Tech Lead with over 5 years of experience bringing complex software to life for global clients like BMW Group, Philips, and Siemens. I build scalable APIs and high-performance apps with Node.js, .NET, Flutter, and React but what really drives me is helping teams find better, clearer ways to deliver reliable software that users love. I thrive on tackling tough technical challenges and breathing new life into legacy systems so they can grow with the business. Leading with mentorship and a focus on clear communication, I lean on Flow Metrics not just as numbers but as a way to make delivery predictable and less stressful for everyone whether my team is across the desk or halfway around the world. Before tech, I worked in education which shaped how I lead by valuing empathy, communication, and team wellbeing as the foundation for building strong, collaborative teams. Fluent in English and French, I love working in distributed environments where diverse perspectives create truly global impact.
+skills:
+  top_skills:
+    - Team Leadership
+    - React
+    - .NET Core
+  technologies:
+    backend: .NET Core, C#, Java, Kafka, Nest.js, Node.js, and Redis
+    frontend: Angular, Javascript, Jest, Playwright, Next.js, React.js, TailwindCSS, and Typescript
+    mobile: Flutter and Dart
+    databases: CosmosDB, MongoDB, MySQL, Oracle, and PostgreSQL
+    devops: AWS, Azure, Countly, Docker, Dynatrace, Firebase, Git, Github Actions, Grafana, Jenkins, Kibana, Kubernetes, and Terraform
+    ai: GitHub Copilot, Spec-Driven Development
+languages:
+  - language: English
+    proficiency: Full Professional
+  - language: Portuguese
+    proficiency: Native or Bilingual
+  - language: French
+    proficiency: Full Professional
+  - language: Spanish
+    proficiency: Professional Working
+  - language: German
+    proficiency: Limited Working
+certifications:
+  - EPEx Français B2
+  - Certified Scrum Master® (CSM®)
+  - GitLab Certified Git Associate
+  - Microsoft Certified: Azure Fundamentals
+experience:
+  - company: Zallpy Digital
+    duration: 4 years
+    roles:
+      - title: Tech Lead
+        dates: December 2024 - Present (1 year)
+        location: Florianópolis, Brazil
+        client: BMW Group
+        responsibilities:
+          - Leads a team of 6 developers responsible for the notification platform in the My BMW and MINI apps, managing the BFF and mobile display for over 11 million daily notifications.
+          - Championed the adoption of Monte Carlo forecasting over traditional task-level estimation, increasing team throughput by 26% and significantly improving delivery predictability.
+          - Drives quality and engineering excellence, maintaining a year-over-year defect rate under 4% across all delivered features.
+          - Mentors and coaches engineers to support technical growth, improve team maturity, and consistently achieve a Sprint commitment completion rate (Say/ Do ratio) above 90%.
+          - Architects new features and microservices using.NET and NestJS, continuously evolving the platform to support over 10 million active users.
+          - Collaborates with distributed teams in Brazil, Germany, Portugal, and China to align on architecture and deliver globally integrated product features.
+      - title: Full Stack Developer
+        dates: December 2021 - December 2024 (3 years 1 month)
+        location: Florianópolis, Brazil
+        client: BMW Group
+        responsibilities:
+          - Engineered the "Services" tab, a major feature in the My BMW and MINI apps used over 5 million times per day, owning both the Flutter front end and the NestJS/TypeScript BFF.
+          - Built a critical internal log investigation tool with Flutter Web, adopted by 20+ development teams, streamlining debugging with direct log access in Kibana.
+          - Developed a business-critical, event-driven API using .NET and Apache Kafka to deliver proactive vehicle maintenance alerts, enhancing customer engagement and supporting dealership revenue.
+          - Contributed to an internal web application built with React and Next.js, improving the operational efficiency of international support teams.
+          - Collaborated daily with distributed teams in Brazil, Germany, Portugal, and China to integrate systems and deliver features to a global user base.
+  - company: Philips
+    roles:
+      - title: Software Developer
+        dates: August 2021- December 2021 (5 months)
+        location: Florianópolis, Brazil
+        responsibilities:
+          - Worked on the maintenance and evolution of Tasy, a leading hospital management software used in over 450 hospitals and managing more than 30 million patients annually.
+          - Utilised Java 8, Angular, and JavaScript to refactor code smells, fix bugs, and implement new features based on client requests, ensuring continuous improvement of the system.
+  - company: Fundação CERTI
+    duration: 1 year 4 months
+    roles:
+      - title: Software Developer
+        dates: October 2020 - July 2021 (10 months)
+        location: Florianópolis, Brazil
+        responsibilities:
+          - Developed MVPs for large clients, including Siemens and Intelbras, building Android mobile apps with Flutter, APIs using Node.js, TypeScript, AWS Lambda, and PostgreSQL, and dashboards with React and TypeScript.
+          - Acted as Scrum Master for a developer team, ensuring agile delivery of innovative solutions.
+      - title: Software Developer Intern
+        dates: April 2020 October 2020 (7 months)
+        location: Florianópolis, Brazil
+        responsibilities:
+          - Contributed to the development of MVPs, including an Android mobile app with Flutter and an API with Node.js and AWS Lambda.
+          - Assisted a team in optimizing the performance of a React application, resolving latency issues.
+  - company: Trackli
+    roles:
+      - title: Full Stack Development Intern
+        dates: January 2020 - April 2020 (4 months)
+        location: Florianópolis, Brazil
+        responsibilities:
+          - Contributed to the implementation of Trackli's new device monitoring platform by developing a new frontend using HTML, CSS, JavaScript, and jQuery.
+          - Integrated the frontend with the existing PHP backend, supporting the platform's modernization.
+  - company: Santa Catarina State Department of Education
+    roles:
+      - title: Geography Teacher
+        dates: 2018-2020 (2 years)
+        location: Florianópolis, Brazil
+        responsibilities:
+          - Teached at Escola Jovem Jacó Anderle and Santa Catarina's Institute of Education (IEE).
+education:
+  - institution: Anhanguera Educacional
+    degree: Technologist
+    field: Analysis and Development of Computer Systems
+    dates: March 2021 December 2022
+  - institution: National Service of Industrial Learning / Santa Catarina
+    degree: Technician
+    field: Development of Computer Systems
+    dates: 2019-2020
+  - institution: Santa Catarina State University
+    degree: Bachelor's Degree
+    field: Geography
+    dates: 2010-2016
