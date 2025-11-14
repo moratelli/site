@@ -1,8 +1,9 @@
-@import "mixins.scss";
-@import "variables.scss";
+@import 'node_modules/modern-normalize/modern-normalize.css';
+@import 'mixins.scss';
+@import 'variables.scss';
 
 // Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap');
 
 // Typography
 h1,
@@ -205,8 +206,6 @@ body {
 }
 
 .today {
-  margin-bottom: 8rem !important;
-
   aside {
     display: flex;
     flex-wrap: nowrap;
@@ -220,11 +219,14 @@ body {
     }
 
     /* Passport */
-    > img {
+    > picture {
       align-self: center;
-      z-index: 99;
-      max-width: 15rem;
-      margin: -15rem 16rem 0rem 0rem;
+      z-index: 999;
+
+      > img {
+        max-width: 20rem;
+        margin: 0rem 0rem -15rem -15rem;
+      }
     }
 
     /* Ottawa */
@@ -238,7 +240,7 @@ body {
     /* Lara and I */
     .photo:nth-of-type(3) {
       max-width: 15rem;
-      margin-top: 0rem;
+      margin-top: -6rem;
       margin-left: -5rem;
     }
 
@@ -305,23 +307,11 @@ footer {
   }
 
   .today {
-    > div {
-      margin-top: 8rem;
-      margin-right: 3rem;
-      flex: 0 1 50%;
-    }
-
     aside {
       /* Paris */
       .photo:nth-of-type(1) {
         max-width: 12rem;
         margin: 2rem 0rem 0rem 4rem;
-      }
-
-      /* Passport */
-      > img {
-        max-width: 10rem;
-        margin: -15rem 10rem 0rem 0rem;
       }
 
       /* Ottawa */
@@ -400,6 +390,14 @@ footer {
 
   .info-bits {
     flex-direction: row;
+  }
+
+  .today {
+    > div {
+      margin-top: 8rem;
+      margin-right: 7rem;
+      flex: 0 1 50%;
+    }
   }
 
   footer {
