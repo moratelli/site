@@ -1,0 +1,67 @@
+{
+  "introduction": "Bonjour! Je suis <0>Pedro Moratelli</0>, <1>Tech Lead</1>.",
+  "skills": {
+    "title": "Compétences",
+    "list": [
+      "Leadership d'équipe",
+      ".NET Core",
+      "Node.js",
+      "React & Next.js",
+      "Flutter",
+      "TypeScript",
+      "Nest.JS",
+      "Kafka",
+      "Docker & Kubernetes",
+      "Azure & AWS",
+      "CI/CD",
+      "Projets internationaux"
+    ]
+  },
+  "myJourney": {
+    "title": "Mon Parcours Jusqu'à Présent",
+    "school": {
+      "paragraph_1": "Mon parcours en développement de logiciels a débuté au <0>SENAI</0> à Florianópolis.",
+      "paragraph_2": "C'est là que j'ai appris les fondements du développement web, y compris React, Node.js et SQL, ainsi que les principes des bonnes pratiques de développement."
+    },
+    "trackli": {
+      "dates": "Jan 2020 - Avr 2020",
+      "paragraph_1": "Mon premier rôle dans l'industrie a été un stage chez <0>Trackli</0>.",
+      "paragraph_2": "Durant cette période, j'ai aidé à moderniser la plateforme de suivi des appareils de l'entreprise, en développant un nouveau frontend avec HTML, CSS, JavaScript et jQuery, et en l'intégrant au backend PHP existant."
+    },
+    "certi": {
+      "dates": "Avr 2020 - Jul 2021",
+      "paragraph_1": "À la <0>Fundação CERTI</0>, j'ai travaillé à la création de produits minimums viables (MVPs) pour des clients majeurs tels que Siemens. Cela comprenait le développement d'une application Flutter qui collectait des données à partir d'appareils médicaux et les envoyait à une API AWS Lambda.",
+      "paragraph_2": "J'ai également créé des tableaux de bord pour les clients en utilisant React, Node.js et TypeScript. J'ai aussi assumé les fonctions de Scrum Master pour l'équipe, assurant la livraison de nos solutions en utilisant les méthodes agiles.",
+      "paragraph_3": "Ce rôle m'a beaucoup appris sur le développement agile. Pendant mon séjour à CERTI, j'ai aussi commencé mon diplôme de Technologue en Analyse et Développement de Systèmes à <0>Anhanguera</0> pour formaliser mes connaissances.",
+      "info_bits": [
+        "Fundação CERTI est un centre d'innovation qui crée des solutions de pointe pour de grands clients nationaux et internationaux."
+      ]
+    },
+    "philips": {
+      "dates": "Août 2021 - Déc 2021",
+      "paragraph_1": "J'ai travaillé à la maintenance et au développement de nouvelles fonctionnalités pour <0>Tasy</0>, un système intégré de gestion de soins de santé utilisé par plus de 900 institutions de santé au Brésil",
+      "paragraph_2": "J'ai encore amélioré mes compétences en développement web en utilisant AngularJS, JavaScript et Java"
+    },
+    "zallpy": {
+      "dates": "Déc 2021 - Présent",
+      "paragraph_1": "J'ai rejoint <0>Zallpy Digital</0> pour intégrer une équipe axée sur le développement mobile Full Stack. Nous développons des fonctionnalités pour les applications de BMW : <1>My BMW</1> et <2>MINI</2>",
+      "paragraph_2": "C'est amusant de travailler à nouveau avec Flutter et TypeScript. J'ai aussi l'occasion d'apprendre et d'appliquer des modèles de conception de logiciels modernes, comme les <0>BFF</0>",
+      "paragraph_3": "Aujourd'hui, en tant que Tech Lead, je dirige une équipe de six ingénieurs responsables de la plateforme de notifications, qui gère plus de 11 millions de notifications quotidiennes. J'agis comme mentor pour mon équipe, je conçois de nouveaux microservices en .NET et NestJS, et je me concentre sur la livraison prévisible, ce qui nous a aidés à augmenter le throughput de l'équipe de 26%.",
+      "paragraph_4": "Travailler à cette échelle exige une collaboration étroite avec des équipes distribuées en Allemagne, au Portugal et en Chine, tout en maintenant un taux de défauts inférieur à 4%. C'est un environnement fantastique pour grandir en matière de livraison de logiciels de haute qualité à l'échelle mondiale.",
+      "info_bits": [
+        "Les applications du groupe BMW desservent plus de 10 millions d'utilisateurs actifs et exigent des normes de qualité de code, de tests et de DevOps extrêmement élevées.",
+        "Mon rôle implique une collaboration quotidienne en anglais et en français avec des équipes distribuées au Brésil, en Allemagne, au Portugal et en Chine."
+      ]
+    }
+  },
+  "today": {
+    "title": "Aujourd'hui",
+    "paragraph_1": "Aujourd'hui, je me concentre sur la direction d'équipes et la résolution de défis techniques complexes et à grande échelle. Je suis toujours à la recherche d'opportunités pour bâtir des logiciels fiables et à fort impact dans des environnements mondiaux, et pour agir comme mentor auprès d'autres personnes, les aidant à se développer et à réussir dans leur propre carrière.",
+    "paragraph_2": "Pour compléter mon expérience en collaboration mondiale, je suis activement à la recherche d'opportunités sur site ou en mode hybride en Amérique du Nord et en Europe. Ma maîtrise professionnelle complète de l'anglais et du français, ainsi que mes compétences en allemand, me permet de m'intégrer facilement au sein d'équipes internationales et diversifiées."
+  },
+  "footer": {
+    "linkedIn": "N'hésitez pas à vous connecter avec moi sur <0>LinkedIn</0>",
+    "blog": "Consultez <0>mon blog</0> pour lire mes réflexions sur la tech et le marché",
+    "resume": "Vous cherchez <0>mon CV?</0> Cliquez sur l'icône ci-dessus pour le consulter"
+  }
+}

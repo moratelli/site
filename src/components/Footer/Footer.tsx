@@ -1,12 +1,10 @@
 import { Trans, useTranslation } from 'react-i18next'
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 
 export const Footer = () => {
-  const { t } = useTranslation()
+  const { i18n } = useTranslation()
 
   return (
     <footer>
-      <LanguageSwitcher />
       <nav>
         <ul>
           <li>
@@ -15,6 +13,7 @@ export const Footer = () => {
             </a>
             <p>
               <Trans
+                i18n={i18n}
                 i18nKey="footer.linkedIn"
                 components={[
                   <a
@@ -33,6 +32,7 @@ export const Footer = () => {
             </a>
             <p>
               <Trans
+                i18n={i18n}
                 i18nKey="footer.blog"
                 components={[
                   <a
@@ -51,6 +51,7 @@ export const Footer = () => {
             </a>
             <p>
               <Trans
+                i18n={i18n}
                 i18nKey="footer.resume"
                 components={[
                   <a
