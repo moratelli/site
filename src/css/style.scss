@@ -1,4 +1,4 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
 @import 'mixins.scss';
 @import 'variables.scss';
 
@@ -394,7 +394,9 @@ footer {
 
   .today {
     > div {
-      margin-top: 8rem;
+      margin-top: 3.5rem;
+      align-self: center;
+      vertical-align: middle;
       margin-right: 7rem;
       flex: 0 1 50%;
     }
