@@ -3,12 +3,12 @@
 @import 'variables.scss';
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
 
 // Typography
 h1,
 h2 {
-  font-family: $ibm-plex;
+  font-family: $sora;
 }
 
 h1 {
