@@ -275,7 +275,10 @@ footer {
 
 // Tablets
 @media (min-width: 481px) {
-  .introduction,
+  .introduction {
+    margin: 0 5em 3.5em 5em;
+  }
+
   .skills {
     margin: 0 2em 3.5em 2em;
   }
@@ -341,7 +344,9 @@ footer {
     margin: 5em 10%;
   }
 
-  .introduction,
+  .introduction {
+    margin: 0 15% 3.5em 15%;
+  }
   .skills {
     margin: 0 13% 3.5em 13%;
   }
