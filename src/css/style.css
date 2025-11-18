@@ -107,7 +107,8 @@ ul {
 a {
   font-weight: 600;
   cursor: pointer;
-  text-decoration: underline dotted #f5f5f5;
+  -webkit-text-decoration: underline dotted #f5f5f5;
+          text-decoration: underline dotted #f5f5f5;
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #f5f5f5 !important;
   -webkit-text-decoration-style: dotted !important;
@@ -128,9 +129,10 @@ body {
 
 .introduction {
   text-align: center;
-  margin: 0 1em 5em 1em;
+  margin: 0 1em 3em 1em;
 }
 .introduction h1 {
+  font-size: large;
   font-weight: 400;
 }
 .introduction span {
@@ -162,7 +164,7 @@ body {
 }
 
 .skills {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .skills ul {
   display: flex;
@@ -171,17 +173,16 @@ body {
 }
 .skills li {
   display: inline-block;
-  padding: 0px 16px;
-  line-height: 32px;
+  padding: 4px 12px;
   margin-bottom: 8px;
 }
 .skills li span {
-  font-size: 0.9rem;
+  font-size: normal;
   font-weight: 700;
 }
 
 .journey article {
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -262,14 +263,15 @@ body {
   flex-wrap: nowrap;
   flex-direction: column;
   /* Paris */
+  /* Passport */
+  /* Ottawa */
+  /* Lara and I */
+  /* Panda */
 }
 .today aside .photo:nth-of-type(1) {
   transform: rotate(4deg);
   max-width: 17rem;
   margin: 2rem 0rem -3rem 4rem;
-}
-.today aside {
-  /* Passport */
 }
 .today aside > picture {
   align-self: center;
@@ -279,25 +281,16 @@ body {
   max-width: 20rem;
   margin: 0rem 0rem -15rem -15rem;
 }
-.today aside {
-  /* Ottawa */
-}
 .today aside .photo:nth-of-type(2) {
   z-index: 97;
   transform: rotate(-3deg);
   max-width: 9rem;
   margin: 0rem -13rem 0rem 0;
 }
-.today aside {
-  /* Lara and I */
-}
 .today aside .photo:nth-of-type(3) {
   max-width: 15rem;
   margin-top: -6rem;
   margin-left: -5rem;
-}
-.today aside {
-  /* Panda */
 }
 .today aside .photo:nth-last-child(1) {
   z-index: 99;
@@ -324,10 +317,10 @@ footer li > a {
 @media (min-width: 481px) {
   .introduction,
   .skills {
-    margin: 0 2em 5em 2em;
+    margin: 0 2em 3.5em 2em;
   }
   .skills li span {
-    font-size: 1rem;
+    font-size: normal;
   }
   .journey header img {
     max-height: 3rem;
@@ -343,27 +336,21 @@ footer li > a {
   }
   .today aside {
     /* Paris */
+    /* Ottawa */
+    /* Lara and I */
+    /* Panda */
   }
   .today aside .photo:nth-of-type(1) {
     max-width: 12rem;
     margin: 2rem 0rem 0rem 4rem;
   }
-  .today aside {
-    /* Ottawa */
-  }
   .today aside .photo:nth-of-type(2) {
     max-width: 9rem;
     margin: -1rem -13rem 0rem 0;
   }
-  .today aside {
-    /* Lara and I */
-  }
   .today aside .photo:nth-of-type(3) {
     max-width: 12rem;
     margin-left: -5rem;
-  }
-  .today aside {
-    /* Panda */
   }
   .today aside .photo:nth-last-child(1) {
     max-width: 6rem;
@@ -376,7 +363,10 @@ footer li > a {
   }
   .introduction,
   .skills {
-    margin: 0 13% 5em 13%;
+    margin: 0 13% 3.5em 13%;
+  }
+  .journey .section-title {
+    margin-bottom: 0.5rem;
   }
   .journey .school,
   .journey .zallpy,
@@ -426,6 +416,4 @@ footer li > a {
   body {
     margin: 5em 25%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

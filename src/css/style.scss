@@ -59,9 +59,10 @@ body {
 
 .introduction {
   text-align: center;
-  margin: 0 1em 5em 1em;
+  margin: 0 1em 3em 1em;
 
   h1 {
+    font-size: large;
     font-weight: 400;
   }
 
@@ -91,7 +92,7 @@ body {
 }
 
 .skills {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   ul {
     display: flex;
@@ -101,12 +102,11 @@ body {
 
   li {
     display: inline-block;
-    padding: 0px 16px;
-    line-height: 32px;
+    padding: 4px 12px;
     margin-bottom: 8px;
 
     span {
-      font-size: 0.9rem;
+      font-size: normal;
       font-weight: 700;
     }
   }
@@ -114,7 +114,7 @@ body {
 
 .journey {
   article {
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -277,11 +277,11 @@ footer {
 @media (min-width: 481px) {
   .introduction,
   .skills {
-    margin: 0 2em 5em 2em;
+    margin: 0 2em 3.5em 2em;
   }
 
   .skills li span {
-    font-size: 1rem;
+    font-size: normal;
   }
 
   .journey {
@@ -343,10 +343,14 @@ footer {
 
   .introduction,
   .skills {
-    margin: 0 13% 5em 13%;
+    margin: 0 13% 3.5em 13%;
   }
 
   .journey {
+    .section-title {
+      margin-bottom: 0.5rem;
+    }
+
     .school,
     .zallpy,
     .today {
