@@ -30,6 +30,11 @@ export const Philips = () => {
             components={[
               <a
                 className="text-gradient-philips"
+                href="https://www.philips.com.br/healthcare"
+                target="_blank"
+              />,
+              <a
+                className="text-gradient-philips"
                 href="https://www.philips.com.br/healthcare/resources/landing/solucao-tasy"
                 target="_blank"
               />,

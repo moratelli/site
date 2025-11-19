@@ -66,7 +66,7 @@
     },
     "philips": {
       "dates": "Ago 2021 - Dez 2021",
-      "paragraph1": "Em seguida, mudei para a Philips, onde trabalhei na manutenção e evolução do <0>Tasy</0>, um sistema de gestão hospitalar de grande escala usado por centenas de hospitais e que gerencia milhões de registros de pacientes.",
+      "paragraph1": "Em seguida, mudei para a <0>Philips</0>, onde trabalhei na manutenção e evolução do <1>Tasy</1>, um sistema de gestão hospitalar de grande escala usado por centenas de hospitais e que gerencia milhões de registros de pacientes.",
       "paragraph2": "Este papel fortaleceu minhas habilidades em software empresarial, pois utilizei Java, Angular e JavaScript para refatorar código, corrigir bugs e implementar novas funcionalidades solicitadas por clientes.",
       "tags": [
         "Java",
