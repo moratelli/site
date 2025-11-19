@@ -227,7 +227,7 @@ body {
   justify-content: center;
 }
 .journey .tags {
-  margin-top: 0.5rem;
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
@@ -240,7 +240,6 @@ body {
   font-size: 0.7rem;
   display: inline-block;
   padding: 4px 12px;
-  margin-bottom: 8px;
 }
 
 .info-bits li {
