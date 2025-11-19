@@ -1,5 +1,5 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap");
 .text-gradient-lime {
   background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
   color: transparent;
@@ -73,16 +73,20 @@
 }
 
 .border-gradient-sky {
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sunset {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 h1,
 h2 {
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 h1 {
@@ -110,7 +114,7 @@ a {
   font-weight: 600;
   cursor: pointer;
   -webkit-text-decoration: underline dotted #f5f5f5;
-  text-decoration: underline dotted #f5f5f5;
+          text-decoration: underline dotted #f5f5f5;
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #f5f5f5 !important;
   -webkit-text-decoration-style: dotted !important;
@@ -121,23 +125,11 @@ p {
 }
 
 body {
-  font-family:
-    'DM Sans',
-    sans-serif,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: "DM Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #0d0d0d;
   font-size: 0.9rem;
   color: #f5f5f5;
-  margin: 3em 2em 3em 2em;
+  margin: 3em 2em 1em 2em;
   overflow-x: hidden;
 }
 
@@ -160,19 +152,10 @@ body {
   padding: 2px;
   max-width: 7rem;
   margin-bottom: 2rem;
-  border-radius: 100%;
   outline-offset: -4px;
-  border-left: 2 solid #82b4ff;
-  border-right: 2 solid #bff0ff;
-  background-image:
-    -webkit-linear-gradient(135deg, #82b4ff, #bff0ff),
-    -webkit-linear-gradient(135deg, #82b4ff, #bff0ff);
-  background-size: 100% 2;
-  background-position:
-    0 100%,
-    0 0;
-  background-repeat: no-repeat;
-  background-clip: border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
 }
 
 .section-title {
@@ -200,7 +183,7 @@ body {
 }
 
 .journey article {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -211,7 +194,7 @@ body {
 .journey header {
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .journey header div {
   flex: 1 0 70%;
@@ -225,6 +208,22 @@ body {
   display: flex;
   justify-content: center;
 }
+.journey .tags {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.journey .tag {
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 4px;
+  font-family: "Sora", sans-serif;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 8px;
+}
 
 .info-bits li {
   background: #282828;
@@ -237,7 +236,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .info-bits li:nth-of-type(1) {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 .info-bits li:nth-last-child(1) {
   margin-bottom: 0;
@@ -264,7 +263,7 @@ body {
 .photo-with-subtitles p {
   margin: 0.25rem 0 0 0;
   text-align: center;
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Nanum Pen Script", cursive;
   font-size: 1.4rem;
   color: black;
 }
@@ -329,7 +328,7 @@ footer li {
 footer li > a {
   color: white;
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 481px) {
@@ -379,7 +378,7 @@ footer li > a {
 }
 @media (min-width: 768px) {
   body {
-    margin: 5em 10%;
+    margin: 5em 10% 1rem 10%;
   }
   .introduction {
     margin: 0 15% 3.5em 15%;
@@ -417,6 +416,9 @@ footer li > a {
   .journey .philips header img {
     max-width: 8rem;
   }
+  .journey .zallpy {
+    margin-bottom: 0;
+  }
   .info-bits {
     flex-direction: row;
   }
@@ -436,6 +438,6 @@ footer li > a {
 }
 @media (min-width: 1281px) {
   body {
-    margin: 5em 25%;
+    margin: 5em 25% 1rem 25%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
