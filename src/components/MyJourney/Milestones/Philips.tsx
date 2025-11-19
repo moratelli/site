@@ -1,8 +1,10 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { philips1xWebp, philips2xWebp, philipsPng } from '../../../assets/assets'
+import { Tags } from '../../Tags/Tags'
 
 export const Philips = () => {
   const { t, i18n } = useTranslation()
+  const tags = t('myJourney.philips.tags', { returnObjects: true }) as string[]
 
   return (
     <article className="philips">
@@ -35,6 +37,7 @@ export const Philips = () => {
           />
         </p>
         <p>{t('myJourney.philips.paragraph2')}</p>
+        <Tags tags={tags} />
       </div>
     </article>
   )

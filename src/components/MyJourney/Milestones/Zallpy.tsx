@@ -8,11 +8,13 @@ import {
   zallpy2xWebp,
   zallpyPng,
 } from '../../../assets/assets'
+import { Tags } from '../../Tags/Tags'
 
 export const Zallpy = () => {
   const { t, i18n } = useTranslation()
 
   const infoBits: string[] = t('myJourney.zallpy.infoBits', { returnObjects: true })
+  const tags: string[] = t('myJourney.zallpy.tags', { returnObjects: true })
 
   return (
     <article className="zallpy">
@@ -65,11 +67,6 @@ export const Zallpy = () => {
             ]}
           />
         </p>
-        <ul className="info-bits">
-          {infoBits.map((bit, i) => (
-            <li key={i}>{bit}</li>
-          ))}
-        </ul>
         <p>
           <Trans
             i18n={i18n}
@@ -97,6 +94,12 @@ export const Zallpy = () => {
             ]}
           />
         </p>
+        <Tags tags={tags} />
+        <ul className="info-bits">
+          {infoBits.map((bit, i) => (
+            <li key={i}>{bit}</li>
+          ))}
+        </ul>
       </div>
       <div className="photo-container">
         <div className="photo-with-subtitles">

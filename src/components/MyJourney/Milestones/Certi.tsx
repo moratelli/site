@@ -1,10 +1,12 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { certi1xWebp, certi2xWebp, certiPng } from '../../../assets/assets'
+import { Tags } from '../../Tags/Tags'
 
 export const Certi = () => {
   const { t, i18n } = useTranslation()
 
   const infoBits = t('myJourney.certi.infoBits', { returnObjects: true }) as string[]
+  const tags = t('myJourney.certi.tags', { returnObjects: true }) as string[]
 
   return (
     <article className="certi">
@@ -42,6 +44,7 @@ export const Certi = () => {
             ]}
           />
         </p>
+        <Tags tags={tags} />
         <ul className="info-bits">
           {infoBits.map((b) => (
             <li key={b}>{b}</li>

@@ -87,13 +87,14 @@
       ],
       "tags": [
         ".NET",
+        "Node.js",
+        "React",
+        "TypeScript",
         "NestJS",
         "Flutter",
-        "TypeScript",
-        "React",
-        "Kafka",
+        "Next.js",
         "Azure",
-        "AWS"
+        "CI/CD"
       ]
     }
   },

@@ -76,7 +76,7 @@
     },
     "zallpy": {
       "dates": "Dez 2021 - Presente",
-      "photoCaption": "NO ESCRITÓRIO",
+      "photoCaption": "NA FIRMA",
       "paragraph1": "Entrei na <0>Zallpy Digital</0> para integrar uma equipe trabalhando diretamente com o BMW Group em seus aplicativos móveis globais: <1>My BMW</1> e <2>MINI</2>.",
       "paragraph2": "Como Desenvolvedor Full Stack, eu projetei a aba \"Serviços\", um recurso central usado mais de 5 milhões de vezes por dia, construindo tanto o frontend em Flutter quanto o Backend-for-Frontend em NestJS. Essa experiência me permitiu aprofundar meu domínio em <0>arquiteturas BFF</0> e outros padrões modernos de design.",
       "paragraph3": "Agora, como Tech Lead, lidero uma equipe de seis engenheiros responsável pela plataforma de notificações, que lida com mais de 11 milhões de notificações diárias. Eu mentoro minha equipe, arquitetando novos microsserviços em .NET e NestJS, e <0>foco em entregas previsíveis</0>, o que nos ajudou a aumentar o throughput do time em 26%.",
@@ -87,13 +87,14 @@
       ],
       "tags": [
         ".NET",
+        "Node.js",
+        "React",
+        "TypeScript",
         "NestJS",
         "Flutter",
-        "TypeScript",
-        "React",
-        "Kafka",
+        "Next.js",
         "Azure",
-        "AWS"
+        "CI/CD"
       ]
     }
   },
