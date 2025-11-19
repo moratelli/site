@@ -12,7 +12,17 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
 
   const handleChange = (lng: SupportedLanguage) => {
-    i18n.changeLanguage(lng)
+    // Save current scroll position as percentage of total height
+    const scrollPercentage = window.scrollY / document.documentElement.scrollHeight
+
+    i18n.changeLanguage(lng).then(() => {
+      // Wait for content to re-render
+      requestAnimationFrame(() => {
+        // Restore scroll position relative to new content height
+        const newScrollPosition = scrollPercentage * document.documentElement.scrollHeight
+        window.scrollTo({ top: newScrollPosition, behavior: 'smooth' })
+      })
+    })
   }
 
   return (
