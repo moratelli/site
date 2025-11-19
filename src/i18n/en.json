@@ -66,7 +66,7 @@
     },
     "philips": {
       "dates": "Aug 2021 - Dec 2021",
-      "paragraph1": "I then moved to Philips, where I worked on the maintenance and evolution of <0>Tasy</0>, a large-scale hospital management system used by hundreds of hospitals and managing millions of patient records.",
+      "paragraph1": "I then moved to <0>Philips</0>, where I worked on the maintenance and evolution of <1>Tasy</1>, a large-scale hospital management system used by hundreds of hospitals and managing millions of patient records.",
       "paragraph2": "This role strengthened my enterprise software skills, as I utilised Java, Angular, and JavaScript to refactor code, resolve bugs, and implement new client-requested features.",
       "tags": [
         "Java",
@@ -87,13 +87,14 @@
       ],
       "tags": [
         ".NET",
+        "Node.js",
+        "React",
+        "TypeScript",
         "NestJS",
         "Flutter",
-        "TypeScript",
-        "React",
-        "Kafka",
+        "Next.js",
         "Azure",
-        "AWS"
+        "CI/CD"
       ]
     }
   },

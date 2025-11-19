@@ -1,8 +1,10 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { trackli1xWebp, trackli2xWebp, trackliPng } from '../../../assets/assets'
+import { Tags } from '../../Tags/Tags'
 
 export const Trackli = () => {
   const { t, i18n } = useTranslation()
+  const tags = t('myJourney.trackli.tags', { returnObjects: true }) as string[]
 
   return (
     <article className="trackli">
@@ -29,6 +31,7 @@ export const Trackli = () => {
           ]}
         />
         <p>{t('myJourney.trackli.paragraph2')}</p>
+        <Tags tags={tags} />
       </div>
     </article>
   )

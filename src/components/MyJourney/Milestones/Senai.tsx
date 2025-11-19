@@ -8,9 +8,11 @@ import {
   senai2xWebp,
   senaiPng,
 } from '../../../assets/assets'
+import { Tags } from '../../Tags/Tags'
 
 export const Senai = () => {
   const { t, i18n } = useTranslation()
+  const tags = t('myJourney.school.tags', { returnObjects: true }) as string[]
 
   return (
     <article className="school">
@@ -37,6 +39,7 @@ export const Senai = () => {
           ]}
         />
         <p>{t('myJourney.school.paragraph2')}</p>
+        <Tags tags={tags} />
       </div>
       <div className="photo-container">
         <div className="photo-with-subtitles">

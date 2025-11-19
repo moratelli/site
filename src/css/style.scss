@@ -53,7 +53,7 @@ body {
   background-color: $background-color;
   font-size: 0.9rem;
   color: #f5f5f5;
-  margin: 3em 2em 3em 2em;
+  margin: 3em 2em 1em 2em;
   overflow-x: hidden;
 }
 
@@ -79,9 +79,8 @@ body {
     padding: 2px;
     max-width: 7rem;
     margin-bottom: 2rem;
-    border-radius: 100%;
     outline-offset: -4px;
-    @include border-gradient-avatar();
+    @include border-gradient-sunset();
   }
 }
 
@@ -114,7 +113,7 @@ body {
 
 .journey {
   article {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
   }
@@ -127,7 +126,7 @@ body {
   header {
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     div {
       flex: 1 0 70%;
@@ -144,6 +143,24 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .tags {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .tag {
+    border: 1px solid #4b5563;
+    color: #9ca3af;
+    border-radius: 4px;
+    font-family: $sora;
+    font-size: 0.7rem;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+  }
 }
 
 .info-bits {
@@ -159,7 +176,7 @@ body {
   }
 
   li:nth-of-type(1) {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   li:nth-last-child(1) {
@@ -268,7 +285,7 @@ footer {
     > a {
       color: white;
       text-decoration: none;
-      font-size: 1.7rem;
+      font-size: 2rem;
     }
   }
 }
@@ -341,7 +358,7 @@ footer {
 // Desktop
 @media (min-width: 768px) {
   body {
-    margin: 5em 10%;
+    margin: 5em 10% 1rem 10%;
   }
 
   .introduction {
@@ -395,6 +412,10 @@ footer {
         }
       }
     }
+
+    .zallpy {
+      margin-bottom: 0;
+    }
   }
 
   .info-bits {
@@ -425,6 +446,6 @@ footer {
 // Huge screens
 @media (min-width: 1281px) {
   body {
-    margin: 5em 25%;
+    margin: 5em 25% 1rem 25%;
   }
 }

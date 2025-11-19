@@ -15,11 +15,13 @@ export interface TranslationSchema {
       dates: string
       paragraph1: string
       paragraph2: string
+      tags: string[]
     }
     trackli: {
       dates: string
       paragraph1: string
       paragraph2: string
+      tags: string[]
     }
     certi: {
       dates: string
@@ -27,11 +29,13 @@ export interface TranslationSchema {
       paragraph2: string
       paragraph3: string
       infoBits: string[]
+      tags: string[]
     }
     philips: {
       dates: string
       paragraph1: string
       paragraph2: string
+      tags: string[]
     }
     zallpy: {
       dates: string
@@ -41,6 +45,7 @@ export interface TranslationSchema {
       paragraph4: string
       infoBits: string[]
       photo_caption?: string
+      tags: string[]
     }
   }
   today: {
