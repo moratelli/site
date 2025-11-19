@@ -1,14 +1,14 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
 @import 'mixins.scss';
 @import 'variables.scss';
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
 
 // Typography
 h1,
 h2 {
-  font-family: $ibm-plex;
+  font-family: $sora;
 }
 
 h1 {
@@ -59,9 +59,10 @@ body {
 
 .introduction {
   text-align: center;
-  margin: 0 1em 5em 1em;
+  margin: 0 1em 3em 1em;
 
   h1 {
+    font-size: large;
     font-weight: 400;
   }
 
@@ -91,7 +92,7 @@ body {
 }
 
 .skills {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   ul {
     display: flex;
@@ -101,12 +102,11 @@ body {
 
   li {
     display: inline-block;
-    padding: 0px 16px;
-    line-height: 32px;
+    padding: 4px 12px;
     margin-bottom: 8px;
 
     span {
-      font-size: 0.9rem;
+      font-size: normal;
       font-weight: 700;
     }
   }
@@ -114,7 +114,7 @@ body {
 
 .journey {
   article {
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -275,13 +275,16 @@ footer {
 
 // Tablets
 @media (min-width: 481px) {
-  .introduction,
+  .introduction {
+    margin: 0 5em 3.5em 5em;
+  }
+
   .skills {
-    margin: 0 2em 5em 2em;
+    margin: 0 2em 3.5em 2em;
   }
 
   .skills li span {
-    font-size: 1rem;
+    font-size: normal;
   }
 
   .journey {
@@ -341,12 +344,18 @@ footer {
     margin: 5em 10%;
   }
 
-  .introduction,
+  .introduction {
+    margin: 0 15% 3.5em 15%;
+  }
   .skills {
-    margin: 0 13% 5em 13%;
+    margin: 0 13% 3.5em 13%;
   }
 
   .journey {
+    .section-title {
+      margin-bottom: 0.5rem;
+    }
+
     .school,
     .zallpy,
     .today {
@@ -394,7 +403,9 @@ footer {
 
   .today {
     > div {
-      margin-top: 8rem;
+      margin-top: 3.5rem;
+      align-self: center;
+      vertical-align: middle;
       margin-right: 7rem;
       flex: 0 1 50%;
     }

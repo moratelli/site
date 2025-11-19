@@ -1,6 +1,9 @@
+import { Trans, useTranslation } from 'react-i18next'
 import { avatar1xWebp, avatar2xWebp, avatar3xWebp, avatarJpeg } from '../../assets/assets'
 
 export const Introduction = () => {
+  const { i18n } = useTranslation()
+
   return (
     <header className="introduction">
       <picture>
@@ -17,9 +20,21 @@ export const Introduction = () => {
         />
       </picture>
       <h1>
-        Hello! <br />
-        I'm <span className="text-gradient-mint">Pedro Moratelli</span>, a{' '}
-        <span className="text-gradient-sunset">Tech Lead</span>.
+        <Trans
+          i18n={i18n}
+          i18nKey="introduction.paragraph1"
+          components={[<span className="text-gradient-mint" />]}
+        />
+      </h1>
+      <h1>
+        <Trans
+          i18n={i18n}
+          i18nKey="introduction.paragraph2"
+          components={[
+            <span className="text-gradient-sunset" />,
+            <span className="text-gradient-sky" />,
+          ]}
+        />
       </h1>
     </header>
   )

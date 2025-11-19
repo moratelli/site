@@ -1,11 +1,14 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Footer } from './components/Footer/Footer'
 import { Introduction } from './components/Introduction/Introduction'
-import { MyDevJourney } from './components/MyDevJourney/MyDevJourney'
+import { MyJourney } from './components/MyJourney/MyJourney'
 import { Skills } from './components/Skills/Skills'
 import './css/style.css'
 
 function App() {
+  const { i18n } = useTranslation()
+
   useEffect(() => {
     const myBmwLink = document.getElementById('myBmwLink') as HTMLAnchorElement
     const miniLink = document.getElementById('miniLink') as HTMLAnchorElement
@@ -19,12 +22,19 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    // keep <html lang="..."> in sync for accessibility and SEO
+    if (i18n && i18n.language) {
+      document.documentElement.lang = i18n.language
+    }
+  }, [i18n])
+
   return (
     <>
       <Introduction />
       <main>
         <Skills />
-        <MyDevJourney />
+        <MyJourney />
       </main>
       <Footer />
     </>

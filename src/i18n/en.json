@@ -1,0 +1,110 @@
+{
+  "introduction": {
+    "paragraph1": "Hello! I'm <0>Pedro Moratelli</0>.",
+    "paragraph2": "I am a <0>Tech Lead</0> specialising in high-performance web and mobile applications for <1>global clients</1>."
+  },
+  "clientsTitle": "Trusted by",
+  "skills": {
+    "title": "Skills",
+    "list": [
+      "Team Leadership",
+      ".NET Core",
+      "Node.js",
+      "React & Next.js",
+      "Flutter",
+      "TypeScript",
+      "Nest.JS",
+      "Kafka",
+      "Docker & Kubernetes",
+      "Azure & AWS",
+      "CI/CD",
+      "International Projects"
+    ]
+  },
+  "myJourney": {
+    "title": "My Journey So Far",
+    "school": {
+      "dates": "2019 - 2020",
+      "title": "Education",
+      "photoCaption": "CLASS AT SENAI",
+      "paragraph1": "My software development journey began at <0>SENAI</0> in Florianópolis.",
+      "paragraph2": "That is where I learned the fundamentals of web development, including React, Node.js, and SQL, alongside the principles of good software practices.",
+      "tags": [
+        "React",
+        "Node.js",
+        "SQL"
+      ]
+    },
+    "trackli": {
+      "dates": "Jan 2020 - Apr 2020",
+      "paragraph1": "My first role in the industry was an internship at <0>Trackli</0>.",
+      "paragraph2": "During my time there, I helped modernise the company's device monitoring platform, developing a new frontend with HTML, CSS, JavaScript, and jQuery, and integrating it with the existing PHP backend.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "PHP"
+      ]
+    },
+    "certi": {
+      "dates": "Apr 2020 - Jul 2021",
+      "paragraph1": "At <0>Fundação CERTI</0>, I worked on building Minimum Viable Products for major clients like Siemens. This included developing a Flutter app that sent data from medical devices to an AWS Lambda API.",
+      "paragraph2": "I also built client dashboards using React, Node.js, and TypeScript. I also took on Scrum Master duties for the team, ensuring we delivered our solutions using agile methods.",
+      "paragraph3": "This role taught me a great deal about agile development. Whilst at CERTI, I also began my Technologist degree in Analysis and Development of Computer Systems at <0>Anhanguera</0> to formalise my knowledge.",
+      "infoBits": [
+        "Fundação CERTI is an innovation centre that builds cutting-edge solutions for major national and international clients."
+      ],
+      "tags": [
+        "Flutter",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "PostgreSQL"
+      ]
+    },
+    "philips": {
+      "dates": "Aug 2021 - Dec 2021",
+      "paragraph1": "I then moved to Philips, where I worked on the maintenance and evolution of <0>Tasy</0>, a large-scale hospital management system used by hundreds of hospitals and managing millions of patient records.",
+      "paragraph2": "This role strengthened my enterprise software skills, as I utilised Java, Angular, and JavaScript to refactor code, resolve bugs, and implement new client-requested features.",
+      "tags": [
+        "Java",
+        "Angular",
+        "JavaScript"
+      ]
+    },
+    "zallpy": {
+      "dates": "Dec 2021 - Present",
+      "photoCaption": "IN THE OFFICE",
+      "paragraph1": "I joined <0>Zallpy Digital</0> to integrate a team working directly with the BMW Group on their global mobile applications: <1>My BMW</1> and <2>MINI</2>.",
+      "paragraph2": "As a Full Stack Developer, I engineered the \"Services\" tab, a core feature used over 5 million times daily, building both the Flutter frontend and the NestJS Backend-for-Frontend. This role allowed me to deepen my expertise in <0>BFF architectures</0> and other modern design patterns.",
+      "paragraph3": "Now as a Tech Lead, I lead a team of six engineers responsible for the notification platform, which handles over 11 million daily notifications. I mentor my team, architect new microservices in .NET and NestJS, and <0>focus on predictable delivery</0>, which has helped us increase our team's throughput by 26%.",
+      "paragraph4": "Working at this scale requires <0>close collaboration with distributed teams in Germany, Portugal, and China</0>, all whilst maintaining a defect rate under 4%. It is a fantastic environment for growing in high-quality, global software delivery.",
+      "infoBits": [
+        "The BMW Group's applications serve over 10 million active users and demand extremely high standards for code quality, testing, and DevOps.",
+        "I also developed a React-based internal tool that enables support and marketing teams to manage campaigns and send notifications efficiently."
+      ],
+      "tags": [
+        ".NET",
+        "NestJS",
+        "Flutter",
+        "TypeScript",
+        "React",
+        "Kafka",
+        "Azure",
+        "AWS"
+      ]
+    }
+  },
+  "today": {
+    "title": "Today",
+    "paragraph1": "Today, I am focused on leading teams and tackling complex, large-scale technical challenges. I am always looking for opportunities to build reliable, high-impact software in global environments and to mentor others, helping them grow and succeed in their own careers.",
+    "paragraph2": "To complement my experience in global collaboration, I am actively seeking on-site or hybrid opportunities in North America and Europe. My full professional fluency in English and French, along with my German skills, allows me to integrate seamlessly into diverse, international teams."
+  },
+  "footer": {
+    "blog": "Check out <0>my blog</0> for my thoughts on tech",
+    "linkedIn": "Think my profile matches a job post? Let's chat on <0>LinkedIn</0>",
+    "github": "Curious about my code? Check out my <0>GitHub</0>"
+  }
+}
