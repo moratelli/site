@@ -28,8 +28,8 @@ export const Today = () => {
     <article className="today">
       <div>
         <h1 className="text-gradient-lime">{t('today.title', 'Today')}</h1>
-        <p>{t('today.paragraph_1')}</p>
-        <p>{t('today.paragraph_2')}</p>
+        <p>{t('today.paragraph1')}</p>
+        <p>{t('today.paragraph2')}</p>
       </div>
       <aside>
         <picture>

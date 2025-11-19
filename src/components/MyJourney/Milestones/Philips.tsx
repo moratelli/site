@@ -24,7 +24,7 @@ export const Philips = () => {
         <p>
           <Trans
             i18n={i18n}
-            i18nKey="myJourney.philips.paragraph_1"
+            i18nKey="myJourney.philips.paragraph1"
             components={[
               <a
                 className="text-gradient-philips"
@@ -34,7 +34,7 @@ export const Philips = () => {
             ]}
           />
         </p>
-        <p>{t('myJourney.philips.paragraph_2')}</p>
+        <p>{t('myJourney.philips.paragraph2')}</p>
       </div>
     </article>
   )

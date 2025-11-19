@@ -12,7 +12,7 @@ import {
 export const Zallpy = () => {
   const { t, i18n } = useTranslation()
 
-  const infoBits: string[] = t('myJourney.zallpy.info_bits', { returnObjects: true })
+  const infoBits: string[] = t('myJourney.zallpy.infoBits', { returnObjects: true })
 
   return (
     <article className="zallpy">
@@ -34,7 +34,7 @@ export const Zallpy = () => {
         <p>
           <Trans
             i18n={i18n}
-            i18nKey="myJourney.zallpy.paragraph_1"
+            i18nKey="myJourney.zallpy.paragraph1"
             components={[
               <a className="text-gradient-zallpy" href="https://zallpy.com" target="_blank" />,
               <a
@@ -55,7 +55,7 @@ export const Zallpy = () => {
         <p>
           <Trans
             i18n={i18n}
-            i18nKey="myJourney.zallpy.paragraph_2"
+            i18nKey="myJourney.zallpy.paragraph2"
             components={[
               <a
                 href="https://medium.com/mobilepeople/backend-for-frontend-pattern-why-you-need-to-know-it-46f94ce420b0"
@@ -70,6 +70,33 @@ export const Zallpy = () => {
             <li key={i}>{bit}</li>
           ))}
         </ul>
+        <p>
+          <Trans
+            i18n={i18n}
+            i18nKey="myJourney.zallpy.paragraph3"
+            components={[
+              <a
+                href="https://www.linkedin.com/posts/pedromoratelli_agile-scrum-flowmetrics-activity-7338234241899462656-EAyW?utm_source=share&utm_medium=member_desktop&rcm=ACoAACsD5ugBhJw4o-_p8ThGeHy_m-nO7QErcag0"
+                target="_blank"
+                className="text-gradient-zallpy"
+              />,
+            ]}
+          />
+        </p>
+        <p>
+          {' '}
+          <Trans
+            i18n={i18n}
+            i18nKey="myJourney.zallpy.paragraph4"
+            components={[
+              <a
+                href="https://www.linkedin.com/posts/pedromoratelli_last-week-i-was-invited-to-our-projects-activity-7307856358991683584-_lqZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACsD5ugBhJw4o-_p8ThGeHy_m-nO7QErcag"
+                target="_blank"
+                className="text-gradient-zallpy"
+              />,
+            ]}
+          />
+        </p>
       </div>
       <div className="photo-container">
         <div className="photo-with-subtitles">
@@ -84,7 +111,7 @@ export const Zallpy = () => {
               alt="A work selfie"
             />
           </picture>
-          <p>{t('zallpy.photo_caption', 'IN THE OFFICE')}</p>
+          <p>{t('myJourney.zallpy.photoCaption', 'IN THE OFFICE')}</p>
         </div>
       </div>
     </article>

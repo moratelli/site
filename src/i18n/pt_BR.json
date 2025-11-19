@@ -1,5 +1,9 @@
 {
-  "introduction": "Olá! Eu sou <0>Pedro Moratelli</0>, <1>Tech Lead</1>.",
+  "introduction": {
+    "paragraph1": "Olá! Eu sou <0>Pedro Moratelli</0>.",
+    "paragraph2": "Sou um <0>Tech Lead</0> especializado em aplicações web e mobile de alta performance para <1>clientes globais</1>."
+  },
+  "clientsTitle": "Com a confiança de",
   "skills": {
     "title": "Habilidades",
     "list": [
@@ -20,48 +24,87 @@
   "myJourney": {
     "title": "Minha Trajetória Até Agora",
     "school": {
-      "paragraph_1": "Minha jornada em desenvolvimento de software começou no <0>SENAI</0> em Florianópolis.",
-      "paragraph_2": "Foi lá que aprendi os fundamentos do desenvolvimento web, incluindo React, Node.js e SQL, além dos princípios de boas práticas de desenvolvimento."
+      "dates": "2019 - 2020",
+      "title": "Educação",
+      "photoCaption": "TURMA NO SENAI",
+      "paragraph1": "Minha jornada em desenvolvimento de software começou no <0>SENAI</0> em Florianópolis.",
+      "paragraph2": "Foi lá que aprendi os fundamentos do desenvolvimento web, incluindo React, Node.js e SQL, além dos princípios de boas práticas de desenvolvimento.",
+      "tags": [
+        "React",
+        "Node.js",
+        "SQL"
+      ]
     },
     "trackli": {
       "dates": "Jan 2020 - Abr 2020",
-      "paragraph_1": "Meu primeiro papel na indústria foi como estagiário na <0>Trackli</0>.",
-      "paragraph_2": "Durante meu tempo lá, ajudei a modernizar a plataforma de monitoramento de dispositivos da empresa, desenvolvendo um novo frontend com HTML, CSS, JavaScript e jQuery, e integrando-o ao backend PHP existente."
+      "paragraph1": "Meu primeiro papel na indústria foi como estagiário na <0>Trackli</0>.",
+      "paragraph2": "Durante meu tempo lá, ajudei a modernizar a plataforma de monitoramento de dispositivos da empresa, desenvolvendo um novo frontend com HTML, CSS, JavaScript e jQuery, e integrando-o ao backend PHP existente.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "PHP"
+      ]
     },
     "certi": {
       "dates": "Abr 2020 - Jul 2021",
-      "paragraph_1": "Na <0>Fundação CERTI</0>, trabalhei na construção de MVPs (Minimum Viable Products) para grandes clientes como a Siemens. Isso incluiu o desenvolvimento de um aplicativo em Flutter que coletava dados de dispositivos médicos e os enviava para uma API AWS Lambda.",
-      "paragraph_2": "Eu também criei dashboards para clientes usando React, Node.js e TypeScript. Além disso, assumi as responsabilidades de Scrum Master da equipe, garantindo que entregássemos nossas soluções usando metodologias ágeis.",
-      "paragraph_3": "Este papel me ensinou muito sobre desenvolvimento ágil. Enquanto estava na CERTI, também iniciei minha graduação de Tecnólogo em Análise e Desenvolvimento de Sistemas na <0>Anhanguera</0> para formalizar meu conhecimento.",
-      "info_bits": [
+      "paragraph1": "Na <0>Fundação CERTI</0>, trabalhei na construção de MVPs (Minimum Viable Products) para grandes clientes como a Siemens. Isso incluiu o desenvolvimento de um aplicativo em Flutter que coletava dados de dispositivos médicos e os enviava para uma API AWS Lambda.",
+      "paragraph2": "Eu também criei dashboards para clientes usando React, Node.js e TypeScript. Além disso, assumi as responsabilidades de Scrum Master da equipe, garantindo que entregássemos nossas soluções usando métodos ágeis.",
+      "paragraph3": "Este papel me ensinou muito sobre desenvolvimento ágil. Enquanto estava na CERTI, também iniciei minha graduação de Tecnólogo em Análise e Desenvolvimento de Sistemas na <0>Anhanguera</0> para formalizar meu conhecimento.",
+      "infoBits": [
         "A Fundação CERTI é um centro de inovação que constrói soluções de ponta para grandes clientes nacionais e internacionais."
+      ],
+      "tags": [
+        "Flutter",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "PostgreSQL"
       ]
     },
     "philips": {
       "dates": "Ago 2021 - Dez 2021",
-      "paragraph_1": "Trabalhei mantendo e desenvolvendo novos recursos para o <0>Tasy</0>, um sistema integrado de gestão hospitalar usado por mais de 900 instituições de saúde no Brasil",
-      "paragraph_2": "Aprimorei ainda mais minhas habilidades em Desenvolvimento Web usando AngularJS, JavaScript e Java"
+      "paragraph1": "Em seguida, mudei para a Philips, onde trabalhei na manutenção e evolução do <0>Tasy</0>, um sistema de gestão hospitalar de grande escala usado por centenas de hospitais e que gerencia milhões de registros de pacientes.",
+      "paragraph2": "Este papel fortaleceu minhas habilidades em software empresarial, pois utilizei Java, Angular e JavaScript para refatorar código, corrigir bugs e implementar novas funcionalidades solicitadas por clientes.",
+      "tags": [
+        "Java",
+        "Angular",
+        "JavaScript"
+      ]
     },
     "zallpy": {
       "dates": "Dez 2021 - Presente",
-      "paragraph_1": "Entrei na <0>Zallpy Digital</0> para integrar uma equipe focada em Desenvolvimento Mobile Full Stack. Desenvolvemos recursos para os aplicativos da BMW: <1>My BMW</1> e <2>MINI</2>",
-      "paragraph_2": "É divertido trabalhar novamente com Flutter e TypeScript. Também tenho a chance de aprender e aplicar padrões modernos de design de software, como <0>BFFs</0>",
-      "paragraph_3": "Agora, como Tech Lead, lidero uma equipe de seis engenheiros responsável pela plataforma de notificações, que lida com mais de 11 milhões de notificações diárias. Eu mentoro minha equipe, arquitetando novos microsserviços em .NET e NestJS, e foco em entregas previsíveis, o que nos ajudou a aumentar o throughput do time em 26%.",
-      "paragraph_4": "Trabalhar nesta escala exige colaboração estreita com equipes distribuídas na Alemanha, Portugal e China, tudo isso enquanto mantemos uma taxa de defeitos abaixo de 4%. É um ambiente fantástico para crescer em entrega de software global de alta qualidade.",
-      "info_bits": [
+      "photoCaption": "NO ESCRITÓRIO",
+      "paragraph1": "Entrei na <0>Zallpy Digital</0> para integrar uma equipe trabalhando diretamente com o BMW Group em seus aplicativos móveis globais: <1>My BMW</1> e <2>MINI</2>.",
+      "paragraph2": "Como Desenvolvedor Full Stack, eu projetei a aba \"Serviços\", um recurso central usado mais de 5 milhões de vezes por dia, construindo tanto o frontend em Flutter quanto o Backend-for-Frontend em NestJS. Essa experiência me permitiu aprofundar meu domínio em <0>arquiteturas BFF</0> e outros padrões modernos de design.",
+      "paragraph3": "Agora, como Tech Lead, lidero uma equipe de seis engenheiros responsável pela plataforma de notificações, que lida com mais de 11 milhões de notificações diárias. Eu mentoro minha equipe, arquitetando novos microsserviços em .NET e NestJS, e <0>foco em entregas previsíveis</0>, o que nos ajudou a aumentar o throughput do time em 26%.",
+      "paragraph4": "Trabalhar nesta escala exige <0>colaboração estreita com equipes distribuídas na Alemanha, Portugal e China</0>, tudo isso enquanto mantemos uma taxa de defeitos abaixo de 4%. É um ambiente fantástico para crescer em entrega de software global de alta qualidade.",
+      "infoBits": [
         "Os aplicativos do BMW Group atendem a mais de 10 milhões de usuários ativos e exigem padrões extremamente elevados de qualidade de código, testes e DevOps.",
-        "Meu papel envolve colaboração diária em inglês e francês com equipes distribuídas no Brasil, Alemanha, Portugal e China."
+        "Eu também desenvolvi uma ferramenta interna baseada em React que permite às equipes de suporte e marketing gerenciar campanhas e enviar notificações de forma eficiente."
+      ],
+      "tags": [
+        ".NET",
+        "NestJS",
+        "Flutter",
+        "TypeScript",
+        "React",
+        "Kafka",
+        "Azure",
+        "AWS"
       ]
     }
   },
   "today": {
     "title": "Hoje",
-    "paragraph_1": "Hoje, meu foco é liderar equipes e enfrentar desafios técnicos complexos e de grande escala. Estou sempre buscando oportunidades para construir software confiável e de alto impacto em ambientes globais, e para mentorar outras pessoas, ajudando-as a crescer e ter sucesso em suas próprias carreiras.",
-    "paragraph_2": "Para complementar minha experiência em colaboração global, estou buscando ativamente por oportunidades presenciais ou híbridas na América do Norte e Europa. Minha fluência profissional total em inglês e francês, juntamente com minhas habilidades em alemão, permite-me integrar perfeitamente em equipes internacionais e diversificadas."
+    "paragraph1": "Hoje, meu foco é liderar equipes e enfrentar desafios técnicos complexos e de grande escala. Estou sempre buscando oportunidades para construir software confiável e de alto impacto em ambientes globais, e para mentorar outras pessoas, ajudando-as a crescer e ter sucesso em suas próprias carreiras.",
+    "paragraph2": "Para complementar minha experiência em colaboração global, estou buscando ativamente por oportunidades presenciais ou híbridas na América do Norte e Europa. Minha fluência profissional total em inglês e francês, juntamente com minhas habilidades em alemão, permite-me integrar perfeitamente em equipes internacionais e diversificadas."
   },
   "footer": {
-    "linkedIn": "Sinta-se à vontade para se conectar comigo no <0>LinkedIn</0>",
-    "blog": "Confira <0>meu blog</0> para ler minhas ideias sobre tecnologia e o mercado",
-    "resume": "Procurando <0>meu currículo?</0> Clique no ícone acima para lê-lo"
+    "blog": "Confira <0>meu blog</0> para ler minhas ideias sobre tecnologia",
+    "linkedIn": "Acha que meu perfil combina com uma vaga? Vamos conversar no <0>LinkedIn</0>",
+    "github": "Curioso sobre meu código? Confira meu <0>GitHub</0>"
   }
 }

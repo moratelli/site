@@ -4,7 +4,7 @@ import { certi1xWebp, certi2xWebp, certiPng } from '../../../assets/assets'
 export const Certi = () => {
   const { t, i18n } = useTranslation()
 
-  const infoBits = t('myJourney.certi.info_bits', { returnObjects: true }) as string[]
+  const infoBits = t('myJourney.certi.infoBits', { returnObjects: true }) as string[]
 
   return (
     <article className="certi">
@@ -26,17 +26,17 @@ export const Certi = () => {
         <p>
           <Trans
             i18n={i18n}
-            i18nKey="myJourney.certi.paragraph_1"
+            i18nKey="myJourney.certi.paragraph1"
             components={[
               <a className="text-gradient-certi" href="https://certi.org.br" target="_blank" />,
             ]}
           />
         </p>
-        <p>{t('myJourney.certi.paragraph_2')}</p>
+        <p>{t('myJourney.certi.paragraph2')}</p>
         <p>
           <Trans
             i18n={i18n}
-            i18nKey="myJourney.certi.paragraph_3"
+            i18nKey="myJourney.certi.paragraph3"
             components={[
               <a className="text-gradient-certi" href="https://anhanguera.com" target="_blank" />,
             ]}

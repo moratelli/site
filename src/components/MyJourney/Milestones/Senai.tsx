@@ -17,8 +17,8 @@ export const Senai = () => {
       <div>
         <header>
           <div>
-            <h1 className="text-gradient-sky">Education</h1>
-            <h3 className="text-gradient-sky">2019 - 2020</h3>
+            <h1 className="text-gradient-sky">{t('myJourney.school.title')}</h1>
+            <h3 className="text-gradient-sky">{t('myJourney.school.dates')}</h3>
           </div>
           <picture>
             <source type="image/webp" srcSet={`${senai1xWebp} 1x, ${senai2xWebp} 2x`} />
@@ -31,12 +31,12 @@ export const Senai = () => {
         </header>
         <Trans
           i18n={i18n}
-          i18nKey="myJourney.school.paragraph_1"
+          i18nKey="myJourney.school.paragraph1"
           components={[
             <a className="text-gradient-sky" href="https://www.senai.br" target="_blank" />,
           ]}
         />
-        <p>{t('myJourney.school.paragraph_2')}</p>
+        <p>{t('myJourney.school.paragraph2')}</p>
       </div>
       <div className="photo-container">
         <div className="photo-with-subtitles">
@@ -51,7 +51,7 @@ export const Senai = () => {
               alt="The logo of SENAI"
             />
           </picture>
-          <p>{t('school_caption', 'CLASS AT SENAI')}</p>
+          <p>{t('myJourney.school.photoCaption', 'CLASS AT SENAI')}</p>
         </div>
       </div>
     </article>

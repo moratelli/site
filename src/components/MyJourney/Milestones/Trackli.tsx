@@ -23,12 +23,12 @@ export const Trackli = () => {
         </header>
         <Trans
           i18n={i18n}
-          i18nKey="myJourney.trackli.paragraph_1"
+          i18nKey="myJourney.trackli.paragraph1"
           components={[
             <a className="text-gradient-trackli" href="https://trackli.com.br" target="_blank" />,
           ]}
         />
-        <p>{t('myJourney.trackli.paragraph_2')}</p>
+        <p>{t('myJourney.trackli.paragraph2')}</p>
       </div>
     </article>
   )

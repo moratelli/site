@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Footer } from './components/Footer/Footer'
 import { Introduction } from './components/Introduction/Introduction'
-import { LanguageSwitcher } from './components/LanguageSwitcher/LanguageSwitcher'
 import { MyJourney } from './components/MyJourney/MyJourney'
 import { Skills } from './components/Skills/Skills'
 import './css/style.css'
@@ -37,7 +36,6 @@ function App() {
         <Skills />
         <MyJourney />
       </main>
-      <LanguageSwitcher />
       <Footer />
     </>
   )
