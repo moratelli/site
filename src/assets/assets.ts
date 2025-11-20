@@ -23,6 +23,24 @@ export { default as zallpy1xWebp } from './logos/1x/zallpy.webp'
 export { default as zallpy2xWebp } from './logos/2x/zallpy.webp'
 export { default as zallpyPng } from './logos/zallpy.png'
 
+// TrustedBy - Logos - BMW
+export { default as bmwPng } from './logos/bmw.png'
+
+// TrustedBy - Logos - Mini
+export { default as mini1xWebp } from './logos/1x/mini.webp'
+export { default as mini2xWebp } from './logos/2x/mini.webp'
+export { default as miniPng } from './logos/mini.png'
+
+// TrustedBy - Logos - Siemens
+export { default as siemens1xWebp } from './logos/1x/siemens.webp'
+export { default as siemens2xWebp } from './logos/2x/siemens.webp'
+export { default as siemensPng } from './logos/siemens.png'
+
+// TrustedBy - Logos - Philips Shield
+export { default as philips1xShieldWebp } from './logos/1x/philips-shield.webp'
+export { default as philips2xShieldWebp } from './logos/2x/philips-shield.webp'
+export { default as philipsShieldPng } from './logos/philips-shield.png'
+
 // Photos - Avatar
 export { default as avatar1xWebp } from './photos/1x/avatar.webp'
 export { default as avatar2xWebp } from './photos/2x/avatar.webp'
