@@ -4,6 +4,7 @@ export interface TranslationSchema {
     paragraph1: string
     paragraph2: string
   }
+  trustedBy: string
   skills: {
     title: string
     list: string[]

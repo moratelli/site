@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0;
 }
 
@@ -90,6 +90,34 @@ body {
   font-weight: 500;
 }
 
+.trusted-by {
+  margin-bottom: 2.5rem;
+
+  .logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+
+    img {
+      max-height: 2.25rem;
+      max-width: 8rem;
+      filter: grayscale(100%);
+      opacity: 0.85;
+    }
+
+    img:hover {
+      filter: none;
+      opacity: 0.9;
+    }
+
+    #philips-shield:hover {
+      filter: brightness(0) saturate(100%) invert(33%) sepia(98%) saturate(1825%) hue-rotate(198deg)
+        brightness(93%) contrast(90%);
+    }
+  }
+}
+
 .skills {
   margin-bottom: 3rem;
 
@@ -126,7 +154,7 @@ body {
   header {
     display: flex;
     flex-wrap: nowrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     div {
       flex: 1 0 70%;
@@ -145,7 +173,7 @@ body {
   }
 
   .tags {
-    margin-top: 0.5rem;
+    margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
@@ -159,7 +187,6 @@ body {
     font-size: 0.7rem;
     display: inline-block;
     padding: 4px 12px;
-    margin-bottom: 8px;
   }
 }
 
@@ -296,6 +323,16 @@ footer {
     margin: 0 5em 3.5em 5em;
   }
 
+  .trusted-by {
+    .logos {
+      gap: 3rem;
+
+      img {
+        max-height: 2.5rem;
+      }
+    }
+  }
+
   .skills {
     margin: 0 2em 3.5em 2em;
   }
@@ -364,6 +401,17 @@ footer {
   .introduction {
     margin: 0 15% 3.5em 15%;
   }
+
+  .trusted-by {
+    .logos {
+      gap: 3.5rem;
+
+      img {
+        max-height: 3rem;
+      }
+    }
+  }
+
   .skills {
     margin: 0 13% 3.5em 13%;
   }

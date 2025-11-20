@@ -3,7 +3,7 @@
     "paragraph1": "Hello! I'm <0>Pedro Moratelli</0>.",
     "paragraph2": "I am a <0>Tech Lead</0> specialising in high-performance web and mobile applications for <1>global clients</1>."
   },
-  "clientsTitle": "Trusted by",
+  "trustedBy": "Trusted by",
   "skills": {
     "title": "Skills",
     "list": [

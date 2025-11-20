@@ -4,6 +4,7 @@ import { Footer } from './components/Footer/Footer'
 import { Introduction } from './components/Introduction/Introduction'
 import { MyJourney } from './components/MyJourney/MyJourney'
 import { Skills } from './components/Skills/Skills'
+import { TrustedBy } from './components/TrustedBy/TrustedBy'
 import './css/style.css'
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <>
       <Introduction />
       <main>
+        <TrustedBy />
         <Skills />
         <MyJourney />
       </main>
