@@ -71,17 +71,13 @@
 }
 
 .border-gradient-sky {
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-sunset {
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
-} /*# sourceMappingURL=mixins.css.map */
+}/*# sourceMappingURL=mixins.css.map */

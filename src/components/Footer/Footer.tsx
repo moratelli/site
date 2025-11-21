@@ -1,4 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 
 export const Footer = () => {
@@ -9,21 +10,14 @@ export const Footer = () => {
       <nav>
         <ul>
           <li>
-            <a href="https://linkedin.com/in/pedromoratelli" target="_blank" rel="noreferrer">
+            <Link to="/blog">
               <i className="fa fa-comment text-gradient-sunset"></i>
-            </a>
+            </Link>
             <p>
               <Trans
                 i18n={i18n}
                 i18nKey="footer.blog"
-                components={[
-                  <a
-                    href="https://linkedin.com/in/pedromoratelli"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gradient-sunset"
-                  />,
-                ]}
+                components={[<Link to="/blog" className="text-gradient-sunset" />]}
               />
             </p>
           </li>

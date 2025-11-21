@@ -1,5 +1,5 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap");
 .text-gradient-lime {
   background-image: linear-gradient(to right, #ffe597 0%, #aaff82 100%);
   color: transparent;
@@ -73,24 +73,20 @@
 }
 
 .border-gradient-sky {
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-sunset {
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 h1,
 h2 {
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 h1 {
@@ -118,7 +114,7 @@ a {
   font-weight: 600;
   cursor: pointer;
   -webkit-text-decoration: underline dotted #f5f5f5;
-  text-decoration: underline dotted #f5f5f5;
+          text-decoration: underline dotted #f5f5f5;
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #f5f5f5 !important;
   -webkit-text-decoration-style: dotted !important;
@@ -129,19 +125,7 @@ p {
 }
 
 body {
-  font-family:
-    'DM Sans',
-    sans-serif,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: "DM Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #0d0d0d;
   font-size: 0.9rem;
   color: #f5f5f5;
@@ -169,9 +153,7 @@ body {
   max-width: 7rem;
   margin-bottom: 2rem;
   outline-offset: -4px;
-  background:
-    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
@@ -202,8 +184,7 @@ body {
   opacity: 0.9;
 }
 .trusted-by .logos #philips-shield:hover {
-  filter: brightness(0) saturate(100%) invert(33%) sepia(98%) saturate(1825%) hue-rotate(198deg)
-    brightness(93%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(98%) saturate(1825%) hue-rotate(198deg) brightness(93%) contrast(90%);
 }
 
 .skills {
@@ -260,7 +241,7 @@ body {
   border: 1px solid #4b5563;
   color: #9ca3af;
   border-radius: 4px;
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 0.7rem;
   display: inline-block;
   padding: 4px 12px;
@@ -304,7 +285,7 @@ body {
 .photo-with-subtitles p {
   margin: 0.25rem 0 0 0;
   text-align: center;
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Nanum Pen Script", cursive;
   font-size: 1.4rem;
   color: black;
 }
@@ -372,6 +353,276 @@ footer li > a {
   font-size: 2rem;
 }
 
+.nav-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(130, 180, 255, 0.1);
+  border: 1px solid rgba(130, 180, 255, 0.3);
+  border-radius: 8px;
+  color: #82b4ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  background: rgba(130, 180, 255, 0.2);
+  border-color: #82b4ff;
+  transform: translateX(2px);
+}
+
+.blog,
+.blog-post {
+  margin-bottom: 3rem;
+}
+
+.blog .blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.blog .blog-header .blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.blog .blog-header .blog-title span {
+  display: inline;
+}
+.blog .blog-header .blog-subtitle {
+  font-size: 1rem;
+  color: #999;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.blog .tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.blog .tag-filter button {
+  padding: 0.4rem 1rem;
+  background: #282828;
+  border: 1px solid #363636;
+  border-radius: 120px;
+  color: #f5f5f5;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.blog .tag-filter button:hover {
+  border-color: #82b4ff;
+}
+.blog .tag-filter button.active {
+  background: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
+  color: #0d0d0d;
+  font-weight: 700;
+  border: none;
+}
+.blog .blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.blog .blog-posts .text-link-no-style {
+  text-decoration: none;
+  color: inherit;
+}
+.blog .blog-posts .text-link-no-style:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.blog .blog-post-preview header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.blog .blog-post-preview header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.blog .blog-post-preview header h1 a {
+  text-decoration: none;
+  background-image: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog .blog-post-preview header time {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.75rem;
+}
+.blog .blog-post-preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.blog .blog-post-preview .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.blog .blog-post-preview .tags span {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.blog .blog-post-preview .read-more {
+  display: inline-block;
+  font-weight: 600;
+  color: #82b4ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.blog .blog-post-preview .read-more:hover {
+  color: #bff0ff;
+}
+
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+.blog-post .blog-post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.blog-post .blog-post-nav .blog-post-nav-backlinks {
+  display: flex;
+  gap: 1.5rem;
+}
+.blog-post .blog-post-brand {
+  text-align: right;
+  margin-bottom: 2.5rem;
+}
+.blog-post .blog-post-brand a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Sora", sans-serif;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+}
+.blog-post .blog-post-brand a:hover {
+  opacity: 0.8;
+}
+.blog-post .blog-post-brand p {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  font-weight: 300;
+}
+.blog-post .back-link {
+  display: inline-block;
+  color: #82b4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.blog-post .back-link:hover {
+  opacity: 0.8;
+}
+.blog-post .blog-post-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #363636;
+  padding-bottom: 1.5rem;
+}
+.blog-post .blog-post-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background-image: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-post .blog-post-header time {
+  display: block;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+.blog-post .blog-post-header .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.blog-post .blog-post-header .tags span {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.blog-post .blog-post-content {
+  line-height: 1.8;
+}
+.blog-post .blog-post-content h1,
+.blog-post .blog-post-content h2,
+.blog-post .blog-post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.blog-post .blog-post-content h1 {
+  font-size: 1.6rem;
+}
+.blog-post .blog-post-content h2 {
+  font-size: 1.3rem;
+}
+.blog-post .blog-post-content h3 {
+  font-size: 1.1rem;
+}
+.blog-post .blog-post-content p {
+  margin-bottom: 1.5rem;
+}
+.blog-post .blog-post-content ul,
+.blog-post .blog-post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style: inherit;
+}
+.blog-post .blog-post-content ul li,
+.blog-post .blog-post-content ol li {
+  margin-bottom: 0.5rem;
+}
+.blog-post .blog-post-content code {
+  background: #282828;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
+}
+.blog-post .blog-post-content pre {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.blog-post .blog-post-content pre code {
+  background: none;
+  padding: 0;
+}
+.blog-post .blog-post-content blockquote {
+  border-left: 4px solid #82b4ff;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #ccc;
+}
+.blog-post .blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
 @media (min-width: 481px) {
   .introduction {
     margin: 0 5em 3.5em 5em;
@@ -399,6 +650,12 @@ footer li > a {
   }
   footer li > a {
     font-size: 2.5rem;
+  }
+  .blog .blog-header .blog-title {
+    font-size: 2.5rem;
+  }
+  .blog .blog-header .blog-subtitle {
+    font-size: 1.1rem;
   }
   .today aside {
     /* Paris */
@@ -493,4 +750,4 @@ footer li > a {
   body {
     margin: 5em 25% 1rem 25%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
