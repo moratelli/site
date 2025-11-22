@@ -1,13 +1,22 @@
+import { useSetAtom } from 'jotai'
 import ReactMarkdown from 'react-markdown'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import remarkGfm from 'remark-gfm'
 import { getPostBySlug } from '../../utils/blog'
+import { selectedTagAtom } from './blogAtoms'
 
 export const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
   const post = slug ? getPostBySlug(slug) : undefined
+  const navigate = useNavigate()
+  const setSelectedTag = useSetAtom(selectedTagAtom)
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(tag)
+    navigate('/blog')
+  }
 
   if (!post) {
     return <Navigate to="/blog" replace />
@@ -38,7 +47,7 @@ export const BlogPost = () => {
       </div>
 
       <header className="blog-post-header">
-        <h1>{post.title}</h1>
+        <h1 className="text-gradient-sky">{post.title}</h1>
         <time dateTime={post.date}>{formatDate(post.date)}</time>
         {post.tags.length > 0 && (
           <div className="tags">
@@ -46,9 +55,13 @@ export const BlogPost = () => {
               const gradients = ['sky', 'mint', 'lime', 'peach', 'sunset']
               const gradientClass = gradients[index % gradients.length]
               return (
-                <span key={tag} className={`border-gradient-${gradientClass}`}>
+                <button
+                  key={tag}
+                  className={`border-gradient-${gradientClass}`}
+                  onClick={() => handleTagClick(tag)}
+                >
                   {tag}
-                </span>
+                </button>
               )
             })}
           </div>

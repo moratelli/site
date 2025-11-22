@@ -1,13 +1,16 @@
-import { atom, useAtom } from 'jotai'
+import { useAtom } from 'jotai'
 import { Link } from 'react-router-dom'
 import { getAllPosts, getAllTags } from '../../utils/blog'
-
-const selectedTagAtom = atom<string | null>(null)
+import { selectedTagAtom } from './blogAtoms'
 
 export const BlogList = () => {
   const allPosts = getAllPosts()
   const allTags = getAllTags()
   const [selectedTag, setSelectedTag] = useAtom(selectedTagAtom)
+
+  const handleTagClick = (tag: string | null) => {
+    setSelectedTag(tag)
+  }
 
   const filteredPosts = selectedTag
     ? allPosts.filter((post) => post.tags.includes(selectedTag))
@@ -42,7 +45,7 @@ export const BlogList = () => {
         <div className="tag-filter">
           <button
             className={selectedTag === null ? 'active' : ''}
-            onClick={() => setSelectedTag(null)}
+            onClick={() => handleTagClick(null)}
           >
             All
           </button>
@@ -50,7 +53,7 @@ export const BlogList = () => {
             <button
               key={tag}
               className={selectedTag === tag ? 'active' : ''}
-              onClick={() => setSelectedTag(tag)}
+              onClick={() => handleTagClick(tag)}
             >
               {tag}
             </button>
@@ -74,8 +77,8 @@ export const BlogList = () => {
             {post.tags.length > 0 && (
               <ul className="tags">
                 {post.tags.map((tag) => (
-                  <li key={tag} className="tag">
-                    {tag}
+                  <li key={tag}>
+                    <button onClick={() => handleTagClick(tag)}>{tag}</button>
                   </li>
                 ))}
               </ul>
