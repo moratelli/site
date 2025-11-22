@@ -9,8 +9,22 @@ const blogPostsRaw: Record<string, string> = {
   'building-type-safe-i18n-react': i18nPost,
 }
 
+interface FrontmatterData {
+  title?: string
+  date?: string
+  excerpt?: string
+  slug?: string
+  tags?: string[]
+  [key: string]: string | string[] | undefined
+}
+
+interface ParsedMarkdown {
+  data: FrontmatterData
+  content: string
+}
+
 // Simple frontmatter parser (browser-compatible)
-function parseFrontmatter(markdown: string): { data: any; content: string } {
+const parseFrontmatter = (markdown: string): ParsedMarkdown => {
   const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/
   const match = markdown.match(frontmatterRegex)
 
@@ -20,7 +34,7 @@ function parseFrontmatter(markdown: string): { data: any; content: string } {
 
   const frontmatter = match[1]
   const content = match[2]
-  const data: any = {}
+  const data: FrontmatterData = {}
 
   // Parse YAML-like frontmatter
   frontmatter.split('\n').forEach((line) => {
@@ -28,7 +42,7 @@ function parseFrontmatter(markdown: string): { data: any; content: string } {
     if (colonIndex === -1) return
 
     const key = line.substring(0, colonIndex).trim()
-    let value: any = line.substring(colonIndex + 1).trim()
+    let value: string | string[] = line.substring(colonIndex + 1).trim()
 
     // Remove quotes
     if (
@@ -52,7 +66,7 @@ function parseFrontmatter(markdown: string): { data: any; content: string } {
   return { data, content }
 }
 
-export function getAllPosts(): BlogPost[] {
+export const getAllPosts = (): BlogPost[] => {
   const posts: BlogPost[] = []
 
   try {
@@ -66,10 +80,10 @@ export function getAllPosts(): BlogPost[] {
       const { data, content } = parseFrontmatter(markdown)
 
       posts.push({
-        title: data.title || 'Untitled',
-        date: data.date || new Date().toISOString(),
-        excerpt: data.excerpt || '',
-        slug: data.slug || slug,
+        title: data.title ?? 'Untitled',
+        date: data.date ?? new Date().toISOString(),
+        excerpt: data.excerpt ?? '',
+        slug: data.slug ?? slug,
         tags: Array.isArray(data.tags) ? data.tags : [],
         content,
       })
@@ -82,12 +96,12 @@ export function getAllPosts(): BlogPost[] {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
+export const getPostBySlug = (slug: string): BlogPost | undefined => {
   const posts = getAllPosts()
   return posts.find((post) => post.slug === slug)
 }
 
-export function getAllTags(): string[] {
+export const getAllTags = (): string[] => {
   const posts = getAllPosts()
   const tagSet = new Set<string>()
 
@@ -98,7 +112,7 @@ export function getAllTags(): string[] {
   return Array.from(tagSet).sort()
 }
 
-export function getPostsByTag(tag: string): BlogPost[] {
+export const getPostsByTag = (tag: string): BlogPost[] => {
   const posts = getAllPosts()
   return posts.filter((post) => post.tags.includes(tag))
 }

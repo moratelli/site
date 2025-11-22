@@ -24,24 +24,17 @@ export const BlogPost = () => {
 
   return (
     <article className="blog-post">
-      <div className="blog-post-nav">
-        <div className="blog-post-nav-backlinks">
-          <Link to="/" className="back-link">
-            ← Home
-          </Link>
-          <Link to="/blog" className="back-link">
-            ← Back to Blog
-          </Link>
-        </div>
-
-        <div className="blog-post-brand">
-          <Link to="/blog">
+      <div className="blog-post-brand">
+        <div className="blog-brand-title">
+          <Link to="/" className="blog-brand-part">
             <span className="text-gradient-sunset">pedromoratelli</span>
-            <span className="text-link-no-style">/</span>
+          </Link>
+          <span className="blog-brand-slash">/</span>
+          <Link to="/blog" className="blog-brand-part">
             <span className="text-gradient-sky">blog</span>
           </Link>
-          <p>Reflections on code, career, and the industry.</p>
         </div>
+        <p>Reflections on code, career, and the industry.</p>
       </div>
 
       <header className="blog-post-header">

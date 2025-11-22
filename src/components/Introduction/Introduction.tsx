@@ -1,24 +1,11 @@
 import { Trans, useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router-dom'
 import { avatar1xWebp, avatar2xWebp, avatar3xWebp, avatarJpeg } from '../../assets/assets'
 
 export const Introduction = () => {
   const { i18n } = useTranslation()
-  const location = useLocation()
-  const isOnBlog = location.pathname.startsWith('/blog')
 
   return (
     <header className="introduction">
-      {isOnBlog && (
-        <Link to="/" className="nav-link">
-          ← Back to Home
-        </Link>
-      )}
-      {!isOnBlog && (
-        <Link to="/blog" className="nav-link">
-          Read My Thoughts →
-        </Link>
-      )}
       <picture>
         <source
           type="image/webp"
@@ -36,7 +23,7 @@ export const Introduction = () => {
         <Trans
           i18n={i18n}
           i18nKey="introduction.paragraph1"
-          components={[<span className="text-gradient-mint" />]}
+          components={[<span className="text-gradient-sunset" />]}
         />
       </h1>
       <h1>
@@ -44,7 +31,7 @@ export const Introduction = () => {
           i18n={i18n}
           i18nKey="introduction.paragraph2"
           components={[
-            <span className="text-gradient-sunset" />,
+            <span className="text-gradient-mint" />,
             <span className="text-gradient-sky" />,
           ]}
         />
