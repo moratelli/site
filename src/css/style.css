@@ -172,6 +172,10 @@ a {
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #f5f5f5 !important;
   -webkit-text-decoration-style: dotted !important;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.8;
 }
 
 p {
@@ -293,7 +297,15 @@ body {
   flex-wrap: wrap;
   gap: 0.25rem;
 }
-.tags .tag,
+.tags .tag {
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 0.25rem;
+  font-family: "Sora", sans-serif;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+}
 .tags button {
   background: #0d0d0d;
   cursor: pointer;
@@ -306,7 +318,6 @@ body {
   display: inline-block;
   padding: 0.25rem 0.75rem;
 }
-.tags .tag:hover,
 .tags button:hover {
   border-color: #82b4ff;
 }
