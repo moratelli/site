@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from './App.tsx'
@@ -8,6 +10,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Suspense fallback={<div style={{ padding: '2rem', textAlign: 'center' }}>Loading…</div>}>
       <App />
+      <Analytics />
+      <SpeedInsights />
     </Suspense>
   </StrictMode>
 )

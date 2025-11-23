@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { BlogList } from './components/Blog/BlogList'
 import { BlogPost } from './components/Blog/BlogPost'
@@ -14,7 +13,6 @@ export const App = () => {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
-      <Analytics />
     </Router>
   )
 }
