@@ -24,14 +24,16 @@ export const Zallpy = () => {
             <h1 className="text-gradient-zallpy">Zallpy Digital</h1>
             <h3 className="text-gradient-zallpy">{t('myJourney.zallpy.dates')}</h3>
           </div>
-          <picture>
-            <source type="image/webp" srcSet={`${zallpy1xWebp} 1x, ${zallpy2xWebp} 2x`} />
-            <img
-              src={zallpyPng}
-              srcSet={`${zallpy1xWebp} 1x, ${zallpy2xWebp} 2x`}
-              alt="Zallpy Digital's logo"
-            />
-          </picture>
+          <a href="https://zallpy.com" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source type="image/webp" srcSet={`${zallpy1xWebp} 1x, ${zallpy2xWebp} 2x`} />
+              <img
+                src={zallpyPng}
+                srcSet={`${zallpy1xWebp} 1x, ${zallpy2xWebp} 2x`}
+                alt="Zallpy Digital's logo"
+              />
+            </picture>
+          </a>
         </header>
         <p>
           <Trans

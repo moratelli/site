@@ -23,7 +23,7 @@ export const Introduction = () => {
         <Trans
           i18n={i18n}
           i18nKey="introduction.paragraph1"
-          components={[<span className="text-gradient-mint" />]}
+          components={[<span className="text-gradient-sunset" />]}
         />
       </h1>
       <h1>
@@ -31,7 +31,7 @@ export const Introduction = () => {
           i18n={i18n}
           i18nKey="introduction.paragraph2"
           components={[
-            <span className="text-gradient-sunset" />,
+            <span className="text-gradient-mint" />,
             <span className="text-gradient-sky" />,
           ]}
         />

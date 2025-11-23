@@ -16,14 +16,16 @@ export const Certi = () => {
             <h1 className="text-gradient-certi">Fundação CERTI</h1>
             <h3 className="text-gradient-certi">{t('myJourney.certi.dates')}</h3>
           </div>
-          <picture>
-            <source type="image/webp" srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`} />
-            <img
-              src={certiPng}
-              srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`}
-              alt="Fundação CERTI's logo"
-            />
-          </picture>
+          <a href="https://certi.org.br" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source type="image/webp" srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`} />
+              <img
+                src={certiPng}
+                srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`}
+                alt="Fundação CERTI's logo"
+              />
+            </picture>
+          </a>
         </header>{' '}
         <p>
           <Trans

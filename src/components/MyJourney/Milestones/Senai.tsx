@@ -22,14 +22,16 @@ export const Senai = () => {
             <h1 className="text-gradient-sky">{t('myJourney.school.title')}</h1>
             <h3 className="text-gradient-sky">{t('myJourney.school.dates')}</h3>
           </div>
-          <picture>
-            <source type="image/webp" srcSet={`${senai1xWebp} 1x, ${senai2xWebp} 2x`} />
-            <img
-              src={senaiPng}
-              srcSet={`${senai1xWebp} 1x, ${senai2xWebp} 2x`}
-              alt="SENAI's logo"
-            />
-          </picture>
+          <a href="https://www.senai.br" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source type="image/webp" srcSet={`${senai1xWebp} 1x, ${senai2xWebp} 2x`} />
+              <img
+                src={senaiPng}
+                srcSet={`${senai1xWebp} 1x, ${senai2xWebp} 2x`}
+                alt="SENAI's logo"
+              />
+            </picture>
+          </a>
         </header>
         <Trans
           i18n={i18n}
