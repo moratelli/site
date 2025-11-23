@@ -84,6 +84,60 @@
   border: 2px solid transparent;
 }
 
+.border-gradient-lime {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #ffe597 0%, #aaff82 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-mint {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sky {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-peach {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #ffe598 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sunset {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-trackli {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-certi {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #ff942f 0%, #ffeaac 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-philips {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #3378d1 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-zallpy {
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #11f175 0%, #c1ffd8 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
 h1,
 h2 {
   font-family: "Sora", sans-serif;
@@ -239,7 +293,11 @@ body {
   flex-wrap: wrap;
   gap: 0.25rem;
 }
-.tags .tag {
+.tags .tag,
+.tags button {
+  background: #0d0d0d;
+  cursor: pointer;
+  transition: all 0.2s ease;
   border: 1px solid #4b5563;
   color: #9ca3af;
   border-radius: 0.25rem;
@@ -247,6 +305,10 @@ body {
   font-size: 0.7rem;
   display: inline-block;
   padding: 0.25rem 0.75rem;
+}
+.tags .tag:hover,
+.tags button:hover {
+  border-color: #82b4ff;
 }
 
 .info-bits li {
@@ -384,28 +446,30 @@ footer li > a {
   margin-bottom: 2rem;
 }
 .blog .blog-header .blog-title {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  font-family: "Sora", sans-serif;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  justify-content: center;
 }
-.blog .blog-header .blog-title .blog-title-part {
+.blog .blog-header .blog-title .brand-part, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-part, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-part, .blog .blog-header .blog-title .blog-title-part {
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-.blog .blog-header .blog-title .blog-title-part:hover {
+.blog .blog-header .blog-title .brand-part:hover, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-part:hover, .blog .blog-header .blog-title .blog-title-part:hover {
   opacity: 0.7;
+}
+.blog .blog-header .blog-title .brand-slash, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-slash, .blog .blog-header .blog-title .blog-title-slash {
+  color: #f5f5f5;
+  font-weight: 700;
 }
 .blog .blog-header .blog-title .blog-title-part span {
   display: inline;
-}
-.blog .blog-header .blog-title .blog-title-slash {
-  color: #f5f5f5;
-  font-weight: 700;
 }
 .blog .blog-header .blog-subtitle {
   font-size: 1rem;
@@ -486,27 +550,15 @@ footer li > a {
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
-.blog .blog-post-preview .tags button {
-  background: #0d0d0d;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid #4b5563;
-  color: #9ca3af;
-  border-radius: 0.25rem;
-  font-family: "Sora", sans-serif;
-  font-size: 0.7rem;
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-}
-.blog .blog-post-preview .tags button:hover {
-  border-color: #82b4ff;
-}
 .blog .blog-post-preview .read-more {
-  margin-top: 1rem;
-  font-weight: 600;
   color: #82b4ff;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  margin-top: 1rem;
+}
+.blog .blog-post-preview .read-more:hover {
+  opacity: 0.8;
 }
 .blog .blog-post-preview .read-more:hover {
   color: #bff0ff;
@@ -530,17 +582,19 @@ footer li > a {
   font-weight: 700;
   font-family: "Sora", sans-serif;
   margin-bottom: 0.5rem;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   gap: 0.25rem;
+  display: inline-flex;
 }
-.blog-post .blog-post-brand .blog-brand-title .blog-brand-part {
+.blog-post .blog-post-brand .blog-brand-title .brand-part, .blog-post .blog-post-brand .blog-brand-title .blog-brand-part, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-part, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-part {
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-.blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover {
-  opacity: 0.8;
+.blog-post .blog-post-brand .blog-brand-title .brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-part:hover, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-part:hover {
+  opacity: 0.7;
 }
-.blog-post .blog-post-brand .blog-brand-title .blog-brand-slash {
+.blog-post .blog-post-brand .blog-brand-title .brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog-brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-slash, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-slash {
   color: #f5f5f5;
   font-weight: 700;
 }
@@ -551,11 +605,11 @@ footer li > a {
   font-weight: 300;
 }
 .blog-post .back-link {
-  display: inline-block;
   color: #82b4ff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
 }
 .blog-post .back-link:hover {
   opacity: 0.8;
@@ -578,21 +632,6 @@ footer li > a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-.blog-post .blog-post-header .tags button {
-  background: #0d0d0d;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid #4b5563;
-  color: #9ca3af;
-  border-radius: 0.25rem;
-  font-family: "Sora", sans-serif;
-  font-size: 0.7rem;
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-}
-.blog-post .blog-post-header .tags button:hover {
-  border-color: #82b4ff;
 }
 .blog-post .blog-post-content {
   line-height: 1.8;

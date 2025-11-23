@@ -54,3 +54,69 @@ $gradients: map-merge(
 .border-gradient-sunset {
   @include border-gradient-sunset();
 }
+
+// Generate border-gradient classes for all gradients
+@each $gradient, $value in $gradients {
+  .border-gradient-#{$gradient} {
+    background:
+      linear-gradient($background-color, $background-color) padding-box,
+      $value border-box;
+    border-radius: 120px;
+    border: 2px solid transparent;
+  }
+}
+
+// Reusable tag button mixin
+@mixin tag-button {
+  background: $background-color;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 0.25rem;
+  font-family: $sora;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+
+  &:hover {
+    border-color: #82b4ff;
+  }
+}
+
+// Reusable link styles
+@mixin link-blue {
+  color: #82b4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Reusable brand header
+@mixin brand-header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: $sora;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  .brand-part {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .brand-slash {
+    color: #f5f5f5;
+    font-weight: 700;
+  }
+}

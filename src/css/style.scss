@@ -182,14 +182,9 @@ body {
   flex-wrap: wrap;
   gap: 0.25rem;
 
-  .tag {
-    border: 1px solid #4b5563;
-    color: #9ca3af;
-    border-radius: 0.25rem;
-    font-family: $sora;
-    font-size: 0.7rem;
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
+  .tag,
+  button {
+    @include tag-button;
   }
 }
 
@@ -353,22 +348,13 @@ footer {
     margin-bottom: 2rem;
 
     .blog-title {
+      @include brand-header;
       font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
       line-height: 1.2;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 0.25rem;
 
       .blog-title-part {
-        text-decoration: none;
-        transition: opacity 0.2s ease;
-
-        &:hover {
-          opacity: 0.7;
-        }
+        @extend .brand-part;
 
         span {
           display: inline;
@@ -376,8 +362,7 @@ footer {
       }
 
       .blog-title-slash {
-        color: #f5f5f5;
-        font-weight: 700;
+        @extend .brand-slash;
       }
     }
 
@@ -475,31 +460,11 @@ footer {
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 1rem;
-
-      button {
-        background: $background-color;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: 1px solid #4b5563;
-        color: #9ca3af;
-        border-radius: 0.25rem;
-        font-family: $sora;
-        font-size: 0.7rem;
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-
-        &:hover {
-          border-color: #82b4ff;
-        }
-      }
     }
 
     .read-more {
+      @include link-blue;
       margin-top: 1rem;
-      font-weight: 600;
-      color: #82b4ff;
-      text-decoration: none;
-      transition: color 0.2s ease;
 
       &:hover {
         color: #bff0ff;
@@ -523,25 +488,15 @@ footer {
     margin-bottom: 2.5rem;
 
     .blog-brand-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      font-family: $sora;
-      margin-bottom: 0.5rem;
+      @include brand-header;
       display: inline-flex;
-      gap: 0.25rem;
 
       .blog-brand-part {
-        text-decoration: none;
-        transition: opacity 0.2s ease;
-
-        &:hover {
-          opacity: 0.8;
-        }
+        @extend .brand-part;
       }
 
       .blog-brand-slash {
-        color: #f5f5f5;
-        font-weight: 700;
+        @extend .brand-slash;
       }
     }
 
@@ -554,15 +509,8 @@ footer {
   }
 
   .back-link {
+    @include link-blue;
     display: inline-block;
-    color: #82b4ff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   .blog-post-header {
@@ -585,23 +533,6 @@ footer {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-
-      button {
-        background: $background-color;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: 1px solid #4b5563;
-        color: #9ca3af;
-        border-radius: 0.25rem;
-        font-family: $sora;
-        font-size: 0.7rem;
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-
-        &:hover {
-          border-color: #82b4ff;
-        }
-      }
     }
   }
 
