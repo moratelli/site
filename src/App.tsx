@@ -5,7 +5,7 @@ import { HomePage } from './HomePage'
 
 import './css/style.css'
 
-const App = () => {
+export const App = () => {
   return (
     <Router>
       <Routes>
@@ -16,5 +16,3 @@ const App = () => {
     </Router>
   )
 }
-
-export default App
