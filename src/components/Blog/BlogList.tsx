@@ -2,6 +2,7 @@ import { useAtom } from 'jotai'
 import { Link } from 'react-router-dom'
 import { getAllPosts, getAllTags } from '../../utils/blog'
 import { selectedTagAtom } from './blogAtoms'
+import { BlogBrand } from './BlogBrand'
 
 export const BlogList = () => {
   const allPosts = getAllPosts()
@@ -28,18 +29,7 @@ export const BlogList = () => {
 
   return (
     <section className="blog">
-      <header className="blog-header">
-        <h2 className="blog-title">
-          <Link to="/" className="blog-title-part">
-            <span className="text-gradient-sunset">pedromoratelli</span>
-          </Link>
-          <span className="blog-title-slash">/</span>
-          <Link to="/blog" className="blog-title-part">
-            <span className="text-gradient-sky">blog</span>
-          </Link>
-        </h2>
-        <p className="blog-subtitle">Reflections on code, career, and the industry.</p>
-      </header>
+      <BlogBrand />
 
       {allTags.length > 0 && (
         <div className="tag-filter">

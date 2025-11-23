@@ -6,6 +6,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import remarkGfm from 'remark-gfm'
 import { getPostBySlug } from '../../utils/blog'
 import { selectedTagAtom } from './blogAtoms'
+import { BlogBrand } from './BlogBrand'
 
 export const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -33,18 +34,7 @@ export const BlogPost = () => {
 
   return (
     <article className="blog-post">
-      <div className="blog-post-brand">
-        <div className="blog-brand-title">
-          <Link to="/" className="blog-brand-part">
-            <span className="text-gradient-sunset">pedromoratelli</span>
-          </Link>
-          <span className="blog-brand-slash">/</span>
-          <Link to="/blog" className="blog-brand-part">
-            <span className="text-gradient-sky">blog</span>
-          </Link>
-        </div>
-        <p>Reflections on code, career, and the industry.</p>
-      </div>
+      <BlogBrand />
 
       <header className="blog-post-header">
         <h1 className="text-gradient-sky">{post.title}</h1>

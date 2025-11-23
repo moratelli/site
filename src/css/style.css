@@ -441,11 +441,11 @@ footer li > a {
   margin-bottom: 3rem;
 }
 
-.blog .blog-header {
+.blog .blog-brand {
   text-align: center;
   margin-bottom: 2rem;
 }
-.blog .blog-header .blog-title {
+.blog .blog-brand .blog-brand-title {
   font-size: 1.3rem;
   font-weight: 700;
   font-family: "Sora", sans-serif;
@@ -457,21 +457,29 @@ footer li > a {
   line-height: 1.2;
   justify-content: center;
 }
-.blog .blog-header .blog-title .brand-part, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-part, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-part, .blog .blog-header .blog-title .blog-title-part {
+.blog .blog-brand .blog-brand-title .brand-part {
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-.blog .blog-header .blog-title .brand-part:hover, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-part:hover, .blog .blog-header .blog-title .blog-title-part:hover {
+.blog .blog-brand .blog-brand-title .brand-part:hover {
   opacity: 0.7;
 }
-.blog .blog-header .blog-title .brand-slash, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-brand-slash, .blog .blog-header .blog-title .blog-title-slash {
+.blog .blog-brand .blog-brand-title .brand-slash {
   color: #f5f5f5;
   font-weight: 700;
 }
-.blog .blog-header .blog-title .blog-title-part span {
-  display: inline;
+.blog .blog-brand .blog-brand-part {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
-.blog .blog-header .blog-subtitle {
+.blog .blog-brand .blog-brand-part:hover {
+  opacity: 0.7;
+}
+.blog .blog-brand .blog-brand-slash {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+.blog .blog-brand .blog-brand-subtitle {
   font-size: 1rem;
   color: #999;
   font-weight: 300;
@@ -571,11 +579,11 @@ footer li > a {
   gap: 2rem;
   margin-top: 3rem;
 }
-.blog-post .blog-post-brand {
+.blog-post .blog-brand {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.blog-post .blog-post-brand .blog-brand-title {
+.blog-post .blog-brand .blog-brand-title {
   font-size: 1.3rem;
   font-weight: 700;
   font-family: "Sora", sans-serif;
@@ -585,18 +593,29 @@ footer li > a {
   gap: 0.25rem;
   display: inline-flex;
 }
-.blog-post .blog-post-brand .blog-brand-title .brand-part, .blog-post .blog-post-brand .blog-brand-title .blog-brand-part, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-part, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-part {
+.blog-post .blog-brand .blog-brand-title .brand-part {
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
-.blog-post .blog-post-brand .blog-brand-title .brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-part:hover, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-part:hover {
+.blog-post .blog-brand .blog-brand-title .brand-part:hover {
   opacity: 0.7;
 }
-.blog-post .blog-post-brand .blog-brand-title .brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog-brand-slash, .blog-post .blog-post-brand .blog-brand-title .blog .blog-header .blog-title .blog-title-slash, .blog .blog-header .blog-title .blog-post .blog-post-brand .blog-brand-title .blog-title-slash {
+.blog-post .blog-brand .blog-brand-title .brand-slash {
   color: #f5f5f5;
   font-weight: 700;
 }
-.blog-post .blog-post-brand p {
+.blog-post .blog-brand .blog-brand-part {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.blog-post .blog-brand .blog-brand-part:hover {
+  opacity: 0.7;
+}
+.blog-post .blog-brand .blog-brand-slash {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+.blog-post .blog-brand .blog-brand-subtitle {
   font-size: 0.85rem;
   color: #999;
   margin: 0;
@@ -720,10 +739,10 @@ footer li > a {
   footer li > a {
     font-size: 2.5rem;
   }
-  .blog .blog-header .blog-title {
+  .blog .blog-brand .blog-brand-title {
     font-size: 2.5rem;
   }
-  .blog .blog-header .blog-subtitle {
+  .blog .blog-brand .blog-brand-subtitle {
     font-size: 1.1rem;
   }
   .today aside {
