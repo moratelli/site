@@ -4,11 +4,11 @@ export const BlogBrand = () => {
   return (
     <header className="blog-brand">
       <h2 className="blog-brand-title">
-        <Link to="/" className="blog-brand-part">
+        <Link to="/" className="blog-brand-part" title="Go to the Home Page">
           <span className="text-gradient-sunset">pedromoratelli</span>
         </Link>
         <span className="blog-brand-slash">/</span>
-        <Link to="/blog" className="blog-brand-part">
+        <Link to="/blog" className="blog-brand-part" title="Go to the Blog Page">
           <span className="text-gradient-sky">blog</span>
         </Link>
       </h2>
