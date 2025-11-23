@@ -509,13 +509,13 @@ footer {
 }
 
 .blog-post {
-  max-width: 800px;
   margin: 0 auto 3rem;
 
   .blog-post-nav {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-top: 3rem;
   }
 
   .blog-post-brand {
@@ -535,7 +535,7 @@ footer {
         transition: opacity 0.2s ease;
 
         &:hover {
-          opacity: 0.7;
+          opacity: 0.8;
         }
       }
 

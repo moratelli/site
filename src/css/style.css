@@ -513,13 +513,13 @@ footer li > a {
 }
 
 .blog-post {
-  max-width: 800px;
   margin: 0 auto 3rem;
 }
 .blog-post .blog-post-nav {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-top: 3rem;
 }
 .blog-post .blog-post-brand {
   text-align: center;
@@ -538,7 +538,7 @@ footer li > a {
   transition: opacity 0.2s ease;
 }
 .blog-post .blog-post-brand .blog-brand-title .blog-brand-part:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .blog-post .blog-post-brand .blog-brand-title .blog-brand-slash {
   color: #f5f5f5;
