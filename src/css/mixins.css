@@ -134,67 +134,89 @@
 }
 
 .border-gradient-sky {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-sunset {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-lime {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #ffe597 0%, #aaff82 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe597 0%, #aaff82 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-mint {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-sky {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-peach {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #ffe598 0%, #fbae95 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe598 0%, #fbae95 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-sunset {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-trackli {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-certi {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #ff942f 0%, #ffeaac 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff942f 0%, #ffeaac 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-philips {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #3378d1 0%, #bff0ff 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #3378d1 0%, #bff0ff 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
 
 .border-gradient-zallpy {
-  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box, linear-gradient(135deg, #11f175 0%, #c1ffd8 100%) border-box;
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #11f175 0%, #c1ffd8 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
-}/*# sourceMappingURL=mixins.css.map */
+} /*# sourceMappingURL=mixins.css.map */
