@@ -5,6 +5,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-lime a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-mint {
   background-image: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
@@ -12,6 +19,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-mint a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-sky {
@@ -21,6 +35,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-sky a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-peach {
   background-image: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
@@ -28,6 +49,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-peach a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-sunset {
@@ -37,6 +65,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-sunset a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-trackli {
   background-image: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
@@ -44,6 +79,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-trackli a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-certi {
@@ -53,6 +95,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-certi a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-philips {
   background-image: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
@@ -61,6 +110,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-philips a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-zallpy {
   background-image: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
@@ -68,6 +124,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-zallpy a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .border-gradient-sky {
@@ -82,6 +145,78 @@
   background:
     linear-gradient(#0d0d0d, #0d0d0d) padding-box,
     linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-lime {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe597 0%, #aaff82 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-mint {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sky {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-peach {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe598 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sunset {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-trackli {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-certi {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff942f 0%, #ffeaac 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-philips {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #3378d1 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-zallpy {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #11f175 0%, #c1ffd8 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 } /*# sourceMappingURL=mixins.css.map */

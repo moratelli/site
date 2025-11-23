@@ -7,6 +7,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-lime a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-mint {
   background-image: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%);
@@ -14,6 +21,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-mint a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-sky {
@@ -23,6 +37,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-sky a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-peach {
   background-image: linear-gradient(to right, #ffe598 0%, #fbae95 100%);
@@ -30,6 +51,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-peach a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-sunset {
@@ -39,6 +67,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-sunset a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-trackli {
   background-image: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%);
@@ -46,6 +81,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-trackli a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .text-gradient-certi {
@@ -55,6 +97,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-certi a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-philips {
   background-image: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%);
@@ -63,6 +112,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-gradient-philips a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
 
 .text-gradient-zallpy {
   background-image: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%);
@@ -70,6 +126,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-zallpy a {
+  color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .border-gradient-sky {
@@ -84,6 +147,78 @@
   background:
     linear-gradient(#0d0d0d, #0d0d0d) padding-box,
     linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-lime {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe597 0%, #aaff82 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-mint {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sky {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #82b4ff 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-peach {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #ffe598 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-sunset {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(to right, #fbae95 0%, #ab83fe 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-trackli {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-certi {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #ff942f 0%, #ffeaac 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-philips {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #3378d1 0%, #bff0ff 100%) border-box;
+  border-radius: 120px;
+  border: 2px solid transparent;
+}
+
+.border-gradient-zallpy {
+  background:
+    linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+    linear-gradient(135deg, #11f175 0%, #c1ffd8 100%) border-box;
   border-radius: 120px;
   border: 2px solid transparent;
 }
@@ -117,11 +252,16 @@ ul {
 a {
   font-weight: 600;
   cursor: pointer;
-  -webkit-text-decoration: underline dotted #f5f5f5;
-  text-decoration: underline dotted #f5f5f5;
+  -webkit-text-decoration: underline dotted rgba(245, 245, 245, 0.4509803922);
+  text-decoration: underline dotted rgba(245, 245, 245, 0.4509803922);
+  text-underline-offset: 0.1rem;
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #f5f5f5 !important;
   -webkit-text-decoration-style: dotted !important;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.8;
 }
 
 p {
@@ -196,6 +336,9 @@ body {
   max-width: 8rem;
   filter: grayscale(100%);
   opacity: 0.85;
+  transition:
+    filter 0.2s ease,
+    opacity 0.2s ease;
 }
 .trusted-by .logos img:hover {
   filter: none;
@@ -250,20 +393,36 @@ body {
   display: flex;
   justify-content: center;
 }
-.journey .tags {
+
+.tags {
   margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
 }
-.journey .tag {
+.tags .tag {
   border: 1px solid #4b5563;
   color: #9ca3af;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-family: 'Sora', sans-serif;
   font-size: 0.7rem;
   display: inline-block;
-  padding: 4px 12px;
+  padding: 0.25rem 0.75rem;
+}
+.tags button {
+  background: #0d0d0d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 0.25rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+}
+.tags button:hover {
+  border-color: #82b4ff;
 }
 
 .info-bits li {
@@ -372,6 +531,250 @@ footer li > a {
   font-size: 2rem;
 }
 
+.blog,
+.blog-post {
+  margin-bottom: 3rem;
+}
+
+.blog .blog-brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.blog .blog-brand .blog-brand-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  justify-content: center;
+}
+.blog .blog-brand .blog-brand-part {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.blog .blog-brand .blog-brand-part:hover {
+  opacity: 0.8;
+}
+.blog .blog-brand .blog-brand-slash {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+.blog .blog-brand .blog-brand-subtitle {
+  font-size: 1rem;
+  color: #999;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.blog .tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.blog .tag-filter button {
+  background: #0d0d0d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 0.25rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.3rem 1rem;
+}
+.blog .tag-filter button:hover {
+  border-color: #82b4ff;
+}
+.blog .tag-filter button.active {
+  background: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
+  color: #0d0d0d;
+  font-weight: 700;
+  border: none;
+}
+.blog .blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.blog .blog-post-preview header {
+  display: flex;
+}
+.blog .blog-post-preview header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.blog .blog-post-preview header h1 a {
+  transition: opacity 0.2s ease;
+}
+.blog .blog-post-preview header h1 a:hover {
+  opacity: 0.8;
+}
+.blog .blog-post-preview header time {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+}
+.blog .blog-post-preview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.blog .blog-post-preview .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.blog .blog-post-preview .read-more {
+  color: #82b4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  margin-top: 1rem;
+}
+.blog .blog-post-preview .read-more:hover {
+  opacity: 0.8;
+}
+.blog .blog-post-preview .read-more:hover {
+  opacity: 0.8;
+}
+
+.blog-post {
+  margin: 0 auto 3rem;
+}
+.blog-post .blog-post-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.blog-post .blog-brand {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.blog-post .blog-brand .blog-brand-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  display: inline-flex;
+}
+.blog-post .blog-brand .blog-brand-part {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.blog-post .blog-brand .blog-brand-part:hover {
+  opacity: 0.8;
+}
+.blog-post .blog-brand .blog-brand-slash {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+.blog-post .blog-brand .blog-brand-subtitle {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  font-weight: 300;
+}
+.blog-post .back-link {
+  color: #82b4ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+}
+.blog-post .back-link:hover {
+  opacity: 0.8;
+}
+.blog-post .blog-post-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #363636;
+}
+.blog-post .blog-post-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.blog-post .blog-post-header time {
+  display: block;
+  font-size: 0.9rem;
+  color: #999;
+}
+.blog-post .blog-post-header .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.blog-post .blog-post-content {
+  line-height: 1.8;
+}
+.blog-post .blog-post-content h1,
+.blog-post .blog-post-content h2,
+.blog-post .blog-post-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.blog-post .blog-post-content h1 {
+  font-size: 1.6rem;
+}
+.blog-post .blog-post-content h2 {
+  font-size: 1.3rem;
+}
+.blog-post .blog-post-content h3 {
+  font-size: 1.1rem;
+}
+.blog-post .blog-post-content p {
+  margin-bottom: 1.5rem;
+}
+.blog-post .blog-post-content ul,
+.blog-post .blog-post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style: inherit;
+}
+.blog-post .blog-post-content ul li,
+.blog-post .blog-post-content ol li {
+  margin-bottom: 0.5rem;
+}
+.blog-post .blog-post-content code {
+  background: #282828;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+.blog-post .blog-post-content pre {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.blog-post .blog-post-content pre code {
+  background: none;
+  padding: 0;
+}
+.blog-post .blog-post-content blockquote {
+  border-left: 4px solid #82b4ff;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #ccc;
+}
+.blog-post .blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
 @media (min-width: 481px) {
   .introduction {
     margin: 0 5em 3.5em 5em;
@@ -399,6 +802,12 @@ footer li > a {
   }
   footer li > a {
     font-size: 2.5rem;
+  }
+  .blog .blog-brand .blog-brand-title {
+    font-size: 2.5rem;
+  }
+  .blog .blog-brand .blog-brand-subtitle {
+    font-size: 1.1rem;
   }
   .today aside {
     /* Paris */
