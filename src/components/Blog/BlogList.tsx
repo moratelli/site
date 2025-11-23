@@ -73,7 +73,6 @@ export const BlogList = () => {
                 <time dateTime={post.date}>{formatDate(post.date)}</time>
               </div>
             </header>
-            <p>{post.excerpt}</p>
             {post.tags.length > 0 && (
               <ul className="tags">
                 {post.tags.map((tag) => (
@@ -83,6 +82,7 @@ export const BlogList = () => {
                 ))}
               </ul>
             )}
+            <p>{post.excerpt}</p>
             <Link to={`/blog/${post.slug}`} className="read-more">
               Read more →
             </Link>
