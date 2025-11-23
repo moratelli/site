@@ -14,14 +14,16 @@ export const Trackli = () => {
             <h1 className="text-gradient-trackli">Trackli</h1>
             <h3 className="text-gradient-trackli">{t('myJourney.trackli.dates')}</h3>
           </div>
-          <picture>
-            <source type="image/webp" srcSet={`${trackli1xWebp} 1x, ${trackli2xWebp} 2x`} />
-            <img
-              src={trackliPng}
-              srcSet={`${trackli1xWebp} 1x, ${trackli2xWebp} 2x`}
-              alt="Trackli's logo"
-            />
-          </picture>
+          <a href="https://trackli.com.br" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source type="image/webp" srcSet={`${trackli1xWebp} 1x, ${trackli2xWebp} 2x`} />
+              <img
+                src={trackliPng}
+                srcSet={`${trackli1xWebp} 1x, ${trackli2xWebp} 2x`}
+                alt="Trackli's logo"
+              />
+            </picture>
+          </a>
         </header>
         <Trans
           i18n={i18n}
