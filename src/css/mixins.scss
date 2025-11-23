@@ -40,6 +40,14 @@ $gradients: map-merge(
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    a {
+      color: inherit;
+      background: inherit;
+      -webkit-background-clip: inherit;
+      background-clip: inherit;
+      -webkit-text-fill-color: inherit;
+    }
   }
 }
 
