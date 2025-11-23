@@ -642,7 +642,7 @@ footer li > a {
   opacity: 0.8;
 }
 .blog .blog-post-preview .read-more:hover {
-  color: #bff0ff;
+  opacity: 0.8;
 }
 
 .blog-post {
