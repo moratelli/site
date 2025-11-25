@@ -79,8 +79,8 @@ $gradients: map.merge(
   background: variables.$background-color;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid #4b5563;
-  color: #9ca3af;
+  border: 1px solid variables.$color-border-default;
+  color: variables.$color-text-disabled;
   border-radius: 0.25rem;
   font-family: variables.$sora;
   font-size: 0.7rem;
@@ -88,13 +88,13 @@ $gradients: map.merge(
   padding: 0.25rem 0.75rem;
 
   &:hover {
-    border-color: #82b4ff;
+    border-color: variables.$color-accent-blue;
   }
 }
 
 // Reusable link styles
 @mixin link-blue {
-  color: #82b4ff;
+  color: variables.$color-accent-blue;
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.2s ease;
