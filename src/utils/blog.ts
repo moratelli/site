@@ -1,13 +1,11 @@
 import type { BlogPost } from '../types/blog'
 
-// Import markdown files directly
-import i18nPost from '../content/blog/en/building-type-safe-i18n-react.md?raw'
-import welcomePost from '../content/blog/en/welcome-to-my-blog.md?raw'
-
-const blogPostsRaw: Record<string, string> = {
-  'welcome-to-my-blog': welcomePost,
-  'building-type-safe-i18n-react': i18nPost,
-}
+// Dynamically import all markdown files from the blog directory
+const blogPostsRaw = import.meta.glob<string>('../content/blog/en/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+})
 
 interface FrontmatterData {
   title?: string
@@ -23,7 +21,27 @@ interface ParsedMarkdown {
   content: string
 }
 
-// Simple frontmatter parser (browser-compatible)
+/**
+ * Browser-compatible YAML frontmatter parser for markdown blog posts.
+ *
+ * Parses simple YAML frontmatter (key: value pairs and arrays with []) without Node.js dependencies.
+ * Does not support complex YAML features (nested objects, multi-line strings, etc.).
+ *
+ * @param markdown - Raw markdown string with optional frontmatter delimited by ---
+ * @returns Parsed frontmatter data object and remaining content
+ *
+ * @example
+ * ```typescript
+ * const result = parseFrontmatter(`---
+ * title: 'My Post'
+ * tags: ['react', 'typescript']
+ * ---
+ * # Content here
+ * `)
+ * // result.data = { title: 'My Post', tags: ['react', 'typescript'] }
+ * // result.content = '# Content here'
+ * ```
+ */
 const parseFrontmatter = (markdown: string): ParsedMarkdown => {
   const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/
   const match = markdown.match(frontmatterRegex)
@@ -70,12 +88,14 @@ export const getAllPosts = (): BlogPost[] => {
   const posts: BlogPost[] = []
 
   try {
-    for (const slug in blogPostsRaw) {
-      const markdown = blogPostsRaw[slug]
+    for (const path in blogPostsRaw) {
+      const markdown = blogPostsRaw[path]
       if (!markdown) {
-        console.warn(`No markdown content for ${slug}`)
         continue
       }
+
+      // Extract slug from file path (e.g., '../content/blog/en/welcome-to-my-blog.md' -> 'welcome-to-my-blog')
+      const slug = path.split('/').pop()?.replace('.md', '') ?? ''
 
       const { data, content } = parseFrontmatter(markdown)
 
@@ -89,7 +109,11 @@ export const getAllPosts = (): BlogPost[] => {
       })
     }
   } catch (error) {
-    console.error('Error loading blog posts:', error)
+    // In production, this error will be caught by ErrorBoundary
+    // Development errors will be visible in the console anyway
+    if (import.meta.env.DEV) {
+      console.error('Error loading blog posts:', error)
+    }
   }
 
   // Sort by date, newest first

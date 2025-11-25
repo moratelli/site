@@ -23,10 +23,6 @@ export const BlogPost = () => {
     [setSelectedTag, navigate]
   )
 
-  if (!post) {
-    return <Navigate to="/blog" replace />
-  }
-
   const formatDate = useCallback((dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-GB', {
@@ -54,6 +50,10 @@ export const BlogPost = () => {
     }),
     []
   )
+
+  if (!post) {
+    return <Navigate to="/blog" replace />
+  }
 
   return (
     <article className="blog-post">
