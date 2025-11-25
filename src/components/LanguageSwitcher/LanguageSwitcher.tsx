@@ -1,6 +1,6 @@
+import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../../i18n/config'
-import './LanguageSwitcher.css'
 
 const LANGUAGE_CONFIG: Record<SupportedLanguage, { emoji: string; label: string }> = {
   en: { emoji: '🇬🇧', label: 'EN' },
@@ -8,22 +8,32 @@ const LANGUAGE_CONFIG: Record<SupportedLanguage, { emoji: string; label: string 
   pt_BR: { emoji: '🇧🇷', label: 'PT' },
 }
 
+/**
+ * Language switcher component for internationalization.
+ *
+ * Allows users to switch between supported languages (English, French, Portuguese).
+ * Preserves scroll position when changing languages using percentage-based calculation.
+ * Stores language preference in localStorage for persistence across sessions.
+ */
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
 
-  const handleChange = (lng: SupportedLanguage) => {
-    // Save current scroll position as percentage of total height
-    const scrollPercentage = window.scrollY / document.documentElement.scrollHeight
+  const handleChange = useCallback(
+    (lng: SupportedLanguage) => {
+      // Save current scroll position as percentage of total height
+      const scrollPercentage = window.scrollY / document.documentElement.scrollHeight
 
-    i18n.changeLanguage(lng).then(() => {
-      // Wait for content to re-render
-      requestAnimationFrame(() => {
-        // Restore scroll position relative to new content height
-        const newScrollPosition = scrollPercentage * document.documentElement.scrollHeight
-        window.scrollTo({ top: newScrollPosition, behavior: 'smooth' })
+      i18n.changeLanguage(lng).then(() => {
+        // Wait for content to re-render
+        requestAnimationFrame(() => {
+          // Restore scroll position relative to new content height
+          const newScrollPosition = scrollPercentage * document.documentElement.scrollHeight
+          window.scrollTo({ top: newScrollPosition, behavior: 'smooth' })
+        })
       })
-    })
-  }
+    },
+    [i18n]
+  )
 
   return (
     <div className="language-switcher" role="navigation" aria-label="Language selector">

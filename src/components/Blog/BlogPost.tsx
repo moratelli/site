@@ -1,4 +1,5 @@
 import { useSetAtom } from 'jotai'
+import { useCallback, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -10,26 +11,48 @@ import { BlogBrand } from './BlogBrand'
 
 export const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
-  const post = slug ? getPostBySlug(slug) : undefined
+  const post = useMemo(() => (slug ? getPostBySlug(slug) : undefined), [slug])
   const navigate = useNavigate()
   const setSelectedTag = useSetAtom(selectedTagAtom)
 
-  const handleTagClick = (tag: string) => {
-    setSelectedTag(tag)
-    navigate('/blog')
-  }
+  const handleTagClick = useCallback(
+    (tag: string) => {
+      setSelectedTag(tag)
+      navigate('/blog')
+    },
+    [setSelectedTag, navigate]
+  )
 
-  if (!post) {
-    return <Navigate to="/blog" replace />
-  }
-
-  const formatDate = (dateString: string) => {
+  const formatDate = useCallback((dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-GB', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     })
+  }, [])
+
+  const markdownComponents = useMemo(
+    () => ({
+      code({ className, children, ...props }: { className?: string; children?: React.ReactNode }) {
+        const match = /language-(\w+)/.exec(className || '')
+        const isInline = !match
+        return !isInline ? (
+          <SyntaxHighlighter style={vscDarkPlus} language={match[1]} PreTag="div">
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        ) : (
+          <code className={className} {...props}>
+            {children}
+          </code>
+        )
+      },
+    }),
+    []
+  )
+
+  if (!post) {
+    return <Navigate to="/blog" replace />
   }
 
   return (
@@ -59,22 +82,7 @@ export const BlogPost = () => {
       </header>
 
       <div className="blog-post-content">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            code({ className, children }) {
-              const match = /language-(\w+)/.exec(className || '')
-              const isInline = !match
-              return !isInline ? (
-                <SyntaxHighlighter style={vscDarkPlus} language={match[1]} PreTag="div">
-                  {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
-              ) : (
-                <code className={className}>{children}</code>
-              )
-            },
-          }}
-        >
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {post.content}
         </ReactMarkdown>
       </div>

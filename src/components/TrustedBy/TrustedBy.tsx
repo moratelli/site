@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   bmwPng,
@@ -12,7 +13,7 @@ import {
   siemensPng,
 } from '../../assets/assets'
 
-export const TrustedBy = () => {
+export const TrustedBy = memo(() => {
   const { t } = useTranslation()
 
   return (
@@ -53,4 +54,6 @@ export const TrustedBy = () => {
       </div>
     </section>
   )
-}
+})
+
+TrustedBy.displayName = 'TrustedBy'

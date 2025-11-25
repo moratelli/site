@@ -1,18 +1,70 @@
+import { lazy, Suspense } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import { BlogList } from './components/Blog/BlogList'
-import { BlogPost } from './components/Blog/BlogPost'
-import { HomePage } from './HomePage'
+import { BlogErrorBoundary } from './components/ErrorBoundary/BlogErrorBoundary'
+import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 
-import './css/style.css'
+import './css/style.scss'
+
+// Lazy load route components
+const HomePage = lazy(() => import('./HomePage').then((module) => ({ default: module.HomePage })))
+const BlogList = lazy(() =>
+  import('./components/Blog/BlogList').then((module) => ({ default: module.BlogList }))
+)
+const BlogPost = lazy(() =>
+  import('./components/Blog/BlogPost').then((module) => ({ default: module.BlogPost }))
+)
+
+// Loading component
+const LoadingFallback = () => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100vh',
+    }}
+  >
+    <p>Loading...</p>
+  </div>
+)
 
 export const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<BlogList />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-      </Routes>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<LoadingFallback />}>
+                  <HomePage />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<LoadingFallback />}>
+                  <BlogList />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="/blog/:slug"
+            element={
+              <BlogErrorBoundary>
+                <Suspense fallback={<LoadingFallback />}>
+                  <BlogPost />
+                </Suspense>
+              </BlogErrorBoundary>
+            }
+          />
+        </Routes>
+      </Router>
+    </ErrorBoundary>
   )
 }

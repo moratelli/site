@@ -1,6 +1,13 @@
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 
-export const BlogBrand = () => {
+/**
+ * Blog branding header component displaying the site navigation breadcrumb.
+ *
+ * Shows "pedromoratelli/blog" style navigation with links to home and blog list.
+ * Memoized to prevent unnecessary re-renders.
+ */
+export const BlogBrand = memo(() => {
   return (
     <header className="blog-brand">
       <h2 className="blog-brand-title">
@@ -15,4 +22,6 @@ export const BlogBrand = () => {
       <p className="blog-brand-subtitle">Reflections on code, career, and the industry.</p>
     </header>
   )
-}
+})
+
+BlogBrand.displayName = 'BlogBrand'

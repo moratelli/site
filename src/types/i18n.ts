@@ -16,6 +16,7 @@ export interface TranslationSchema {
       dates: string
       paragraph1: string
       paragraph2: string
+      photoCaption: string
       tags: string[]
     }
     trackli: {
@@ -45,7 +46,7 @@ export interface TranslationSchema {
       paragraph3: string
       paragraph4: string
       infoBits: string[]
-      photo_caption?: string
+      photoCaption: string
       tags: string[]
     }
   }

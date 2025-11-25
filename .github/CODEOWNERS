@@ -1,0 +1,20 @@
+# Code Owners
+
+# All pull requests require review and approval from the repository owner
+
+# Default owner for everything in the repo
+
+- @moratelli
+
+# Critical configuration files
+
+_.json @moratelli
+_.yml @moratelli
+_.yaml @moratelli
+vercel.json @moratelli
+vite.config.ts @moratelli
+tsconfig_.json @moratelli
+
+# Build and deployment configurations
+
+.github/ @moratelli

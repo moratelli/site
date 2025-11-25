@@ -1,25 +1,25 @@
 @use 'sass:map';
-@import 'variables.scss';
+@use 'variables';
 
 $gradients: () !default;
-$gradients: map-merge(
+$gradients: map.merge(
   (
-    lime: linear-gradient(to right, #ffe597 0%, #aaff82 100%),
-    mint: linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%),
-    sky: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%),
-    peach: linear-gradient(to right, #ffe598 0%, #fbae95 100%),
-    sunset: linear-gradient(to right, #fbae95 0%, #ab83fe 100%),
-    trackli: linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%),
-    certi: linear-gradient(135deg, #ff942f 0%, #ffeaac 100%),
-    philips: linear-gradient(135deg, #3378d1 0%, #bff0ff 100%),
-    zallpy: linear-gradient(135deg, #11f175 0%, #c1ffd8 100%),
+    'lime': linear-gradient(to right, #ffe597 0%, #aaff82 100%),
+    'mint': linear-gradient(to right, #c0f0ff 0%, #a9fe81 100%),
+    'sky': linear-gradient(to right, #82b4ff 0%, #bff0ff 100%),
+    'peach': linear-gradient(to right, #ffe598 0%, #fbae95 100%),
+    'sunset': linear-gradient(to right, #fbae95 0%, #ab83fe 100%),
+    'trackli': linear-gradient(135deg, #ff3e5b 0%, #fbae95 100%),
+    'certi': linear-gradient(135deg, #ff942f 0%, #ffeaac 100%),
+    'philips': linear-gradient(135deg, #3378d1 0%, #bff0ff 100%),
+    'zallpy': linear-gradient(135deg, #11f175 0%, #c1ffd8 100%),
   ),
   $gradients
 );
 
 @mixin border-gradient-sky {
   background:
-    linear-gradient($background-color, $background-color) padding-box,
+    linear-gradient(variables.$background-color, variables.$background-color) padding-box,
     map.get($gradients, 'sky') border-box;
   border-radius: 120px;
   border: 2px solid transparent;
@@ -27,7 +27,7 @@ $gradients: map-merge(
 
 @mixin border-gradient-sunset {
   background:
-    linear-gradient($background-color, $background-color) padding-box,
+    linear-gradient(variables.$background-color, variables.$background-color) padding-box,
     map.get($gradients, 'sunset') border-box;
   border-radius: 120px;
   border: 2px solid transparent;
@@ -67,7 +67,7 @@ $gradients: map-merge(
 @each $gradient, $value in $gradients {
   .border-gradient-#{$gradient} {
     background:
-      linear-gradient($background-color, $background-color) padding-box,
+      linear-gradient(variables.$background-color, variables.$background-color) padding-box,
       $value border-box;
     border-radius: 120px;
     border: 2px solid transparent;
@@ -76,25 +76,25 @@ $gradients: map-merge(
 
 // Reusable tag button mixin
 @mixin tag-button {
-  background: $background-color;
+  background: variables.$background-color;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid #4b5563;
-  color: #9ca3af;
+  border: 1px solid variables.$color-border-default;
+  color: variables.$color-text-disabled;
   border-radius: 0.25rem;
-  font-family: $sora;
+  font-family: variables.$sora;
   font-size: 0.7rem;
   display: inline-block;
   padding: 0.25rem 0.75rem;
 
   &:hover {
-    border-color: #82b4ff;
+    border-color: variables.$color-accent-blue;
   }
 }
 
 // Reusable link styles
 @mixin link-blue {
-  color: #82b4ff;
+  color: variables.$color-accent-blue;
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.2s ease;
@@ -108,7 +108,7 @@ $gradients: map-merge(
 @mixin brand-header {
   font-size: 1.3rem;
   font-weight: 700;
-  font-family: $sora;
+  font-family: variables.$sora;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;

@@ -1,23 +1,28 @@
 import { useAtom } from 'jotai'
+import { useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllPosts, getAllTags } from '../../utils/blog'
 import { selectedTagAtom } from './blogAtoms'
 import { BlogBrand } from './BlogBrand'
 
 export const BlogList = () => {
-  const allPosts = getAllPosts()
-  const allTags = getAllTags()
+  const allPosts = useMemo(() => getAllPosts(), [])
+  const allTags = useMemo(() => getAllTags(), [])
   const [selectedTag, setSelectedTag] = useAtom(selectedTagAtom)
 
-  const handleTagClick = (tag: string | null) => {
-    setSelectedTag(tag)
-  }
+  const handleTagClick = useCallback(
+    (tag: string | null) => {
+      setSelectedTag(tag)
+    },
+    [setSelectedTag]
+  )
 
-  const filteredPosts = selectedTag
-    ? allPosts.filter((post) => post.tags.includes(selectedTag))
-    : allPosts
+  const filteredPosts = useMemo(
+    () => (selectedTag ? allPosts.filter((post) => post.tags.includes(selectedTag)) : allPosts),
+    [selectedTag, allPosts]
+  )
 
-  const formatDate = (dateString: string) => {
+  const formatDate = useCallback((dateString: string) => {
     const date = new Date(dateString)
 
     return date.toLocaleDateString('en-GB', {
@@ -25,7 +30,7 @@ export const BlogList = () => {
       month: 'long',
       day: 'numeric',
     })
-  }
+  }, [])
 
   return (
     <section className="blog">

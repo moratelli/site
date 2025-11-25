@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import {
   laraAndI1xWebp,
   laraAndI2xWebp,
@@ -19,9 +18,11 @@ import {
   passport1xWebp,
   passport2xWebp,
   passportPng,
-} from '../../../assets/assets'
+} from '@assets/assets'
+import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 
-export const Today = () => {
+export const Today = memo(() => {
   const { t } = useTranslation()
 
   return (
@@ -50,7 +51,7 @@ export const Today = () => {
             <img
               src={parisJpeg}
               srcSet={`${paris1xWebp} 1x, ${paris2xWebp} 2x, ${paris3xWebp} 3x`}
-              alt="A picture of Ottawa, Canada"
+              alt="A picture of Paris, France"
             />
           </picture>
         </div>
@@ -63,7 +64,7 @@ export const Today = () => {
             <img
               src={ottawaJpeg}
               srcSet={`${ottawa1xWebp} 1x, ${ottawa2xWebp} 2x, ${ottawa3xWebp} 3x`}
-              alt="A picture of Paris, France"
+              alt="A picture of Ottawa, Canada"
             />
           </picture>
         </div>
@@ -96,4 +97,6 @@ export const Today = () => {
       </aside>
     </article>
   )
-}
+})
+
+Today.displayName = 'Today'

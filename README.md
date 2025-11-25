@@ -1,75 +1,146 @@
-# React + TypeScript + Vite
+# Pedro Moratelli - Personal Portfolio & Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, performant portfolio website built with React 19, TypeScript, and Vite. Features a multilingual blog platform with markdown support, syntax highlighting, and tag-based filtering.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [pedromoratelli.com](https://pedromoratelli.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack & Architecture
 
-## React Compiler
+### Core Technologies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React 19.2** with TypeScript 5.9 for type-safe component development
+- **Vite 7.2** for blazing-fast builds and HMR
+- **React Router Dom** for client-side routing with SPA support
+- **Sass/SCSS** with custom mixins for maintainable styling
 
-Note: This will impact Vite dev & build performances.
+### Key Features
 
-## Expanding the ESLint configuration
+- **Internationalization (i18n):** Multi-language support (EN/PT-BR/FR-CA) using i18next with browser language detection
+- **Blog Platform:** Markdown-based blog with frontmatter, syntax highlighting (Prism), and tag filtering
+- **State Management:** Jotai for lightweight atomic state management
+- **Analytics:** Vercel Analytics & Speed Insights for performance monitoring
+- **CI/CD:** GitHub Actions pipeline with linting, formatting, type-checking, and security audits
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Architecture Highlights
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Custom Markdown Parser**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Browser-compatible frontmatter parser (no Node.js dependencies)
+- Dynamic markdown imports using Vite's `import.meta.glob`
+- Type-safe blog post metadata with TypeScript interfaces
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Reusable Component Patterns**
+
+- Atomic design with shared mixins (`tag-button`, `link-blue`, `text-gradient`)
+- Context-aware styling (parent-controlled component variants)
+- Responsive design with mobile-first breakpoints
+
+**Code Quality & Testing**
+
+- ESLint + Prettier with organized imports and strict type checking
+- Comprehensive test coverage:
+  - **Unit Tests:** Vitest + React Testing Library (62 tests)
+  - **E2E Tests:** Playwright for critical user flows
+  - **i18n Completeness Tests:** Validates all translation keys exist
+- GitHub Actions CI running on every PR (lint, format, type-check, tests, build, security audit)
+- React Compiler enabled for automatic optimization
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/moratelli/site.git
+cd site
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev          # Start development server (http://localhost:5173)
+npm run build        # Build for production
+npm run preview      # Preview production build locally
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues automatically
+npm run format       # Format code with Prettier
+npm run format:check # Check code formatting
+npm run type-check   # Run TypeScript type checking
+npm test             # Run unit tests (Vitest)
+npm run test:e2e     # Run E2E tests (Playwright)
+npm run test:e2e:ui  # Run E2E tests with UI mode
 ```
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Blog/           # Blog-specific components
+│   ├── Footer/         # Site footer
+│   ├── Introduction/   # Hero section
+│   ├── MyJourney/      # Timeline components
+│   ├── Skills/         # Skills showcase
+│   └── ...
+├── content/blog/       # Markdown blog posts (EN/PT-BR)
+├── i18n/              # Translation files
+├── css/               # Global styles and mixins
+├── types/             # TypeScript type definitions
+└── utils/             # Utility functions (markdown parser, etc.)
+```
+
+## Blog System
+
+The blog platform supports:
+
+- **Frontmatter metadata** (title, date, tags, description)
+- **Syntax highlighting** for code blocks (Prism theme)
+- **Tag-based filtering** with URL state management
+- **GitHub Flavored Markdown** (tables, strikethrough, etc.)
+- **Multi-language content** with automatic routing
+
+### Adding a Blog Post
+
+Create a new `.md` file in `src/content/blog/en/` (or `pt_BR/`):
+
+```markdown
+---
+title: 'Your Post Title'
+date: '2025-11-24'
+tags: ['react', 'typescript']
+description: 'Brief description for SEO'
+---
+
+Your markdown content here...
+```
+
+## Deployment
+
+The site is deployed on Vercel with automatic deployments from the `master` branch.
+
+**SPA Routing Configuration:** The `vercel.json` file includes rewrites to ensure client-side routing works correctly for direct URL access.
+
+## Contributing
+
+While this is primarily a personal portfolio, I welcome feedback and suggestions! Please open an issue to discuss potential improvements.
+
+**Note:** All PRs require review and approval before merging (see branch protection rules).
+
+## License
+
+MIT License - Feel free to reference the code structure and patterns, but please don't copy the content verbatim.
+
+---
+
+Built with ❤️ by [Pedro Moratelli](https://pedromoratelli.com) | [LinkedIn](https://www.linkedin.com/in/pedromoratelli) | [GitHub](https://github.com/moratelli)

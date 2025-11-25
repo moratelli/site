@@ -14,6 +14,14 @@ dist-ssr
 .vite
 .DS_Store
 
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Compiled CSS (generated from SCSS)
+src/css/*.css
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

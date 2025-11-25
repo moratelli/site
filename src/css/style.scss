@@ -1,6 +1,6 @@
-@import '../../node_modules/modern-normalize/modern-normalize.css';
-@import 'mixins.scss';
-@import 'variables.scss';
+@use '../../node_modules/modern-normalize/modern-normalize.css';
+@use 'variables';
+@use 'mixins';
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
@@ -8,7 +8,7 @@
 // Typography
 h1,
 h2 {
-  font-family: $sora;
+  font-family: variables.$sora;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h3 {
   margin: 0;
 }
 
-// Remove html fuckery
+// Reset default HTML list styles
 ul {
   list-style: none;
   padding: 0px;
@@ -36,11 +36,8 @@ ul {
 a {
   font-weight: 600;
   cursor: pointer;
-  text-decoration: underline dotted #f5f5f573;
+  text-decoration: underline dotted variables.$color-link-underline;
   text-underline-offset: 0.1rem;
-  -webkit-text-decoration-line: underline !important;
-  -webkit-text-decoration-color: #f5f5f5 !important;
-  -webkit-text-decoration-style: dotted !important;
   transition: opacity 0.2s ease;
 
   &:hover {
@@ -55,10 +52,10 @@ p {
 // IMPORTANT!
 // CSS IS MOBILE-FIRST!
 body {
-  font-family: $font-stack;
-  background-color: $background-color;
+  font-family: variables.$font-stack;
+  background-color: variables.$background-color;
   font-size: 0.9rem;
-  color: #f5f5f5;
+  color: variables.$color-text-primary;
   margin: 3em 2em 1em 2em;
   overflow-x: hidden;
 }
@@ -86,7 +83,7 @@ body {
     max-width: 7rem;
     margin-bottom: 2rem;
     outline-offset: -4px;
-    @include border-gradient-sunset();
+    @include mixins.border-gradient-sunset();
   }
 }
 
@@ -189,24 +186,24 @@ body {
   gap: 0.25rem;
 
   .tag {
-    border: 1px solid #4b5563;
-    color: #9ca3af;
+    border: 1px solid variables.$color-border-default;
+    color: variables.$color-text-disabled;
     border-radius: 0.25rem;
-    font-family: $sora;
+    font-family: variables.$sora;
     font-size: 0.7rem;
     display: inline-block;
     padding: 0.25rem 0.75rem;
   }
 
   button {
-    @include tag-button;
+    @include mixins.tag-button;
   }
 }
 
 .info-bits {
   li {
-    background: #282828;
-    border: 1px solid #363636;
+    background: variables.$color-bg-surface;
+    border: 1px solid variables.$color-border-subtle;
     border-radius: 8px;
     padding: 15px;
     font-size: 0.75rem;
@@ -226,7 +223,7 @@ body {
 
 .photo,
 .photo-with-subtitles {
-  background: #fcfafa;
+  background: variables.$color-bg-light;
   padding: 0.3rem;
   border-radius: 8px;
   transform: rotate(-2deg);
@@ -246,7 +243,7 @@ body {
   p {
     margin: 0.25rem 0 0 0;
     text-align: center;
-    font-family: $nanum-pen;
+    font-family: variables.$nanum-pen;
     font-size: 1.4rem;
     color: black;
   }
@@ -342,7 +339,7 @@ footer {
     margin-bottom: 2rem;
 
     .blog-brand-title {
-      @include brand-header;
+      @include mixins.brand-header;
       font-size: 2rem;
       line-height: 1.2;
       justify-content: center;
@@ -358,13 +355,13 @@ footer {
     }
 
     .blog-brand-slash {
-      color: #f5f5f5;
+      color: variables.$color-text-primary;
       font-weight: 700;
     }
 
     .blog-brand-subtitle {
       font-size: 1rem;
-      color: #999;
+      color: variables.$color-text-muted;
       font-weight: 300;
       max-width: 600px;
       margin: 0 auto;
@@ -379,23 +376,27 @@ footer {
     margin-bottom: 2rem;
 
     button {
-      background: $background-color;
+      background: variables.$background-color;
       cursor: pointer;
       transition: all 0.2s ease;
-      border: 1px solid #4b5563;
-      color: #9ca3af;
+      border: 1px solid variables.$color-border-default;
+      color: variables.$color-text-disabled;
       border-radius: 0.25rem;
-      font-family: $sora;
+      font-family: variables.$sora;
       font-size: 0.85rem;
       padding: 0.3rem 1rem;
 
       &:hover {
-        border-color: #82b4ff;
+        border-color: variables.$color-accent-blue;
       }
 
       &.active {
-        background: linear-gradient(to right, #82b4ff 0%, #bff0ff 100%);
-        color: #0d0d0d;
+        background: linear-gradient(
+          to right,
+          variables.$color-accent-blue 0%,
+          variables.$color-accent-blue-light 100%
+        );
+        color: variables.$color-text-dark;
         font-weight: 700;
         border: none;
       }
@@ -429,7 +430,7 @@ footer {
       time {
         display: block;
         font-size: 0.8rem;
-        color: #999;
+        color: variables.$color-text-muted;
       }
     }
 
@@ -446,7 +447,7 @@ footer {
     }
 
     .read-more {
-      @include link-blue;
+      @include mixins.link-blue;
       margin-top: 1rem;
 
       &:hover {
@@ -471,7 +472,7 @@ footer {
     margin-bottom: 2.5rem;
 
     .blog-brand-title {
-      @include brand-header;
+      @include mixins.brand-header;
       display: inline-flex;
     }
 
@@ -485,26 +486,26 @@ footer {
     }
 
     .blog-brand-slash {
-      color: #f5f5f5;
+      color: variables.$color-text-primary;
       font-weight: 700;
     }
 
     .blog-brand-subtitle {
       font-size: 0.85rem;
-      color: #999;
+      color: variables.$color-text-muted;
       margin: 0;
       font-weight: 300;
     }
   }
 
   .back-link {
-    @include link-blue;
+    @include mixins.link-blue;
     display: inline-block;
   }
 
   .blog-post-header {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #363636;
+    border-bottom: 1px solid variables.$color-border-subtle;
 
     h1 {
       font-size: 1.8rem;
@@ -515,7 +516,7 @@ footer {
     time {
       display: block;
       font-size: 0.9rem;
-      color: #999;
+      color: variables.$color-text-muted;
     }
 
     .tags {
@@ -563,7 +564,7 @@ footer {
     }
 
     code {
-      background: #282828;
+      background: variables.$color-bg-surface;
       padding: 0.2rem 0.4rem;
       border-radius: 4px;
       font-size: 0.9em;
@@ -582,11 +583,11 @@ footer {
     }
 
     blockquote {
-      border-left: 4px solid #82b4ff;
+      border-left: 4px solid variables.$color-accent-blue;
       padding-left: 1rem;
       margin: 1.5rem 0;
       font-style: italic;
-      color: #ccc;
+      color: variables.$color-text-secondary;
     }
 
     img {
@@ -784,9 +785,135 @@ footer {
   }
 }
 
+// Error Boundary
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 2rem;
+
+  &-content {
+    text-align: center;
+    max-width: 600px;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      color: variables.$color-text-subdued;
+    }
+
+    details {
+      margin: 1.5rem 0;
+      text-align: left;
+
+      summary {
+        cursor: pointer;
+        color: variables.$color-text-subdued;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+
+        &:hover {
+          color: variables.$color-text-primary;
+        }
+      }
+
+      pre {
+        background: variables.$color-bg-code;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        font-size: 0.875rem;
+        color: variables.$color-accent-red;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button,
+    a {
+      @include mixins.tag-button;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  }
+}
+
+// Language Switcher
+.language-switcher {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid variables.$color-border-light;
+  margin-top: 1.5rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: none;
+    border: none;
+    color: variables.$color-text-muted;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    min-width: 48px;
+    min-height: 44px;
+
+    .flag {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .label {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: variables.$color-text-primary;
+      background: variables.$color-border-transparent;
+    }
+
+    &.active {
+      color: variables.$color-text-white;
+      background: rgba(130, 180, 255, 0.15);
+
+      .label {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 // Huge screens
 @media (min-width: 1281px) {
   body {
     margin: 5em 25% 1rem 25%;
+  }
+}
+
+// Mobile adjustments for language switcher
+@media (max-width: 768px) {
+  .language-switcher {
+    gap: 0.5rem;
+
+    button {
+      font-size: 0.85rem;
+    }
   }
 }

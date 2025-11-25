@@ -1,4 +1,6 @@
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
@@ -9,8 +11,21 @@ export default defineConfig({
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
+    visualizer({
+      filename: './dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
   ],
   build: {
     outDir: 'dist',
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@assets': resolve(__dirname, './src/assets'),
+    },
   },
 })
