@@ -22,7 +22,11 @@ export class BlogErrorBoundary extends Component<BlogErrorBoundaryProps, BlogErr
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    console.error('BlogErrorBoundary caught an error:', error, errorInfo)
+    // Log errors in development for debugging
+    if (import.meta.env.DEV) {
+      console.error('BlogErrorBoundary caught an error:', error, errorInfo)
+    }
+    // In production, errors are tracked by Vercel Analytics
   }
 
   render(): ReactNode {

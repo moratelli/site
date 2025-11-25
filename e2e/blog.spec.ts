@@ -11,18 +11,18 @@ test.describe('Blog Navigation', () => {
     // Should be on blog page
     await expect(page).toHaveURL(/\/blog/)
 
-    // Should see blog list
-    await expect(page.locator('.blog-list')).toBeVisible()
+    // Should see blog section
+    await expect(page.locator('.blog')).toBeVisible()
   })
 
   test('filters blog posts by tag', async ({ page }) => {
     await page.goto('/blog')
 
     // Wait for posts to load
-    await page.waitForSelector('.blog-post-card', { timeout: 5000 })
+    await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
 
     // Count initial posts
-    const initialCount = await page.locator('.blog-post-card').count()
+    const initialCount = await page.locator('.blog-post-preview').count()
     expect(initialCount).toBeGreaterThan(0)
 
     // Click a tag if available
@@ -32,7 +32,7 @@ test.describe('Blog Navigation', () => {
 
       // Posts should be filtered (count may change)
       await page.waitForTimeout(100)
-      const filteredCount = await page.locator('.blog-post-card').count()
+      const filteredCount = await page.locator('.blog-post-preview').count()
       expect(filteredCount).toBeGreaterThan(0)
     }
   })
@@ -41,10 +41,10 @@ test.describe('Blog Navigation', () => {
     await page.goto('/blog')
 
     // Wait for posts to load
-    await page.waitForSelector('.blog-post-card', { timeout: 5000 })
+    await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
 
     // Click first post
-    const firstPost = page.locator('.blog-post-card').first()
+    const firstPost = page.locator('.blog-post-preview').first()
     await firstPost.click()
 
     // Should be on post page
@@ -58,10 +58,10 @@ test.describe('Blog Navigation', () => {
     await page.goto('/blog')
 
     // Wait for posts to load
-    await page.waitForSelector('.blog-post-card', { timeout: 5000 })
+    await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
 
     // Click first post
-    await page.locator('.blog-post-card').first().click()
+    await page.locator('.blog-post-preview').first().click()
 
     // Check for markdown elements
     const article = page.locator('article')
@@ -75,8 +75,8 @@ test.describe('Blog Navigation', () => {
 
   test('navigates back to blog list from post', async ({ page }) => {
     await page.goto('/blog')
-    await page.waitForSelector('.blog-post-card', { timeout: 5000 })
-    await page.locator('.blog-post-card').first().click()
+    await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
+    await page.locator('.blog-post-preview').first().click()
 
     // Find and click back link
     const backLink = page.getByRole('link', { name: /back to blog/i })

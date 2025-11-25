@@ -34,18 +34,20 @@ export const Senai = memo(() => {
             </picture>
           </a>
         </header>
-        <Trans
-          i18n={i18n}
-          i18nKey="myJourney.school.paragraph1"
-          components={[
-            <a
-              className="text-gradient-sky"
-              href="https://www.senai.br"
-              target="_blank"
-              rel="noopener noreferrer"
-            />,
-          ]}
-        />
+        <p>
+          <Trans
+            i18n={i18n}
+            i18nKey="myJourney.school.paragraph1"
+            components={[
+              <a
+                className="text-gradient-sky"
+                href="https://www.senai.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              />,
+            ]}
+          />
+        </p>
         <p>{t('myJourney.school.paragraph2')}</p>
         <Tags tags={tags} />
       </div>

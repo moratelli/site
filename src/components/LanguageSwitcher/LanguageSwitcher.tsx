@@ -1,7 +1,6 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../../i18n/config'
-import './LanguageSwitcher.css'
 
 const LANGUAGE_CONFIG: Record<SupportedLanguage, { emoji: string; label: string }> = {
   en: { emoji: '🇬🇧', label: 'EN' },

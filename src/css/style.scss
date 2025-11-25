@@ -1,6 +1,6 @@
-@import '../../node_modules/modern-normalize/modern-normalize.css';
-@import 'mixins.scss';
-@import 'variables.scss';
+@use '../../node_modules/modern-normalize/modern-normalize.css';
+@use 'variables';
+@use 'mixins';
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@100..800&family=Nanum+Pen+Script&display=swap');
@@ -8,7 +8,7 @@
 // Typography
 h1,
 h2 {
-  font-family: $sora;
+  font-family: variables.$sora;
 }
 
 h1 {
@@ -38,9 +38,6 @@ a {
   cursor: pointer;
   text-decoration: underline dotted #f5f5f573;
   text-underline-offset: 0.1rem;
-  -webkit-text-decoration-line: underline !important;
-  -webkit-text-decoration-color: #f5f5f5 !important;
-  -webkit-text-decoration-style: dotted !important;
   transition: opacity 0.2s ease;
 
   &:hover {
@@ -55,8 +52,8 @@ p {
 // IMPORTANT!
 // CSS IS MOBILE-FIRST!
 body {
-  font-family: $font-stack;
-  background-color: $background-color;
+  font-family: variables.$font-stack;
+  background-color: variables.$background-color;
   font-size: 0.9rem;
   color: #f5f5f5;
   margin: 3em 2em 1em 2em;
@@ -86,7 +83,7 @@ body {
     max-width: 7rem;
     margin-bottom: 2rem;
     outline-offset: -4px;
-    @include border-gradient-sunset();
+    @include mixins.border-gradient-sunset();
   }
 }
 
@@ -192,14 +189,14 @@ body {
     border: 1px solid #4b5563;
     color: #9ca3af;
     border-radius: 0.25rem;
-    font-family: $sora;
+    font-family: variables.$sora;
     font-size: 0.7rem;
     display: inline-block;
     padding: 0.25rem 0.75rem;
   }
 
   button {
-    @include tag-button;
+    @include mixins.tag-button;
   }
 }
 
@@ -342,7 +339,7 @@ footer {
     margin-bottom: 2rem;
 
     .blog-brand-title {
-      @include brand-header;
+      @include mixins.brand-header;
       font-size: 2rem;
       line-height: 1.2;
       justify-content: center;
@@ -379,13 +376,13 @@ footer {
     margin-bottom: 2rem;
 
     button {
-      background: $background-color;
+      background: variables.$background-color;
       cursor: pointer;
       transition: all 0.2s ease;
       border: 1px solid #4b5563;
       color: #9ca3af;
       border-radius: 0.25rem;
-      font-family: $sora;
+      font-family: variables.$sora;
       font-size: 0.85rem;
       padding: 0.3rem 1rem;
 
@@ -446,7 +443,7 @@ footer {
     }
 
     .read-more {
-      @include link-blue;
+      @include mixins.link-blue;
       margin-top: 1rem;
 
       &:hover {
@@ -471,7 +468,7 @@ footer {
     margin-bottom: 2.5rem;
 
     .blog-brand-title {
-      @include brand-header;
+      @include mixins.brand-header;
       display: inline-flex;
     }
 
@@ -498,7 +495,7 @@ footer {
   }
 
   .back-link {
-    @include link-blue;
+    @include mixins.link-blue;
     display: inline-block;
   }
 
@@ -840,10 +837,61 @@ footer {
 
     button,
     a {
-      @include tag-button;
+      @include mixins.tag-button;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       text-decoration: none;
+    }
+  }
+}
+
+// Language Switcher
+.language-switcher {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    min-width: 48px;
+    min-height: 44px;
+
+    .flag {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .label {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: variables.$color-text-primary;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &.active {
+      color: #fff;
+      background: rgba(130, 180, 255, 0.15);
+
+      .label {
+        font-weight: 700;
+      }
     }
   }
 }
@@ -852,5 +900,16 @@ footer {
 @media (min-width: 1281px) {
   body {
     margin: 5em 25% 1rem 25%;
+  }
+}
+
+// Mobile adjustments for language switcher
+@media (max-width: 768px) {
+  .language-switcher {
+    gap: 0.5rem;
+
+    button {
+      font-size: 0.85rem;
+    }
   }
 }

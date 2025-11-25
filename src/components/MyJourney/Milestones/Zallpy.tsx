@@ -90,7 +90,6 @@ export const Zallpy = memo(() => {
           />
         </p>
         <p>
-          {' '}
           <Trans
             i18n={i18n}
             i18nKey="myJourney.zallpy.paragraph4"
@@ -106,8 +105,8 @@ export const Zallpy = memo(() => {
         </p>
         <Tags tags={tags} />
         <ul className="info-bits">
-          {infoBits.map((bit, i) => (
-            <li key={i}>{bit}</li>
+          {infoBits.map((bit) => (
+            <li key={bit}>{bit}</li>
           ))}
         </ul>
       </div>

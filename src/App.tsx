@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { BlogErrorBoundary } from './components/ErrorBoundary/BlogErrorBoundary'
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 
-import './css/style.css'
+import './css/style.scss'
 
 // Lazy load route components
 const HomePage = lazy(() => import('./HomePage').then((module) => ({ default: module.HomePage })))

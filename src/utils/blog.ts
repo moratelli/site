@@ -84,6 +84,20 @@ const parseFrontmatter = (markdown: string): ParsedMarkdown => {
   return { data, content }
 }
 
+/**
+ * Retrieves all blog posts with parsed frontmatter and content.
+ *
+ * Posts are dynamically imported from markdown files using Vite's glob import.
+ * Automatically extracts slug from filename and sorts posts by date (newest first).
+ *
+ * @returns Array of blog posts with metadata and content
+ *
+ * @example
+ * ```typescript
+ * const posts = getAllPosts()
+ * // Returns: [{ title: '...', date: '2025-11-24', slug: 'post-slug', ... }]
+ * ```
+ */
 export const getAllPosts = (): BlogPost[] => {
   const posts: BlogPost[] = []
 
@@ -120,11 +134,37 @@ export const getAllPosts = (): BlogPost[] => {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
+/**
+ * Finds a blog post by its slug identifier.
+ *
+ * @param slug - URL-friendly post identifier (e.g., 'welcome-to-my-blog')
+ * @returns Blog post if found, undefined otherwise
+ *
+ * @example
+ * ```typescript
+ * const post = getPostBySlug('building-type-safe-i18n-react')
+ * // Returns: BlogPost object or undefined
+ * ```
+ */
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   const posts = getAllPosts()
   return posts.find((post) => post.slug === slug)
 }
 
+/**
+ * Retrieves all unique tags from all blog posts.
+ *
+ * Aggregates tags from all posts and returns them sorted alphabetically.
+ * Useful for rendering tag filters or navigation.
+ *
+ * @returns Sorted array of unique tag strings
+ *
+ * @example
+ * ```typescript
+ * const tags = getAllTags()
+ * // Returns: ['react', 'typescript', 'i18n']
+ * ```
+ */
 export const getAllTags = (): string[] => {
   const posts = getAllPosts()
   const tagSet = new Set<string>()
@@ -136,6 +176,18 @@ export const getAllTags = (): string[] => {
   return Array.from(tagSet).sort()
 }
 
+/**
+ * Filters blog posts by a specific tag.
+ *
+ * @param tag - Tag string to filter by (case-sensitive)
+ * @returns Array of blog posts that include the specified tag
+ *
+ * @example
+ * ```typescript
+ * const reactPosts = getPostsByTag('react')
+ * // Returns: Array of posts tagged with 'react'
+ * ```
+ */
 export const getPostsByTag = (tag: string): BlogPost[] => {
   const posts = getAllPosts()
   return posts.filter((post) => post.tags.includes(tag))

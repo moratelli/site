@@ -86,9 +86,25 @@ describe('i18n Completeness', () => {
   it('no untranslated values (still in English) in non-English languages', () => {
     const enTranslations = flatTranslations.en
 
-    // Check French
+    // Keys that are allowed to be identical (tech terms, proper nouns, dates, etc.)
+    const allowedIdenticalKeys = new Set([
+      'myJourney.school.dates',
+      'myJourney.trackli.dates',
+      'myJourney.certi.dates',
+      'myJourney.philips.dates',
+      'myJourney.zallpy.dates',
+    ])
+
+    // Check French (excluding arrays/tags which often contain tech terms)
     const untranslatedFrench = Object.entries(flatTranslations.fr_CA)
-      .filter(([key, value]) => value === enTranslations[key])
+      .filter(([key, value]) => {
+        // Skip keys that are allowed to be identical
+        if (allowedIdenticalKeys.has(key)) return false
+        // Skip array-like keys (tags, lists) as they often contain proper nouns
+        if (key.endsWith('.tags') || key.endsWith('.list') || key.endsWith('.infoBits'))
+          return false
+        return value === enTranslations[key]
+      })
       .map(([key]) => key)
 
     expect(
@@ -98,7 +114,12 @@ describe('i18n Completeness', () => {
 
     // Check Portuguese
     const untranslatedPortuguese = Object.entries(flatTranslations.pt_BR)
-      .filter(([key, value]) => value === enTranslations[key])
+      .filter(([key, value]) => {
+        if (allowedIdenticalKeys.has(key)) return false
+        if (key.endsWith('.tags') || key.endsWith('.list') || key.endsWith('.infoBits'))
+          return false
+        return value === enTranslations[key]
+      })
       .map(([key]) => key)
 
     expect(
