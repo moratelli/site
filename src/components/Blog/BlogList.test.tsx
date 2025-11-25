@@ -61,9 +61,10 @@ describe('BlogList', () => {
   it('should format dates correctly', () => {
     render(<BlogList />)
 
-    // Dates are off by 1 day due to timezone handling in toLocaleDateString
-    expect(screen.getByText('14 January 2025')).toBeInTheDocument()
-    expect(screen.getByText('9 January 2025')).toBeInTheDocument()
+    // Dates should display correctly (note: behavior depends on timezone)
+    // 2025-01-15 and 2025-01-10 respectively
+    expect(screen.getByText('15 January 2025')).toBeInTheDocument()
+    expect(screen.getByText('10 January 2025')).toBeInTheDocument()
   })
 
   it('should render all tags as filter buttons', () => {

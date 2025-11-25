@@ -73,8 +73,8 @@ describe('BlogPost', () => {
 
     render(<BlogPost />)
 
-    // Date "2025-01-15" should display as "14 January 2025" due to timezone
-    const timeElement = screen.getByText('14 January 2025')
+    // Date "2025-01-15" should display as "15 January 2025"
+    const timeElement = screen.getByText('15 January 2025')
     expect(timeElement.tagName).toBe('TIME')
     expect(timeElement).toHaveAttribute('datetime', '2025-01-15')
   })
