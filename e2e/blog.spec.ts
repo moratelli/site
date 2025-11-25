@@ -43,9 +43,9 @@ test.describe('Blog Navigation', () => {
     // Wait for posts to load
     await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
 
-    // Click first post
-    const firstPost = page.locator('.blog-post-preview').first()
-    await firstPost.click()
+    // Click first post link
+    const firstPostLink = page.locator('.blog-post-preview a').first()
+    await firstPostLink.click()
 
     // Should be on post page
     await expect(page).toHaveURL(/\/blog\/.+/)
@@ -60,11 +60,14 @@ test.describe('Blog Navigation', () => {
     // Wait for posts to load
     await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
 
-    // Click first post
-    await page.locator('.blog-post-preview').first().click()
+    // Click first post link
+    await page.locator('.blog-post-preview a').first().click()
+
+    // Wait for navigation
+    await page.waitForURL(/\/blog\/.+/)
 
     // Check for markdown elements
-    const article = page.locator('article')
+    const article = page.locator('article.blog-post')
     await expect(article).toBeVisible()
 
     // Should have headings
@@ -76,7 +79,8 @@ test.describe('Blog Navigation', () => {
   test('navigates back to blog list from post', async ({ page }) => {
     await page.goto('/blog')
     await page.waitForSelector('.blog-post-preview', { timeout: 5000 })
-    await page.locator('.blog-post-preview').first().click()
+    await page.locator('.blog-post-preview a').first().click()
+    await page.waitForURL(/\/blog\/.+/)
 
     // Find and click back link
     const backLink = page.getByRole('link', { name: /back to blog/i })

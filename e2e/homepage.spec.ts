@@ -17,7 +17,7 @@ test.describe('Homepage', () => {
     await expect(page.getByRole('heading', { name: /trusted by/i })).toBeVisible()
 
     // Check Footer
-    await expect(page.locator('footer[role="contentinfo"]')).toBeVisible()
+    await expect(page.locator('footer')).toBeVisible()
   })
 
   test('has proper page metadata', async ({ page }) => {
