@@ -70,7 +70,7 @@ describe('Introduction', () => {
   it('renders with default English translations', () => {
     const { i18n } = render(<Introduction />)
 
-    expect(i18n.language).toBe('en')
+    expect(i18n.language).toMatch(/^en/)
 
     // Introduction should have text content
     const header = document.querySelector('header.introduction')

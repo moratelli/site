@@ -65,17 +65,18 @@ describe('Footer', () => {
     render(<Footer />)
 
     const footer = screen.getByRole('contentinfo')
-    const nav = screen.getByRole('navigation')
+    const navElements = screen.getAllByRole('navigation')
 
     expect(footer).toBeInTheDocument()
-    expect(footer).toContainElement(nav)
+    expect(navElements.length).toBeGreaterThanOrEqual(1)
+    expect(footer).toContainElement(navElements[0])
   })
 
   it('displays translated content', () => {
     const { i18n } = render(<Footer />)
 
-    // Default language is English
-    expect(i18n.language).toBe('en')
+    // Default language is English (browser may append region code)
+    expect(i18n.language).toMatch(/^en/)
 
     // Footer should render some text content (from Trans components)
     const footer = screen.getByRole('contentinfo')

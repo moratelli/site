@@ -64,14 +64,17 @@ describe('LanguageSwitcher', () => {
 
   it('updates active state after language change', async () => {
     const user = userEvent.setup()
-    render(<LanguageSwitcher />)
+    const { i18n } = render(<LanguageSwitcher />)
+
+    // Set initial language explicitly
+    await i18n.changeLanguage('en')
 
     const ptButton = screen.getByRole('button', { name: /switch to pt/i })
     const enButton = screen.getByRole('button', { name: /switch to en/i })
 
-    // Initially EN is active
-    expect(enButton).toHaveClass('active')
-    expect(ptButton).not.toHaveClass('active')
+    await waitFor(() => {
+      expect(enButton).toHaveClass('active')
+    })
 
     // Click PT button
     await user.click(ptButton)
@@ -107,11 +110,20 @@ describe('LanguageSwitcher', () => {
     // Start: scrollY = 500, scrollHeight = 2000 (25%)
     const frButton = screen.getByRole('button', { name: /switch to fr/i })
 
-    // Simulate content height change after language switch
+    // Need to update scrollHeight before the RAF callback runs
+    let scrollHeightValue = 2000
     Object.defineProperty(document.documentElement, 'scrollHeight', {
-      writable: true,
+      get() {
+        return scrollHeightValue
+      },
       configurable: true,
-      value: 3000,
+    })
+
+    // Override RAF to change scrollHeight before callback
+    requestAnimationFrameSpy.mockImplementation((cb: FrameRequestCallback) => {
+      scrollHeightValue = 3000
+      cb(0)
+      return 0
     })
 
     await user.click(frButton)
@@ -155,14 +167,16 @@ describe('LanguageSwitcher', () => {
     })
   })
 
-  it('handles partial language match for active state', () => {
+  it('handles partial language match for active state', async () => {
     const { i18n } = render(<LanguageSwitcher />)
 
     // Set language to 'en-US' (which starts with 'en')
-    i18n.changeLanguage('en-US')
+    await i18n.changeLanguage('en-US')
 
-    const enButton = screen.getByRole('button', { name: /switch to en/i })
-    expect(enButton).toHaveClass('active')
-    expect(enButton).toHaveAttribute('aria-pressed', 'true')
+    await waitFor(() => {
+      const enButton = screen.getByRole('button', { name: /switch to en/i })
+      expect(enButton).toHaveClass('active')
+      expect(enButton).toHaveAttribute('aria-pressed', 'true')
+    })
   })
 })

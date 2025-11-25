@@ -124,8 +124,8 @@ describe('BlogPost', () => {
 
     render(<BlogPost />)
 
-    // BlogBrand renders "Pedro" text
-    expect(screen.getByText('Pedro')).toBeInTheDocument()
+    // BlogBrand renders "pedromoratelli" text
+    expect(screen.getByText('pedromoratelli')).toBeInTheDocument()
   })
 
   it('redirects to blog list when post is not found', () => {
