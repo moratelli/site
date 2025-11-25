@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { philips1xWebp, philips2xWebp, philipsPng } from '../../../assets/assets'
 import { Tags } from '../../Tags/Tags'
 
-export const Philips = () => {
+export const Philips = memo(() => {
   const { t, i18n } = useTranslation()
   const tags = t('myJourney.philips.tags', { returnObjects: true }) as string[]
 
@@ -50,4 +51,6 @@ export const Philips = () => {
       </div>
     </article>
   )
-}
+})
+
+Philips.displayName = 'Philips'

@@ -1,11 +1,32 @@
+import { lazy, Suspense } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import { BlogList } from './components/Blog/BlogList'
-import { BlogPost } from './components/Blog/BlogPost'
 import { BlogErrorBoundary } from './components/ErrorBoundary/BlogErrorBoundary'
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
-import { HomePage } from './HomePage'
 
 import './css/style.css'
+
+// Lazy load route components
+const HomePage = lazy(() => import('./HomePage').then((module) => ({ default: module.HomePage })))
+const BlogList = lazy(() =>
+  import('./components/Blog/BlogList').then((module) => ({ default: module.BlogList }))
+)
+const BlogPost = lazy(() =>
+  import('./components/Blog/BlogPost').then((module) => ({ default: module.BlogPost }))
+)
+
+// Loading component
+const LoadingFallback = () => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100vh',
+    }}
+  >
+    <p>Loading...</p>
+  </div>
+)
 
 export const App = () => {
   return (
@@ -16,7 +37,9 @@ export const App = () => {
             path="/"
             element={
               <ErrorBoundary>
-                <HomePage />
+                <Suspense fallback={<LoadingFallback />}>
+                  <HomePage />
+                </Suspense>
               </ErrorBoundary>
             }
           />
@@ -24,7 +47,9 @@ export const App = () => {
             path="/blog"
             element={
               <ErrorBoundary>
-                <BlogList />
+                <Suspense fallback={<LoadingFallback />}>
+                  <BlogList />
+                </Suspense>
               </ErrorBoundary>
             }
           />
@@ -32,7 +57,9 @@ export const App = () => {
             path="/blog/:slug"
             element={
               <BlogErrorBoundary>
-                <BlogPost />
+                <Suspense fallback={<LoadingFallback />}>
+                  <BlogPost />
+                </Suspense>
               </BlogErrorBoundary>
             }
           />

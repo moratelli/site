@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { trackli1xWebp, trackli2xWebp, trackliPng } from '../../../assets/assets'
 import { Tags } from '../../Tags/Tags'
 
-export const Trackli = () => {
+export const Trackli = memo(() => {
   const { t, i18n } = useTranslation()
   const tags = t('myJourney.trackli.tags', { returnObjects: true }) as string[]
 
@@ -42,4 +43,6 @@ export const Trackli = () => {
       </div>
     </article>
   )
-}
+})
+
+Trackli.displayName = 'Trackli'

@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { certi1xWebp, certi2xWebp, certiPng } from '../../../assets/assets'
 import { Tags } from '../../Tags/Tags'
 
-export const Certi = () => {
+export const Certi = memo(() => {
   const { t, i18n } = useTranslation()
 
   const infoBits = t('myJourney.certi.infoBits', { returnObjects: true }) as string[]
@@ -65,4 +66,6 @@ export const Certi = () => {
       </div>
     </article>
   )
-}
+})
+
+Certi.displayName = 'Certi'

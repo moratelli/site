@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const Skills = () => {
+export const Skills = memo(() => {
   const { t } = useTranslation()
   const skills = t('skills.list', { returnObjects: true }) as string[]
 
@@ -16,4 +17,6 @@ export const Skills = () => {
       </ul>
     </section>
   )
-}
+})
+
+Skills.displayName = 'Skills'

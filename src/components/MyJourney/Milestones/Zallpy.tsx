@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import {
   workingAtZallpy1xWebp,
@@ -11,7 +12,7 @@ import {
 import { PlatformLink } from '../../PlatformLink/PlatformLink'
 import { Tags } from '../../Tags/Tags'
 
-export const Zallpy = () => {
+export const Zallpy = memo(() => {
   const { t, i18n } = useTranslation()
 
   const infoBits: string[] = t('myJourney.zallpy.infoBits', { returnObjects: true })
@@ -128,4 +129,6 @@ export const Zallpy = () => {
       </div>
     </article>
   )
-}
+})
+
+Zallpy.displayName = 'Zallpy'

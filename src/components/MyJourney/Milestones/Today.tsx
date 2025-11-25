@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   laraAndI1xWebp,
@@ -21,7 +22,7 @@ import {
   passportPng,
 } from '../../../assets/assets'
 
-export const Today = () => {
+export const Today = memo(() => {
   const { t } = useTranslation()
 
   return (
@@ -96,4 +97,6 @@ export const Today = () => {
       </aside>
     </article>
   )
-}
+})
+
+Today.displayName = 'Today'

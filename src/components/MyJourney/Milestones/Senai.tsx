@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import {
   classAtSenai1xWebp,
@@ -10,7 +11,7 @@ import {
 } from '../../../assets/assets'
 import { Tags } from '../../Tags/Tags'
 
-export const Senai = () => {
+export const Senai = memo(() => {
   const { t, i18n } = useTranslation()
   const tags = t('myJourney.school.tags', { returnObjects: true }) as string[]
 
@@ -66,4 +67,6 @@ export const Senai = () => {
       </div>
     </article>
   )
-}
+})
+
+Senai.displayName = 'Senai'

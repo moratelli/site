@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 
-export const BlogBrand = () => {
+export const BlogBrand = memo(() => {
   return (
     <header className="blog-brand">
       <h2 className="blog-brand-title">
@@ -15,4 +16,6 @@ export const BlogBrand = () => {
       <p className="blog-brand-subtitle">Reflections on code, career, and the industry.</p>
     </header>
   )
-}
+})
+
+BlogBrand.displayName = 'BlogBrand'
