@@ -8,10 +8,10 @@ export const Trackli = memo(() => {
 
   return (
     <Milestone
-      id="trackli"
       className="trackli"
       gradient="trackli"
       companyName="Trackli"
+      dates={t('myJourney.trackli.dates')}
       href="https://trackli.com.br"
       logo={{
         webp1x: trackli1xWebp,
@@ -19,6 +19,7 @@ export const Trackli = memo(() => {
         fallback: trackliPng,
         alt: "Trackli's logo",
       }}
+      tags={t('myJourney.trackli.tags', { returnObjects: true })}
     >
       <Trans
         i18n={i18n}

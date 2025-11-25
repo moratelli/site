@@ -8,10 +8,10 @@ export const Certi = memo(() => {
 
   return (
     <Milestone
-      id="certi"
       className="certi"
       gradient="certi"
       companyName="Fundação CERTI"
+      dates={t('myJourney.certi.dates')}
       href="https://certi.org.br"
       logo={{
         webp1x: certi1xWebp,
@@ -19,7 +19,8 @@ export const Certi = memo(() => {
         fallback: certiPng,
         alt: "Fundação CERTI's logo",
       }}
-      hasInfoBits
+      tags={t('myJourney.certi.tags', { returnObjects: true })}
+      infoBits={t('myJourney.certi.infoBits', { returnObjects: true })}
     >
       <p>
         <Trans

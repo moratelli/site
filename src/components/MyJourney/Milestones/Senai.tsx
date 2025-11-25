@@ -16,10 +16,10 @@ export const Senai = memo(() => {
 
   return (
     <Milestone
-      id="school"
       className="school"
       gradient="sky"
       companyName={t('myJourney.school.title')}
+      dates={t('myJourney.school.dates')}
       href="https://www.senai.br"
       logo={{
         webp1x: senai1xWebp,
@@ -27,6 +27,7 @@ export const Senai = memo(() => {
         fallback: senaiPng,
         alt: "SENAI's logo",
       }}
+      tags={t('myJourney.school.tags', { returnObjects: true })}
       photos={[
         {
           webp1x: classAtSenai1xWebp,
@@ -34,7 +35,7 @@ export const Senai = memo(() => {
           webp3x: classAtSenai3xWebp,
           fallback: classAtSenaiJpeg,
           alt: 'The logo of SENAI',
-          caption: 'myJourney.school.photoCaption',
+          caption: t('myJourney.school.photoCaption'),
         },
       ]}
     >

@@ -17,10 +17,10 @@ export const Zallpy = memo(() => {
 
   return (
     <Milestone
-      id="zallpy"
       className="zallpy"
       gradient="zallpy"
       companyName="Zallpy Digital"
+      dates={t('myJourney.zallpy.dates')}
       href="https://zallpy.com"
       logo={{
         webp1x: zallpy1xWebp,
@@ -28,7 +28,8 @@ export const Zallpy = memo(() => {
         fallback: zallpyPng,
         alt: "Zallpy Digital's logo",
       }}
-      hasInfoBits
+      tags={t('myJourney.zallpy.tags', { returnObjects: true })}
+      infoBits={t('myJourney.zallpy.infoBits', { returnObjects: true })}
       photos={[
         {
           webp1x: workingAtZallpy1xWebp,
@@ -36,7 +37,7 @@ export const Zallpy = memo(() => {
           webp3x: workingAtZallpy3xWebp,
           fallback: workingAtZallpyJpeg,
           alt: 'A work selfie',
-          caption: 'myJourney.zallpy.photoCaption',
+          caption: t('myJourney.zallpy.photoCaption'),
         },
       ]}
     >

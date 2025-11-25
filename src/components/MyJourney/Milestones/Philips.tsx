@@ -8,10 +8,10 @@ export const Philips = memo(() => {
 
   return (
     <Milestone
-      id="philips"
       className="philips"
       gradient="philips"
       companyName="Philips"
+      dates={t('myJourney.philips.dates')}
       href="https://www.philips.com.br/healthcare"
       logo={{
         webp1x: philips1xWebp,
@@ -19,6 +19,7 @@ export const Philips = memo(() => {
         fallback: philipsPng,
         alt: "Philips's logo",
       }}
+      tags={t('myJourney.philips.tags', { returnObjects: true })}
     >
       <p>
         <Trans
