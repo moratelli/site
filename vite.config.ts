@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 
@@ -19,5 +20,12 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@assets': resolve(__dirname, './src/assets'),
+    },
   },
 })

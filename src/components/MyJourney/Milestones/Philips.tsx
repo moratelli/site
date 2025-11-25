@@ -1,7 +1,7 @@
+import { philips1xWebp, philips2xWebp, philipsPng } from '@assets/assets'
+import { Tags } from '@components/Tags/Tags'
 import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { philips1xWebp, philips2xWebp, philipsPng } from '../../../assets/assets'
-import { Tags } from '../../Tags/Tags'
 
 export const Philips = memo(() => {
   const { t, i18n } = useTranslation()

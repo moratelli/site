@@ -1,7 +1,7 @@
+import { trackli1xWebp, trackli2xWebp, trackliPng } from '@assets/assets'
+import { Tags } from '@components/Tags/Tags'
 import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { trackli1xWebp, trackli2xWebp, trackliPng } from '../../../assets/assets'
-import { Tags } from '../../Tags/Tags'
 
 export const Trackli = memo(() => {
   const { t, i18n } = useTranslation()

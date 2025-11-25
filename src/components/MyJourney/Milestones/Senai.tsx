@@ -1,5 +1,3 @@
-import { memo } from 'react'
-import { Trans, useTranslation } from 'react-i18next'
 import {
   classAtSenai1xWebp,
   classAtSenai2xWebp,
@@ -8,8 +6,10 @@ import {
   senai1xWebp,
   senai2xWebp,
   senaiPng,
-} from '../../../assets/assets'
-import { Tags } from '../../Tags/Tags'
+} from '@assets/assets'
+import { Tags } from '@components/Tags/Tags'
+import { memo } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 export const Senai = memo(() => {
   const { t, i18n } = useTranslation()

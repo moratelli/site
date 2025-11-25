@@ -1,5 +1,3 @@
-import { memo } from 'react'
-import { useTranslation } from 'react-i18next'
 import {
   laraAndI1xWebp,
   laraAndI2xWebp,
@@ -20,7 +18,9 @@ import {
   passport1xWebp,
   passport2xWebp,
   passportPng,
-} from '../../../assets/assets'
+} from '@assets/assets'
+import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const Today = memo(() => {
   const { t } = useTranslation()

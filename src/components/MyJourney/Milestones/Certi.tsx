@@ -1,7 +1,7 @@
+import { certi1xWebp, certi2xWebp, certiPng } from '@assets/assets'
+import { Tags } from '@components/Tags/Tags'
 import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { certi1xWebp, certi2xWebp, certiPng } from '../../../assets/assets'
-import { Tags } from '../../Tags/Tags'
 
 export const Certi = memo(() => {
   const { t, i18n } = useTranslation()

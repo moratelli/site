@@ -9,6 +9,13 @@ const LANGUAGE_CONFIG: Record<SupportedLanguage, { emoji: string; label: string 
   pt_BR: { emoji: '🇧🇷', label: 'PT' },
 }
 
+/**
+ * Language switcher component for internationalization.
+ *
+ * Allows users to switch between supported languages (English, French, Portuguese).
+ * Preserves scroll position when changing languages using percentage-based calculation.
+ * Stores language preference in localStorage for persistence across sessions.
+ */
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
 

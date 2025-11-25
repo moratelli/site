@@ -1,5 +1,3 @@
-import { memo } from 'react'
-import { Trans, useTranslation } from 'react-i18next'
 import {
   workingAtZallpy1xWebp,
   workingAtZallpy2xWebp,
@@ -8,15 +6,17 @@ import {
   zallpy1xWebp,
   zallpy2xWebp,
   zallpyPng,
-} from '../../../assets/assets'
-import { PlatformLink } from '../../PlatformLink/PlatformLink'
-import { Tags } from '../../Tags/Tags'
+} from '@assets/assets'
+import { PlatformLink } from '@components/PlatformLink/PlatformLink'
+import { Tags } from '@components/Tags/Tags'
+import { memo } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 export const Zallpy = memo(() => {
   const { t, i18n } = useTranslation()
 
-  const infoBits: string[] = t('myJourney.zallpy.infoBits', { returnObjects: true })
-  const tags: string[] = t('myJourney.zallpy.tags', { returnObjects: true })
+  const infoBits = t('myJourney.zallpy.infoBits', { returnObjects: true }) as string[]
+  const tags = t('myJourney.zallpy.tags', { returnObjects: true }) as string[]
 
   return (
     <article className="zallpy">
