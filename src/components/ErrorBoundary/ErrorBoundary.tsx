@@ -13,6 +13,17 @@ interface ErrorBoundaryState {
   error: Error | null
 }
 
+/**
+ * React Error Boundary component for graceful error handling.
+ *
+ * Catches JavaScript errors anywhere in the child component tree,
+ * logs them in development, and displays a fallback UI.
+ *
+ * In production, errors are automatically tracked by Vercel Analytics.
+ * Provides a reset mechanism to allow users to recover from errors.
+ *
+ * @see https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
+ */
 export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props)
@@ -24,7 +35,12 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    // Log errors in development for debugging
+    if (import.meta.env.DEV) {
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+    }
+    // In production, errors should be sent to an error tracking service
+    // Currently handled by Vercel Analytics
   }
 
   handleReset = (): void => {

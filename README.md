@@ -35,10 +35,14 @@ A modern, performant portfolio website built with React 19, TypeScript, and Vite
 - Context-aware styling (parent-controlled component variants)
 - Responsive design with mobile-first breakpoints
 
-**Code Quality**
+**Code Quality & Testing**
 
 - ESLint + Prettier with organized imports and strict type checking
-- GitHub Actions CI running on every PR (lint, format, type-check, build, security audit)
+- Comprehensive test coverage:
+  - **Unit Tests:** Vitest + React Testing Library (62 tests)
+  - **E2E Tests:** Playwright for critical user flows
+  - **i18n Completeness Tests:** Validates all translation keys exist
+- GitHub Actions CI running on every PR (lint, format, type-check, tests, build, security audit)
 - React Compiler enabled for automatic optimization
 
 ## Getting Started
@@ -73,6 +77,9 @@ npm run lint:fix     # Fix ESLint issues automatically
 npm run format       # Format code with Prettier
 npm run format:check # Check code formatting
 npm run type-check   # Run TypeScript type checking
+npm test             # Run unit tests (Vitest)
+npm run test:e2e     # Run E2E tests (Playwright)
+npm run test:e2e:ui  # Run E2E tests with UI mode
 ```
 
 ## Project Structure

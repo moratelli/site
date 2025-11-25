@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import type { RenderOptions } from '@testing-library/react'
 import { render } from '@testing-library/react'
 import { Provider } from 'jotai'
@@ -10,7 +11,7 @@ interface AllTheProvidersProps {
   children: ReactNode
 }
 
-function AllTheProviders({ children }: AllTheProvidersProps) {
+const AllTheProviders = ({ children }: AllTheProvidersProps) => {
   return (
     <I18nextProvider i18n={i18n}>
       <Provider>
@@ -25,5 +26,7 @@ const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>
   return { ...result, i18n }
 }
 
+// Re-export everything from @testing-library/react
 export * from '@testing-library/react'
+// Export custom render function
 export { customRender as render }
