@@ -37,7 +37,12 @@ export const Senai = () => {
           i18n={i18n}
           i18nKey="myJourney.school.paragraph1"
           components={[
-            <a className="text-gradient-sky" href="https://www.senai.br" target="_blank" />,
+            <a
+              className="text-gradient-sky"
+              href="https://www.senai.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            />,
           ]}
         />
         <p>{t('myJourney.school.paragraph2')}</p>

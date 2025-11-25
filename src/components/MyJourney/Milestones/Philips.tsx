@@ -34,11 +34,13 @@ export const Philips = () => {
                 className="text-gradient-philips"
                 href="https://www.philips.com.br/healthcare"
                 target="_blank"
+                rel="noopener noreferrer"
               />,
               <a
                 className="text-gradient-philips"
                 href="https://www.philips.com.br/healthcare/resources/landing/solucao-tasy"
                 target="_blank"
+                rel="noopener noreferrer"
               />,
             ]}
           />

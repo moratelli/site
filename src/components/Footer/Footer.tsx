@@ -22,7 +22,11 @@ export const Footer = () => {
             </p>
           </li>
           <li>
-            <a href="https://linkedin.com/in/pedromoratelli" target="_blank" rel="noreferrer">
+            <a
+              href="https://linkedin.com/in/pedromoratelli"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-linkedin text-gradient-sky"></i>
             </a>
             <p>
@@ -33,7 +37,7 @@ export const Footer = () => {
                   <a
                     href="https://linkedin.com/in/pedromoratelli"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-gradient-sky"
                   />,
                 ]}
@@ -41,7 +45,7 @@ export const Footer = () => {
             </p>
           </li>
           <li>
-            <a href="https://github.com/moratelli" target="_blank" rel="noreferrer">
+            <a href="https://github.com/moratelli" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-github text-gradient-lime"></i>
             </a>
             <p>
@@ -52,7 +56,7 @@ export const Footer = () => {
                   <a
                     href="https://github.com/moratelli"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-gradient-lime"
                   />,
                 ]}

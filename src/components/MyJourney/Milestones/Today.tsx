@@ -50,7 +50,7 @@ export const Today = () => {
             <img
               src={parisJpeg}
               srcSet={`${paris1xWebp} 1x, ${paris2xWebp} 2x, ${paris3xWebp} 3x`}
-              alt="A picture of Ottawa, Canada"
+              alt="A picture of Paris, France"
             />
           </picture>
         </div>
@@ -63,7 +63,7 @@ export const Today = () => {
             <img
               src={ottawaJpeg}
               srcSet={`${ottawa1xWebp} 1x, ${ottawa2xWebp} 2x, ${ottawa3xWebp} 3x`}
-              alt="A picture of Paris, France"
+              alt="A picture of Ottawa, Canada"
             />
           </picture>
         </div>

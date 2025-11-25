@@ -29,7 +29,12 @@ export const Trackli = () => {
           i18n={i18n}
           i18nKey="myJourney.trackli.paragraph1"
           components={[
-            <a className="text-gradient-trackli" href="https://trackli.com.br" target="_blank" />,
+            <a
+              className="text-gradient-trackli"
+              href="https://trackli.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            />,
           ]}
         />
         <p>{t('myJourney.trackli.paragraph2')}</p>

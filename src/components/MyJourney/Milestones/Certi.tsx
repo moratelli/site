@@ -32,7 +32,12 @@ export const Certi = () => {
             i18n={i18n}
             i18nKey="myJourney.certi.paragraph1"
             components={[
-              <a className="text-gradient-certi" href="https://certi.org.br" target="_blank" />,
+              <a
+                className="text-gradient-certi"
+                href="https://certi.org.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              />,
             ]}
           />
         </p>
@@ -42,7 +47,12 @@ export const Certi = () => {
             i18n={i18n}
             i18nKey="myJourney.certi.paragraph3"
             components={[
-              <a className="text-gradient-certi" href="https://anhanguera.com" target="_blank" />,
+              <a
+                className="text-gradient-certi"
+                href="https://anhanguera.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              />,
             ]}
           />
         </p>
