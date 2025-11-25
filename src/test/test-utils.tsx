@@ -1,4 +1,5 @@
-import { render, RenderOptions } from '@testing-library/react'
+import type { RenderOptions } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { Provider } from 'jotai'
 import type { ReactElement, ReactNode } from 'react'
 import { I18nextProvider } from 'react-i18next'
@@ -19,8 +20,10 @@ function AllTheProviders({ children }: AllTheProvidersProps) {
   )
 }
 
-const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
-  render(ui, { wrapper: AllTheProviders, ...options })
+const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) => {
+  const result = render(ui, { wrapper: AllTheProviders, ...options })
+  return { ...result, i18n }
+}
 
 export * from '@testing-library/react'
 export { customRender as render }
