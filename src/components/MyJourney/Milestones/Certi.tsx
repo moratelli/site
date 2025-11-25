@@ -1,70 +1,56 @@
 import { certi1xWebp, certi2xWebp, certiPng } from '@assets/assets'
-import { Tags } from '@components/Tags/Tags'
 import { memo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
+import { Milestone } from './MilestoneBase'
 
 export const Certi = memo(() => {
   const { t, i18n } = useTranslation()
 
-  const infoBits = t('myJourney.certi.infoBits', { returnObjects: true }) as string[]
-  const tags = t('myJourney.certi.tags', { returnObjects: true }) as string[]
-
   return (
-    <article className="certi">
-      <div>
-        <header>
-          <div>
-            <h1 className="text-gradient-certi">Fundação CERTI</h1>
-            <h3 className="text-gradient-certi">{t('myJourney.certi.dates')}</h3>
-          </div>
-          <a href="https://certi.org.br" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source type="image/webp" srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`} />
-              <img
-                src={certiPng}
-                srcSet={`${certi1xWebp} 1x, ${certi2xWebp} 2x`}
-                alt="Fundação CERTI's logo"
-              />
-            </picture>
-          </a>
-        </header>{' '}
-        <p>
-          <Trans
-            i18n={i18n}
-            i18nKey="myJourney.certi.paragraph1"
-            components={[
-              <a
-                className="text-gradient-certi"
-                href="https://certi.org.br"
-                target="_blank"
-                rel="noopener noreferrer"
-              />,
-            ]}
-          />
-        </p>
-        <p>{t('myJourney.certi.paragraph2')}</p>
-        <p>
-          <Trans
-            i18n={i18n}
-            i18nKey="myJourney.certi.paragraph3"
-            components={[
-              <a
-                className="text-gradient-certi"
-                href="https://anhanguera.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              />,
-            ]}
-          />
-        </p>
-        <Tags tags={tags} />
-        <ul className="info-bits">
-          {infoBits.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
-      </div>
-    </article>
+    <Milestone
+      id="certi"
+      className="certi"
+      gradient="certi"
+      companyName="Fundação CERTI"
+      href="https://certi.org.br"
+      logo={{
+        webp1x: certi1xWebp,
+        webp2x: certi2xWebp,
+        fallback: certiPng,
+        alt: "Fundação CERTI's logo",
+      }}
+      hasInfoBits
+    >
+      <p>
+        <Trans
+          i18n={i18n}
+          i18nKey="myJourney.certi.paragraph1"
+          components={[
+            <a
+              className="text-gradient-certi"
+              href="https://certi.org.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            />,
+          ]}
+        />
+      </p>
+      <p>{t('myJourney.certi.paragraph2')}</p>
+      <p>
+        <Trans
+          i18n={i18n}
+          i18nKey="myJourney.certi.paragraph3"
+          components={[
+            <a
+              className="text-gradient-certi"
+              href="https://anhanguera.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            />,
+          ]}
+        />
+      </p>
+    </Milestone>
   )
 })
 

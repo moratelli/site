@@ -1,6 +1,15 @@
 import { memo } from 'react'
 
-export const Tags = memo(({ tags }: { tags: string[] }) => (
+interface TagsProps {
+  tags: string[]
+}
+
+/**
+ * Displays a list of tags/keywords with consistent styling.
+ *
+ * Used across milestone components to show technologies, skills, or categories.
+ */
+export const Tags = memo(({ tags }: TagsProps) => (
   <div className="tags">
     {tags.map((tag) => (
       <span key={tag} className="tag">
